@@ -6,6 +6,8 @@ main:
     url: /tutorials/
   - title: "Projets"
     url: /projects/
+  - title: "Samples"
+    url: /samples/
   - title: "Archives"
     url: /year-archive/
   - title: "Ressources"
