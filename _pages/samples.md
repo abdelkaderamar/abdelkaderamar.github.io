@@ -4,5 +4,14 @@ permalink: /samples/
 title: "Samples"
 ---
 
-TODO
+## C++
 
+### Boost
+
+## C#
+
+## Java
+
+## Bash
+
+## Python
