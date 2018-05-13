@@ -68,6 +68,7 @@ ainsi que ses propres programmes qu'il a développés.
 Une question qui m'a permis de découvrir ou redécouvrir un certain nombre
 de programmes.
 - [Commentaires](https://news.ycombinator.com/item?id=17011227)
+
 #### Programmes
 - [tig](https://github.com/jonas/tig) :
 Une interface *curses* de git. A utiliser principalement comme un browser d'un
@@ -108,16 +109,13 @@ Téléchargement de vidéos *Youtube*
 commande. Un peu difficile à configurer.
   - [mpd](https://www.musicpd.org/) :
   Serveur de musique
-  - [ncmpcpp](https://github.com/arybczak/ncmpcpp)   
+  - [ncmpcpp](https://github.com/arybczak/ncmpcpp)
   Client mpd
-  - [beets](http://beets.io/) :
-  Gestion de librairie musicale
+  - [beets](http://beets.io/) : Gestion de librairie musicale
 
-#### Liens
+##### Liens
 - [https://inconsolation.wordpress.com/](https://inconsolation.wordpress.com/) :
 Un blog non mis à jour depuis 2015, mais
 son contenu est riche et la liste des outils présentés conséquente.
 - [https://github.com/agarrharr/awesome-cli-apps](https://github.com/agarrharr/awesome-cli-apps) :
 Une liste d'application CLI organisée par catégories.
-
----
