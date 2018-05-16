@@ -4,6 +4,7 @@ title:  "Hack News Digest (2018-05-04 au 2018-05-11)"
 date:   2018-05-13 10:10:11 +0100
 categories:
   - Posts
+tags:
   - hackernews
 ---
 

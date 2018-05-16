@@ -1,9 +1,12 @@
 ---
 layout: single
+classes: wide
 title:  "Utilisation de *Boost Multi-index*"
-date:   2018-05-16 12:10:11 +0100
+date:   2018-05-16 21:30:00 +0100
 categories:
-  - Draft
+  - Tutorials
+  - Posts
+tags::
   - C++
   - Boost
 ---
@@ -31,12 +34,12 @@ l'objectif est de voir les différents types d'accès que propose cette librairi
 La syntaxe générale du type `multi_index_container` est la suivante
 
 ```cpp
-    multi_index_container<
-      TYPE,
-      indexed_by <
-        {INDEX(ES)}
-        >
-      >
+multi_index_container<
+    TYPE,
+    indexed_by <
+      {INDEX(ES)}
+    >
+  >
 ```
 
 Où :
@@ -184,6 +187,13 @@ définir un conteneur qui propose les accès suivants :
 - Tri sur l'attribut `_isin`.
 
 ```cpp
+typedef multi_index_container<
+    stock,
+    indexed_by<
+      random_access<>,
+      ordered_unique<identity<stock>>,
+      ordered_non_unique<member<stock, string, &stock::_isin>>
+    >> stock_container_t;
 ```
 
 # Lecture
@@ -194,19 +204,22 @@ Pour récupérer un index d'un conteneur `multi_index_container`, la syntaxe est
 la suivante :
 
 ```cpp
-  CONTAINER_TYPE::nth_index<RANK>::type &VAR = CONTAINER.get<RANK>();
+CONTAINER_TYPE::nth_index<RANK>::type &VAR = CONTAINER.get<RANK>();
 ```
 Par exemple pour obtenir les index du `stock_container` défini précédemment,
 on utilise ceci :
 ```cpp
+stock_container_t::nth_index<0>::type &random_index = container.get<0>();
+stock_container_t::nth_index<1>::type &identity_index = container.get<1>();
+stock_container_t::nth_index<2>::type &isin_index = container.get<2>();
 ```
 A partir de là, on peut accéder au premier élément
 ```cpp
-  random_index[0]
+random_index[0]
 ```
 Ou accéder à la liste triée des éléments :
 ```cpp
-  for (auto &s : identity_index)
+for (auto &s : identity_index)
 ```
 Ou accéder à la liste triée des éléments selon l'attribut `_isin` :
 ```cpp
@@ -219,23 +232,78 @@ l'exemple précédent, le type `stock_container` propose les méthodes de
 l'index `ordered_unique`. On peut donc utiliser la variable `container` sans
 passer par l'index `identity_index`
 ```cpp
-  container.begin()
+container.begin()
 ```
 
 # Mise à jour
 La mise à jour du conteneur peut s'effectuer de deux manières :
+
 1. La méthode *replace* : à partir d'un itérateur sur l'élément à modifier, on
 peut mettre à jour le conteneur comme ceci :
 ```cpp
+auto it = container.begin();
+stock st_gobain = *it;
+st_gobain._ric = "SGOB.PA";
+container.replace(it, st_gobain);
 ```
-
 2. Utilisation d'un functor ou d'une fonction avec la méthode *modify*
   - functor
+```cpp
+struct change_ric {
+        change_ric(const string &ric) : _new_ric(ric) {}
+        void operator()(stock &s) { s._ric = _new_ric; }
+private:
+        string _new_ric;
+};
+container.modify(it, change_ric{"BNPP.PA"});
+```
   - fonction
+```cpp
+  auto upd_func = [](stock &s) { s._ric = "TOTF.PA"; };
+  container.modify(it, upd_func);
+```
+
+[comment]: __
 
 # Suppression
 La suppression des éléments se fait via la méthode `erase` avec comme paramètre
-l'itérateur vers l'élément à supprimer.
+l'itérateur vers l'élément à supprimer. Voici un exemple dans lequel on supprime
+le premier élément.
+
+```cpp
+typedef multi_index_container<
+    stock,
+    indexed_by<random_access<>,
+               ordered_non_unique<member<stock, string, &stock::_ric>>>>
+    stock_container_t;
+stock_container_t container{
+  {"FR0000120271", "undefined", "TOTF.PA", "XPAR"},
+                            {"undefined", "undefined", "undefined", "undefined"},
+                            {"FR0000127771", "undefined", "undefined", "XPAR"},
+                            {"FR0000045072", "undefined", "undefined", "XPAR"},
+                            {"undefined", "undefined", "undefined", "XPAR"}};
+stock_container_t::nth_index<0>::type &random_index = container.get<0>();
+stock_container_t::nth_index<1>::type &ric_index = container.get<1>();
+
+auto it = identity_index.begin();
+identity_index.erase(it);
+```
+
+Dans ce qui suit, nous utilisons les méthodes `lower_bound` et `upper_bound`
+(proposées par le type `ordered_non_unique`) pour trouver une plage d'éléments
+à supprimer. La méthode `lower_bound` permet de trouver le premier élément
+donc la clé est égale au paramètre de la fonction. La méthode `upper_bound`
+retourne l'élément suivant le dernier élément. Par exemple,
+`ric_index.upper_bound("undefined")` retourne le *stock* suivant le dernier
+dont le *ric* est égal à *"undefined"*
+
+```cpp
+auto it_begin = ric_index.lower_bound("undefined");
+auto it_end = ric_index.upper_bound("undefined");
+ric_index.erase(it_begin, it_end);
+cout << "Size after 2nd erase " << container.size() << endl;
+copy(ric_index.begin(), ric_index.end(), ostream_iterator<stock>(cout, "\n"));
+```
 
 # Liens
 [Boost Multi-Index](http://www.boost.org/libs/multi_index)
