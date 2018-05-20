@@ -69,5 +69,9 @@ defaults:
       author_profile: true
 
 # Google Analytics
-google_analytics: UA-119584387-1
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-119584387-1"
+    anonymize_ip: false # default
 
