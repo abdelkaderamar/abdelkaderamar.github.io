@@ -68,3 +68,6 @@ defaults:
       related: true
       author_profile: true
 
+# Google Analytics
+google_analytics: UA-119584387-1
+
