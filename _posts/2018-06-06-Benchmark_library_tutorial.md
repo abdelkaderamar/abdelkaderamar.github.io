@@ -1,7 +1,7 @@
 ---
 layout: single
 classes: wide
-title:  "La bibliothèque *Benchmark* de Google"
+title:  "La bibliothèque *Benchmark*"
 date:   2018-05-20 21:30:00 +0100
 categories:
   - Tutorials
