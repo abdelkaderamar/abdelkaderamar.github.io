@@ -54,11 +54,6 @@ d'exécution moyen de la fonction et au temps d'exécution CPU moyen. La derniè
 colonne montre le nombre d'exécution de la fonction à mesurer (le code à
   l'intérieur de la boucle `for (auto _ : state)`).
 
-Les deux colonnes *Time* et *CPU* correspondent respectivement au temps
-d'exécution moyen de la fonction et au temps d'exécution CPU moyen. La dernière
-colonne montre le nombre d'exécution de la fonction à mesurer (le code à
-l'intérieur de la boucle `for (auto _ : state)`).
-
 Par défaut, c'est la bibliothèque qui détermine le nombre d'itération. La règle utilisée (pour la version testée) est de faire un nombre d'itération
 qui respecte les deux conditions suivantes :
 - Pas plus d'un milliard d'itération.
