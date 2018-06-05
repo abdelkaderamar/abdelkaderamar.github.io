@@ -252,5 +252,3 @@ BENCHMARK(benchmark_insert_map)
 ```
 Le résultat est illustré dans le screenshot ci-dessous:
 ![Benchrmark - Premier test]({{ site.url }}{{ site.baseurl }}/assets/images/google-benchmark-screenshot-05.png )
-
-##
