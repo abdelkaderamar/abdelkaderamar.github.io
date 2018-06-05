@@ -68,7 +68,7 @@ defaults:
       related: true
       author_profile: true
 
-# Twitter
+twitter:
   username: "aamar"
 
 # Google Analytics
