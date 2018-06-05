@@ -46,7 +46,8 @@ int main(int argc, char* argv[])
 ```
 
 Le screenshot ci-dessous montre le résultat d'exécution :
-![Benchrmark - Premier test]({{ site.url }}{{ site.baseurl }}/assets/images/google-benchrmark-01.png )
+
+![Benchrmark - Premier test]({{ site.url }}{{ site.baseurl }}/assets/images/google-benchmark-01.png )
 
 Les deux colonnes *Time* et *CPU* correspondent respectivement au temps
 d'exécution moyen de la fonction et au temps d'exécution CPU moyen. La dernière
@@ -93,7 +94,7 @@ int inc_and_wait(const int x) {
 ```
 
 Le résultat du benchmarking est le suivant :
-![Benchrmark - Premier test]({{ site.url }}{{ site.baseurl }}/assets/images/google-benchrmark-02.png )
+![Benchrmark - Premier test]({{ site.url }}{{ site.baseurl }}/assets/images/google-benchmark-02.png )
 
 La première a été exécutée jusqu'à ce que le temps CPU consommé dépasse
 0.5 seconde (43801038 x 15 ns), alors que la seconde s'est exécutée une
@@ -107,7 +108,7 @@ int inc_and_wait(const int x) {
 }
 ```
 
-![Benchrmark - Premier test]({{ site.url }}{{ site.baseurl }}/assets/images/google-benchrmark-03.png )
+![Benchrmark - Premier test]({{ site.url }}{{ site.baseurl }}/assets/images/google-benchmark-03.png )
 
 On remarque que le nombre d'itération n'est pas de 2 (2x2=4 > 2.5) mais
 de dix. En effet, la bibliothèque utilise un facteur d'expansion de 10
@@ -124,7 +125,7 @@ int inc_and_wait(const int x) {
 }
 ```
 
-![Benchrmark - Premier test]({{ site.url }}{{ site.baseurl }}/assets/images/google-benchrmark-04.png )
+![Benchrmark - Premier test]({{ site.url }}{{ site.baseurl }}/assets/images/google-benchmark-04.png )
 
 ## Macros
 
@@ -248,6 +249,6 @@ BENCHMARK(benchmark_insert_map)
     ->Complexity();
 ```
 Le résultat est illustré dans le screenshot ci-dessous:
-![Benchrmark - Premier test]({{ site.url }}{{ site.baseurl }}/assets/images/google-benchrmark-05.png )
+![Benchrmark - Premier test]({{ site.url }}{{ site.baseurl }}/assets/images/google-benchmark-05.png )
 
 ##
