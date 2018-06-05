@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 title:  "La bibliothèque *Benchmark*"
-date:   2018-05-20 21:30:00 +0100
+date:   2018-06-06 21:30:00 +0100
 categories:
   - Tutorials
   - Posts
