@@ -56,7 +56,7 @@ colonne montre le nombre d'exécution de la fonction à mesurer (le code à
 
 Par défaut, c'est la bibliothèque qui détermine le nombre d'itération. La règle utilisée (pour la version testée) est de faire un nombre d'itération
 qui respecte les deux conditions suivantes :
-- Pas plus d'un milliard d'itération.
+- Pas plus d'un milliard d'itérations.
 - Le temps d'exécution CPU total dépasse le paramètre
 `benchmark_min_time` (il est de 0.5 seconde par défaut) ou le temps
 d'exécution total dépasse cinq fois le temps `benchmark_min_time`.
@@ -131,7 +131,7 @@ nom au benchmark.
 ```cpp
 BENCHMARK(benchmark_function);
 ```
-Et à la place de la fonction main, on utilise la macro `BENCHMARK_MAIN`.
+Et à la place de la fonction main, on peut utiliser la macro `BENCHMARK_MAIN`.
 ```cpp
 BENCHMARK_MAIN();
 ```
@@ -140,7 +140,7 @@ BENCHMARK_MAIN();
 Dans le cas où on veut effectuer le benchmarking d'une fonction plusieurs fois
 avec des paramètres différents, la bibliothèque propose deux méthode de le faire :
 - En faisant appel à la méthode `Arg(int)`. Le paramètre de cette dernière est
-passé à l'objet `state` et peut être récupérer avec la méthode `state.range(0)`.
+passé à l'objet `state` et peut être récupéré avec la méthode `state.range(0)`.
 ```
     bench->Arg(32)
 ```
@@ -172,6 +172,13 @@ Ou générer des benchmark sur l'intervalle [1, 4096] avec un facteur
 multiplicateur de 2
 ```cpp
    bench->Range(1, 4096)->RangeMultiplier(2)
+```
+
+La valeur du paramètre de la fonction `Arg` ou les nombres générés par la
+fonction `Range` peut être récupérée comme ceci :
+
+```cpp
+int sz = state.range(0);
 ```
 
 ## Passage de paramètres
