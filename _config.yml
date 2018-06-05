@@ -68,10 +68,14 @@ defaults:
       related: true
       author_profile: true
 
+# Twitter
+  username: "aamar"
+
 # Google Analytics
 analytics:
   provider: "google-gtag"
   google:
     tracking_id: "UA-119584387-1"
     anonymize_ip: false # default
+
 
