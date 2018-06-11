@@ -72,8 +72,6 @@ Après l'acquisition de Github par Microsoft, une bonne partie de la communauté
 - Auto-hébergées : [Phabricator](https://phacility.com/phabricator/), [Gitbucket](https://gitbucket.github.io/), [Gogs](https://gogs.io/), [Gitprep](http://gitprep.yukikimoto.com/) et [Allura](https://allura.apache.org/)
 - [Commentaires HN](https://news.ycombinator.com/item?id=17241487)
 
-### [How I Automated My Job Using Node.js](https://medium.com/dailyjs/how-i-automated-my-job-with-node-js-94bf4e423017)
-- [Commentaires HN](https://news.ycombinator.com/item?id=17265458)
-
 ### [For more and more people, work appears to serve no purpose](https://www.newyorker.com/books/under-review/the-bullshit-job-boom)
+Cet article parle du dernier livre de l'anthropologue américan [David Graeber](https://en.wikipedia.org/wiki/David_GraeberDavid Graeber), *[Bullshit Jobs: A Theory](https://www.amazon.fr/Bullshit-Jobs-Theory-David-Graeber/dp/150114331X/)*. Ce livre qui parle de l'utilité de certains emplois, s'appuie sur des études et des sondages de *YouGov* sur l'avis des employées sur l'utilité de leurs postes. Ces études ont montré qu'une grande partie des sondés trouvent leur emploi inutiles. Graeber montre que ces emplois sont des *Bullshit Jobs* mais ne sont pas des "Shit jobs* car très souvent ils sont très bien rémunérés. La communauté de Hackernews a largement réagi à l'article dans les commentaires, et on sens qu'une grande majorité des intervenants est d'accord avec l'auteur du livre sur l'inutilité de certains métiers (le Powerpoint n'est pas très populaire dans la communauté HN). Par contre les intervenants ont souvent oublié que parmi les catégories visées par ce livre, il y a celle des *duct tapers* ou ceux qui réparent les problèmes qui ne devraient pas exister, et cette catégorie inclut les développeurs informatiques qui corrigent les bugs des systèmes existants.
 - [Commentaires HN](https://news.ycombinator.com/item?id=17260911)
