@@ -14,7 +14,7 @@ Ma sélection personnelle des sujets de la semaine sur
 [Hacker News](https://news.ycombinator.com/). La semaine qui vient de s'écouler
 a vu la plupart des sujets tourner autour de l'acquisition de Github par
 Microsoft. Cette nouvelle a généré une myriades de sujets où les anti
-et les pro Microsoft ont échangé leurs arguments.
+et les pro Microsoft ont échangé leurs arguments. Je n'ai pas retenu ces sujets car il y en avait tellement. J'ai gardé juste celui sur les alternatives à Github même s'il y en avait plusieurs.
 
 ### [Why Development Teams Struggle to Deliver on Time, on Budget, or at All](https://www.7pace.com/blog/software-development-planning-fallacy)
 Dans cet article, l'auteur traite du sujet du planning et de l'estimation des coûts d'un projet de développement en informatique. L'auteur qui note que selon certaines études ces retards coûtent entre 50 et 80 milliards de dollars part d'un phénomène psychologique appelé *[The Planning Fallacy](https://en.wikipedia.org/wiki/Planning_fallacy)*. Ce phénomène conduit les humains à être optimiste et à sous estimer le temps nécessaire pour une tâche. C'est ce que *Daniel Kahneman* décrit dans son livre *Thinking Fast and Slow* avec les deux modes de pensées rapides et lentes; avec une tendance des humains a préférer la méthode rapide car ils sont plutôt paresseux, et le mode lent demande plus d'efforts. Dit autrement, si on nous demande d'estimer le temps pour faire quelque chose, on préfère utiliser la méthode de pensée rapide au lieu d'étudier le sujet plus longuement.
