@@ -2,7 +2,7 @@
 layout: single
 classes: wide
 title:  "*Fold Expressions*"
-date:   2018-05-13 23:48:00 +0100
+date:   2018-06-13 23:48:00 +0100
 categories:
   - Tutorials
   - Posts
