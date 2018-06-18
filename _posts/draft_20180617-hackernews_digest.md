@@ -62,16 +62,37 @@ des systèmes d'exploitation monolithiques et les systèmes à base de micro-noy
 
 > I still maintain the point that designing a monolithic kernel in 1991 is a fundamental error.  Be thankful you are not my student.  You would not get a high grade for such a design :-)
 
-
-
 - [Commentaires HN](https://news.ycombinator.com/item?id=17294907)
 
+### [Office 365 is being completely rewritten in JavaScript](https://twitter.com/thelarkinn/status/1006746626617008128?s=21)
+
+L'annonce de Sean Larkin sur la réécriture complète d'Office 365 en Javascript ou pour être plus précis en *React Native*. L'auteur du tweet, qui est un *Program Manager* chez Microsoft, est intevenu sur [Reddit](https://www.reddit.com/r/programming/comments/8qqhlz/comment/e0ll1dt/) et sur un autre sujet [HN](https://news.ycombinator.com/item?id=17321985) pour apporter plus de clarifications. Microsoft n'abandonne pas les autres langages et les APIs et les outils continueront d'être développés en C++/C# ou d'autres langages. 
+
+- [Commentaires HN](https://news.ycombinator.com/item?id=17300893)
+
+
+
+### [Intel 28-core fantasy vs. AMD 32-core reality](https://www.techspot.com/news/75009-intel-28-core-fantasy-vs-amd-32-core.html)
+
+L'histoire incroyable sur la façon dont Intel a créé une diversion un jour avant la présentation par AMD au Computex 2018. Dans le secteur des HEDT (*High End DeskTop*), AMD avait prévu de présenter un CPU de 32 coeurs cadencés à 3 GHZ (jusqu'à 3.4GHZ), mais un jour
+avant, Intel a présenté un CPU de 28 coeurs cadencés à 5 GHZ. Le problème est que cette démonstration n'avait d'autre objectif que voler la vedette à AMD en présentant une démo d'un produit non fini avec des CPUs overclockés au maximum, intégrés à des cartes avec une puissance électrique extreme et un refroidissement particulier. Intel a réagit à l'article en indiquant que c'est bien un produit qui est en cours de développement et non une simple démo pour essayer de masquer l'exploit d'AMD. Dans tous les cas, ce dernier prévoit de livrer ses nouveaux processesseurs pour le mois d'Août 2018.
+
+- [Commentaires HN](https://news.ycombinator.com/item?id=17280757)
+
+
+### [Ask HN: What has the past 12 months taught you?](https://news.ycombinator.com/item?id=17316120)
+Les réponses sont très variées. Néanmoins, la tendance est plutôt sur l'importance des choses de la vie qui sont en dehors des technologies.
+
+
+### [GIF for CLI](https://github.com/google/gif-for-cli)
+
+Un outil pour transformer des GIFs animés ou des vidéos en une animation ASCII art.
+
+- [Commentaires HN](https://news.ycombinator.com/item?id=17313090)
+
+<!--
 ### []()
 - [Commentaires HN]()
-
-### []()
-- [Commentaires HN]()
-
 
 
 Tools for Exploring .NET Internals
@@ -80,29 +101,21 @@ https://news.ycombinator.com/item?id=17323911
 
 
 
-Ask HN: What has the past 12 months taught you?
-https://news.ycombinator.com/item?id=17316120
-https://news.ycombinator.com/item?id=17316120
+
 
 State of React Native 2018
 https://facebook.github.io/react-native/blog/2018/06/14/state-of-react-native-2018
 https://news.ycombinator.com/item?id=17314315
 
-GIF for CLI
-https://github.com/google/gif-for-cli
-https://news.ycombinator.com/item?id=17313090
+
 
 Ask HN: What are the best hacks to fight depression?
 https://news.ycombinator.com/item?id=17310846
 https://news.ycombinator.com/item?id=17310846
 
-Office 365 is being completely rewritten in JavaScript
-https://twitter.com/thelarkinn/status/1006746626617008128?s=21
-https://news.ycombinator.com/item?id=17300893
 
-Intel 28-core fantasy vs. AMD 32-core reality
-https://www.techspot.com/news/75009-intel-28-core-fantasy-vs-amd-32-core.html
-https://news.ycombinator.com/item?id=17280757
+
+
 
 Introducing Multi-Leg Options Strategies
 http://blog.robinhood.com/news/2018/6/12/introducing-multi-leg-options-strategies
@@ -177,4 +190,4 @@ Writing Multithreaded Applications in C++ (the right way) (2015)
 http://deathbytape.com/articles/2015/02/03/cpp-threading.html
 https://news.ycombinator.com/item?id=17181992
 
-
+-->
