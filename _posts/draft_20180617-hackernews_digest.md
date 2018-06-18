@@ -14,8 +14,57 @@ Ma sélection personnelle des sujets de la semaine sur
 [Hacker News](https://news.ycombinator.com/)
 
 
-### []()
-- [Commentaires HN]()
+### [GitLab Web IDE](https://about.gitlab.com/2018/06/15/introducing-gitlab-s-integrated-development-environment/)
+Gitlab annonce son nouvel IDE Web. Pour l'instant c'est un simple éditeur et un gestionnaire Git, mais selon l'annonce d'autres fonctionnalités sont à venir. Le liens suivant [awesome-online-ide](https://github.com/styfle/awesome-online-ide) contient une liste
+des IDEs web disponible. 
+
+- [Commentaires HN](https://news.ycombinator.com/item?id=17321921)
+
+
+
+### [Alternatives to Google Products](https://restoreprivacy.com/google-alternatives/)
+
+Après l'acquisition la semaine dernière de Github par Microsoft et la prolifération des articles sur les alternatives possible à Github, 
+cet article traite des alternatives aux services de Google (recherche, mail, cloud, chrome, youtube, analytics, maps, play store, calendar). Le sujet a été très populaire dans la communauté HN avec plus de 500 commentaires.
+
+- [Commentaires HN](https://news.ycombinator.com/item?id=17280558)
+
+### [What do Unix command names stand for?](http://www.unixguide.net/unix/faq/1.3.shtml)
+
+Un petit article sur certaines commandes Unix et leurs signification.
+
+|  Commande    | Signification | Description |
+|--------------|---------------| ------------|
+|awk  | Aho Weinberger and Kernighan | Les créateurs du langages Al Aho, Peter <br> Weinberger and Brian Kernighan |         
+|grep  | g/re/p Global Regular Expression Print| |
+|fgrep  | Fixed GREP | |
+|egrep  | Extended GREP | |
+|cat  | CATenate| |
+|gecos  | General Electric Comprehensive Operating Supervisor | |
+|nroff  | New ROFF | |
+|troff  | Typesetter new ROFF | |
+|tee  | T | |
+|bss  | Block Started by Symbol | |
+|biff  | BIFF | Nom d'un chien à l'université de Berkley |
+|rc | RunCom | |
+|Perl | Practical Extraction and Report Language | &nbsp; |
+| dd | copy and convert | dd car cc était déjà pris par le compilateur C |
+| df | disk free | |
+| du | disk usage | |
+| less | less is more | une blague à propos de more |
+
+- [Commentaires HN](https://news.ycombinator.com/item?id=17323753)
+
+### [Linux is Obsolete (1992)](https://groups.google.com/forum/#!topic/comp.os.minix/wlhw16QWltI%5B1-25%5D)
+
+Ce n'est pas nouveau sujet, il a même 26 ans. On retrouve dans cette discussion le débat soulevé par Monsieur Andrew Tanenbaum au sujet 
+des systèmes d'exploitation monolithiques et les systèmes à base de micro-noyau. Autrement c'était une comparaison entre Linux et le système de Tanenbaum Minix. La suite des évènements a donné raison à Linus Torvalds et c'est le système Linux qui a gagné cette bataille. Un extrait de la réponse de Tanenbaum à Torvalds :
+
+> I still maintain the point that designing a monolithic kernel in 1991 is a fundamental error.  Be thankful you are not my student.  You would not get a high grade for such a design :-)
+
+
+
+- [Commentaires HN](https://news.ycombinator.com/item?id=17294907)
 
 ### []()
 - [Commentaires HN]()
@@ -23,26 +72,13 @@ Ma sélection personnelle des sujets de la semaine sur
 ### []()
 - [Commentaires HN]()
 
-### []()
-- [Commentaires HN]()
 
-### []()
-- [Commentaires HN]()
-
-### []()
-- [Commentaires HN]()
-
-What do Unix command names stand for?
-http://www.unixguide.net/unix/faq/1.3.shtml
-https://news.ycombinator.com/item?id=17323753
 
 Tools for Exploring .NET Internals
 http://mattwarren.org/2018/06/15/Tools-for-Exploring-.NET-Internals/
 https://news.ycombinator.com/item?id=17323911
 
-GitLab Web IDE
-https://about.gitlab.com/2018/06/15/introducing-gitlab-s-integrated-development-environment/
-https://news.ycombinator.com/item?id=17321921
+
 
 Ask HN: What has the past 12 months taught you?
 https://news.ycombinator.com/item?id=17316120
@@ -72,9 +108,6 @@ Introducing Multi-Leg Options Strategies
 http://blog.robinhood.com/news/2018/6/12/introducing-multi-leg-options-strategies
 https://news.ycombinator.com/item?id=17303083
 
-Linux is Obsolete (1992)
-https://groups.google.com/forum/#!topic/comp.os.minix/wlhw16QWltI%5B1-25%5D
-https://news.ycombinator.com/item?id=17294907
 
 Ask HN: Is there a new habit you cultivated recently that is really paying off?
 https://news.ycombinator.com/item?id=17291127
@@ -92,9 +125,7 @@ Learning operating system development using Linux kernel and Raspberry Pi
 https://github.com/s-matyukevich/raspberry-pi-os
 https://news.ycombinator.com/item?id=17282000
 
-Alternatives to Google Products
-https://restoreprivacy.com/google-alternatives/
-https://news.ycombinator.com/item?id=17280558
+
 
 Ask HN: Developer Burnout – how to rediscover the passion, or new career?
 https://news.ycombinator.com/item?id=17274320
