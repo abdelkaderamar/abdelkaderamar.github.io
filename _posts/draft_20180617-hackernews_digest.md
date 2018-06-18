@@ -32,7 +32,6 @@ Ma sélection personnelle des sujets de la semaine sur
 ### []()
 - [Commentaires HN]()
 
-<!--
 What do Unix command names stand for?
 http://www.unixguide.net/unix/faq/1.3.shtml
 https://news.ycombinator.com/item?id=17323753
@@ -104,9 +103,9 @@ https://news.ycombinator.com/item?id=17274320
 Chatbots were the next big thing: what happened?
 https://blog.growthbot.org/chatbots-were-the-next-big-thing-what-happened
 https://news.ycombinator.com/item?id=17264718
--->
 
-<!-- Addition links
+
+<!-- Addition links -->
 Has Vue passed React yet?
 https://hasvuepassedreactyet.surge.sh
 https://news.ycombinator.com/item?id=17316267
@@ -147,4 +146,4 @@ Writing Multithreaded Applications in C++ (the right way) (2015)
 http://deathbytape.com/articles/2015/02/03/cpp-threading.html
 https://news.ycombinator.com/item?id=17181992
 
--->
+
