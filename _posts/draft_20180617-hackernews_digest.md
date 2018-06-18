@@ -105,7 +105,7 @@ https://blog.growthbot.org/chatbots-were-the-next-big-thing-what-happened
 https://news.ycombinator.com/item?id=17264718
 
 
-<!-- Addition links -->
+<!-- Additional links -->
 Has Vue passed React yet?
 https://hasvuepassedreactyet.surge.sh
 https://news.ycombinator.com/item?id=17316267
