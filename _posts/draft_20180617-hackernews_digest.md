@@ -15,7 +15,7 @@ Ma sélection personnelle des sujets de la semaine sur
 
 
 ### [GitLab Web IDE](https://about.gitlab.com/2018/06/15/introducing-gitlab-s-integrated-development-environment/)
-Gitlab annonce son nouvel IDE Web. Pour l'instant c'est un simple éditeur et un gestionnaire Git, mais selon l'annonce d'autres fonctionnalités sont à venir. Le liens suivant [awesome-online-ide](https://github.com/styfle/awesome-online-ide) contient une liste
+Gitlab annonce son nouvel IDE Web. Pour l'instant c'est un simple éditeur et un gestionnaire Git, mais selon l'annonce d'autres fonctionnalités sont à venir. Le lien suivant [awesome-online-ide](https://github.com/styfle/awesome-online-ide) contient une liste
 des IDEs web disponible. 
 
 - [Commentaires HN](https://news.ycombinator.com/item?id=17321921)
@@ -66,7 +66,7 @@ des systèmes d'exploitation monolithiques et les systèmes à base de micro-noy
 
 ### [Office 365 is being completely rewritten in JavaScript](https://twitter.com/thelarkinn/status/1006746626617008128?s=21)
 
-L'annonce de Sean Larkin sur la réécriture complète d'Office 365 en Javascript ou pour être plus précis en *React Native*. L'auteur du tweet, qui est un *Program Manager* chez Microsoft, est intevenu sur [Reddit](https://www.reddit.com/r/programming/comments/8qqhlz/comment/e0ll1dt/) et sur un autre sujet [HN](https://news.ycombinator.com/item?id=17321985) pour apporter plus de clarifications. Microsoft n'abandonne pas les autres langages et les APIs et les outils continueront d'être développés en C++/C# ou d'autres langages. 
+L'annonce de Sean Larkin sur la réécriture complète d'Office 365 en JavaScript ou pour être plus précis en *React Native*. L'auteur du tweet, qui est un *Program Manager* chez Microsoft, est intervenu sur [Reddit](https://www.reddit.com/r/programming/comments/8qqhlz/comment/e0ll1dt/) et sur un autre sujet [HN](https://news.ycombinator.com/item?id=17321985) pour apporter plus de clarifications. Microsoft n'abandonne pas les autres langages et les APIs et les outils continueront d'être développés en C++/C# ou d'autres langages. 
 
 - [Commentaires HN](https://news.ycombinator.com/item?id=17300893)
 
@@ -75,7 +75,7 @@ L'annonce de Sean Larkin sur la réécriture complète d'Office 365 en Javascrip
 ### [Intel 28-core fantasy vs. AMD 32-core reality](https://www.techspot.com/news/75009-intel-28-core-fantasy-vs-amd-32-core.html)
 
 L'histoire incroyable sur la façon dont Intel a créé une diversion un jour avant la présentation par AMD au Computex 2018. Dans le secteur des HEDT (*High End DeskTop*), AMD avait prévu de présenter un CPU de 32 coeurs cadencés à 3 GHZ (jusqu'à 3.4GHZ), mais un jour
-avant, Intel a présenté un CPU de 28 coeurs cadencés à 5 GHZ. Le problème est que cette démonstration n'avait d'autre objectif que voler la vedette à AMD en présentant une démo d'un produit non fini avec des CPUs overclockés au maximum, intégrés à des cartes avec une puissance électrique extreme et un refroidissement particulier. Intel a réagit à l'article en indiquant que c'est bien un produit qui est en cours de développement et non une simple démo pour essayer de masquer l'exploit d'AMD. Dans tous les cas, ce dernier prévoit de livrer ses nouveaux processesseurs pour le mois d'Août 2018.
+avant, Intel a présenté un CPU de 28 coeurs cadencés à 5 GHZ. Le problème est que cette démonstration n'avait d'autre objectif que voler la vedette à AMD en présentant une démo d'un produit non fini avec des CPUs overclockés au maximum, intégrés à des cartes avec une puissance électrique extrême et un refroidissement particulier. Intel a réagi à l'article en indiquant que c'est bien un produit qui est en cours de développement et non une simple démo pour essayer de masquer l'exploit d'AMD. Dans tous les cas, ce dernier prévoit de livrer ses nouveaux processeurs pour le mois d'Août 2018.
 
 - [Commentaires HN](https://news.ycombinator.com/item?id=17280757)
 
