@@ -10,7 +10,10 @@ tags:
 
 {% include toc %}
 
+Blabla bla
+
 <iframe src="https://tech.io/snippet-widget/NPl2Le2" width="100%" frameborder="0" scrolling="no" allowtransparency="true" style="visibility: hidden">
+  
 </iframe>
 <script>
   if (typeof window.techioScriptInjected === 'undefined') {
