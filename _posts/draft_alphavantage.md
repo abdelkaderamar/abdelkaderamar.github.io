@@ -19,7 +19,7 @@ Pour les actions, ce service (qui rappelle *Yahoo Finance*) offre une API web RE
 
 Pour les données journalières, hebdomadaires et mensuelles, le service propose deux type de fonction, adjustée et non adjustée pour prendre en compte les dividendes. Ces informations (le montant du dividende et le close adjusté) ne sont pas proposées pour les instruments européens.
 
-Pour utiliser le service, il faut obtenir une clé. Cette opération est très simple et ne nécessite que compléter un formulaire. 
+Pour utiliser le service, il faut obtenir une clé. Cette opération est très simple et se fait en remplissant un simple formulaire. 
 
 > Screenshot 
 
