@@ -36,7 +36,7 @@ La fonction précédente peut être écrite comme la fonction suivante :
 ```cpp
 template<typename ... Ts>
 auto sum_fold_exp(const Ts& ... ts) {
-  return (3 + ... + ts);
+  return (ts + ...);
 }
 ```
 
