@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Hack News Digest (04-05-2018 au 11-05-2018)"
+title:  "Hacker News Digest (04-05-2018 au 11-05-2018)"
 date:   2018-05-13 10:10:11 +0100
 categories:
   - Posts

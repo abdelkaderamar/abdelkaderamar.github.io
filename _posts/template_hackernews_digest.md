@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Hack News Digest (date au date)"
+title:  "Hacker News Digest (xx-xx-2018 au yy-yy-2018)"
 date:   2000-06-03 16:00:00 +0100
 categories:
   - Posts

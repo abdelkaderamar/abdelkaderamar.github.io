@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Hack News Digest (09-06-2018 au 15-06-2018)"
+title:  "Hacker News Digest (09-06-2018 au 15-06-2018)"
 date:   2018-06-18 15:54:00 +0100
 categories:
   - Posts
@@ -16,7 +16,7 @@ Ma sélection personnelle des sujets de la semaine sur
 
 ### [GitLab Web IDE](https://about.gitlab.com/2018/06/15/introducing-gitlab-s-integrated-development-environment/)
 Gitlab annonce son nouvel IDE Web. Pour l'instant c'est un simple éditeur et un gestionnaire Git, mais selon l'annonce d'autres fonctionnalités sont à venir. Le lien suivant [awesome-online-ide](https://github.com/styfle/awesome-online-ide) contient une liste
-des IDEs web disponible. 
+des IDEs web disponible.
 
 - [Commentaires HN](https://news.ycombinator.com/item?id=17321921)
 
@@ -24,7 +24,7 @@ des IDEs web disponible.
 
 ### [Alternatives to Google Products](https://restoreprivacy.com/google-alternatives/)
 
-Après l'acquisition la semaine dernière de Github par Microsoft et la prolifération des articles sur les alternatives possible à Github, 
+Après l'acquisition la semaine dernière de Github par Microsoft et la prolifération des articles sur les alternatives possible à Github,
 cet article traite des alternatives aux services de Google (recherche, mail, cloud, chrome, youtube, analytics, maps, play store, calendar). Le sujet a été très populaire dans la communauté HN avec plus de 500 commentaires.
 
 - [Commentaires HN](https://news.ycombinator.com/item?id=17280558)
@@ -57,7 +57,7 @@ Un petit article sur certaines commandes Unix et leurs signification.
 
 ### [Linux is Obsolete (1992)](https://groups.google.com/forum/#!topic/comp.os.minix/wlhw16QWltI%5B1-25%5D)
 
-Ce n'est pas nouveau sujet, il a même 26 ans. On retrouve dans cette discussion le débat soulevé par Monsieur Andrew Tanenbaum au sujet 
+Ce n'est pas nouveau sujet, il a même 26 ans. On retrouve dans cette discussion le débat soulevé par Monsieur Andrew Tanenbaum au sujet
 des systèmes d'exploitation monolithiques et les systèmes à base de micro-noyau. Autrement c'était une comparaison entre Linux et le système de Tanenbaum Minix. La suite des évènements a donné raison à Linus Torvalds et c'est le système Linux qui a gagné cette bataille. Un extrait de la réponse de Tanenbaum à Torvalds :
 
 > I still maintain the point that designing a monolithic kernel in 1991 is a fundamental error.  Be thankful you are not my student.  You would not get a high grade for such a design :-)
@@ -66,7 +66,7 @@ des systèmes d'exploitation monolithiques et les systèmes à base de micro-noy
 
 ### [Office 365 is being completely rewritten in JavaScript](https://twitter.com/thelarkinn/status/1006746626617008128?s=21)
 
-L'annonce de Sean Larkin sur la réécriture complète d'Office 365 en JavaScript ou pour être plus précis en *React Native*. L'auteur du tweet, qui est un *Program Manager* chez Microsoft, est intervenu sur [Reddit](https://www.reddit.com/r/programming/comments/8qqhlz/comment/e0ll1dt/) et sur un autre sujet [HN](https://news.ycombinator.com/item?id=17321985) pour apporter plus de clarifications. Microsoft n'abandonne pas les autres langages et les APIs et les outils continueront d'être développés en C++/C# ou d'autres langages. 
+L'annonce de Sean Larkin sur la réécriture complète d'Office 365 en JavaScript ou pour être plus précis en *React Native*. L'auteur du tweet, qui est un *Program Manager* chez Microsoft, est intervenu sur [Reddit](https://www.reddit.com/r/programming/comments/8qqhlz/comment/e0ll1dt/) et sur un autre sujet [HN](https://news.ycombinator.com/item?id=17321985) pour apporter plus de clarifications. Microsoft n'abandonne pas les autres langages et les APIs et les outils continueront d'être développés en C++/C# ou d'autres langages.
 
 - [Commentaires HN](https://news.ycombinator.com/item?id=17300893)
 
