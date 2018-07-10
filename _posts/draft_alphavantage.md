@@ -39,38 +39,64 @@ https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=MC.PA&apik
 
 ## AV.NET
 
+### Installation
+
 L’API peut être installée via le gestionnaire de package nuget. La page sur le site nuget.org est la suivante : [https://www.nuget.org/packages/Av.API/](https://www.nuget.org/packages/Av.API/).
+
+### Utilisation
 
 Pour récupérer les données d’Alpha Vantage, l’API propose le type StockAvProvider. Le constructeur de ce dernier reçoit en paramètre votre clé personnelle pour accéder aux services d’Alpha Vantage (pour rappel, l’obtention de cette clé peut se faire facilement à cette adresse https://www.alphavantage.co/support/#api-key).  Le type StockAvProvider fournit les méthodes pour récupérer les différents types de données historiques : 
 1.	Données journalières 
+```csharp
 StockAvProvider provider = new StockAvProvider(avKey);
 provider.RequestDaily("SGO.PA");
+```
 2.	Données hebdomadaires :
+```csharp
 StockAvProvider provider = new StockAvProvider(avKey);
 provider.RequestWeekly("SGO.PA");
+```
 3.	Données mensuelles : 
+```csharp
 StockAvProvider provider = new StockAvProvider(avKey);
 provider.RequestMonthly("SGO.PA");
+```
 4.	Données en mode Batch : pour rappel, seul les stocks américains sont disponibles par cette fonction et uniquement pendant les heures d’ouverture du marché (ceci est dû au fait que cette source est fourni par [IEX](https://iextrading.com/) pour lequel je suis également entrain de développer une API [IEX.Net]( https://github.com/abdelkaderamar/av.net)).
+```csharp
 StockAvProvider provider = new StockAvProvider(avKey);
 provider.BatchRequest(new string[] { "MSFT", "IBM", "AAPL" });
-Utilisation de *AvRequestManager*
+```
+
+#### Utilisation de *AvRequestManager*
 L’accès aux services d’Alpha Vantage a une contrainte sur la fréquence des requêtes à exécuter. La page [support d’Alpha Vantage]( https://www.alphavantage.co/support/#support) ne précise pas une limite de fréquence pour l’envoi des requêtes mais recommande d’envoyer les requêtes de manière espacée dans le temps. D’après les tests que j’ai effectués, un délai de deux secondes entre deux requêtes successives m’a permis d’éviter le problème. Lorsque le service reçoit trop de requêtes, le message suivant est retourné 
+
+```
 {
   "Information": "Please consider optimizing your API call frequency."
 }
-Pour cela, l’API fournit le type *AvRequestManager* qui permet de gérer les appels successifs.  Le constructeur reçoit en paramètre l’objet *StockAvProvider* et doit être démarré avec la méthode `start`
+```
+
+Pour cela, l’API fournit le type `AvRequestManager` qui permet de gérer les appels successifs.  Le constructeur reçoit en paramètre l’objet `StockAvProvider` et doit être démarré avec la méthode `start`
+
+```csharp
 AvRequestManager requestManager = new AvRequestManager(provider);
 requestManager.Start();
+```
+
 C’est la méthode `Add` qui permet d’ajouter une requête à Alpha Vantage. La signature de cette fonction est la suivante :
+
 ```csharp
 Add(RequestType requestType, string symbol, Action<RequestType, string, StockData> callback)
 ```
+
 Le type RequestType est une enum qui définit les différents types de requêtes disponibles 
+
 ```csharp 
 public enum RequestType { Daily, DailyAdjusted, Weekly, WeeklyAdjusted, Monthly, MonthlyAdjusted}
 ```
+
 Voici un exemple d’utilisation de l’objet `AvRequestManager`
+
 ```csharp
 StockAvProvider provider = new StockAvProvider(avKey);
 AvRequestManager requestManager = new AvRequestManager(provider);
