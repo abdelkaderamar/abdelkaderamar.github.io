@@ -45,26 +45,71 @@ L’API peut être installée via le gestionnaire de package nuget. La page sur 
 
 ### Utilisation
 
-Pour récupérer les données d’Alpha Vantage, l’API propose le type StockAvProvider. Le constructeur de ce dernier reçoit en paramètre votre clé personnelle pour accéder aux services d’Alpha Vantage (pour rappel, l’obtention de cette clé peut se faire facilement à cette adresse https://www.alphavantage.co/support/#api-key).  Le type StockAvProvider fournit les méthodes pour récupérer les différents types de données historiques : 
+Pour récupérer les données d’Alpha Vantage, l’API propose le type AvStockProvider. Le constructeur de ce dernier reçoit en paramètre votre clé personnelle pour accéder aux services d’Alpha Vantage (pour rappel, l’obtention de cette clé peut se faire facilement à cette adresse https://www.alphavantage.co/support/#api-key).  Le type AvStockProvider fournit les méthodes pour récupérer les différents types de données historiques : 
 1.	Données journalières 
 ```csharp
-StockAvProvider provider = new StockAvProvider(avKey);
-provider.RequestDaily("SGO.PA");
+AvStockProvider provider = new AvStockProvider(avKey);
+StockData stockData = provider.RequestDaily("SGO.PA");
 ```
 2.	Données hebdomadaires :
 ```csharp
-StockAvProvider provider = new StockAvProvider(avKey);
-provider.RequestWeekly("SGO.PA");
+AvStockProvider provider = new AvStockProvider(avKey);
+StockData stockData = provider.RequestWeekly("SGO.PA");
 ```
 3.	Données mensuelles : 
 ```csharp
-StockAvProvider provider = new StockAvProvider(avKey);
-provider.RequestMonthly("SGO.PA");
+AvStockProvider provider = new AvStockProvider(avKey);
+StockData stockData = provider.RequestMonthly("SGO.PA");
 ```
-4.	Données en mode Batch : pour rappel, seul les stocks américains sont disponibles par cette fonction et uniquement pendant les heures d’ouverture du marché (ceci est dû au fait que cette source est fourni par [IEX](https://iextrading.com/) pour lequel je suis également entrain de développer une API [IEX.Net]( https://github.com/abdelkaderamar/av.net)).
+4.	Données en mode Batch : pour rappel, seul les stocks américains sont 
+disponibles par cette fonction et uniquement pendant les heures d’ouverture 
+du marché (ceci est dû au fait que cette source est fourni par 
+[IEX](https://iextrading.com/) pour lequel je suis également entrain de
+ développer une API [IEX.Net]( https://github.com/abdelkaderamar/av.net)).
+ 
 ```csharp
-StockAvProvider provider = new StockAvProvider(avKey);
-provider.BatchRequest(new string[] { "MSFT", "IBM", "AAPL" });
+AvStockProvider provider = new AvStockProvider(avKey);
+IDictionary<string, StockRealtime> batchData = provider.BatchRequest(new string[] { "MSFT", "IBM", "AAPL" });
+```
+
+L'objet `StockData` contient un ensemble de données de type `StockRealtime`. 
+Chaque données de type `StockRealtime` est associée à une date. La définition 
+d'un objet `StockRealtime` est la suivante : 
+
+```csharp
+    public class StockDataItem
+    {
+        public StockDataItem(DateTime dateTime)
+        {
+            DateTime = dateTime;
+        }
+
+        public DateTime DateTime { get; set; }
+        public double Open { get; set; }
+        public double High { get; set; }
+        public double Low { get; set; }
+        public double Close { get; set; }
+        public long Volume { get; set; }
+        public double AdjustedClose { get; set; }
+    }
+```
+
+Alors qu'un objet `StockData` est défini comme ci-dessous : 
+```csharp
+   public class StockData
+    {
+        public StockData(string symbol)
+        {
+            Symbol = symbol;
+            Data = new SortedDictionary<DateTime, StockDataItem>();
+        }
+
+        public string Symbol { get; }
+
+        public IDictionary<DateTime, StockDataItem> Data { get; }
+		
+		// ...
+	}
 ```
 
 #### Utilisation de *AvRequestManager*
@@ -76,7 +121,7 @@ L’accès aux services d’Alpha Vantage a une contrainte sur la fréquence des
 }
 ```
 
-Pour cela, l’API fournit le type `AvRequestManager` qui permet de gérer les appels successifs.  Le constructeur reçoit en paramètre l’objet `StockAvProvider` et doit être démarré avec la méthode `start`
+Pour cela, l’API fournit le type `AvRequestManager` qui permet de gérer les appels successifs.  Le constructeur reçoit en paramètre l’objet `AvStockProvider` et doit être démarré avec la méthode `start`
 
 ```csharp
 AvRequestManager requestManager = new AvRequestManager(provider);
@@ -98,17 +143,18 @@ public enum RequestType { Daily, DailyAdjusted, Weekly, WeeklyAdjusted, Monthly,
 Voici un exemple d’utilisation de l’objet `AvRequestManager`
 
 ```csharp
-StockAvProvider provider = new StockAvProvider(avKey);
+AvStockProvider provider = new AvStockProvider(avKey);
 AvRequestManager requestManager = new AvRequestManager(provider);
 string[] stocks = new string[] { "SGO.PA", "GLE.PA", "BNP.PA", "VIV.PA", "RNO.PA", "CS.PA" };
 requestManager.Start();
 foreach (var stock in stocks)
 {
-          requestManager.Add(RequestType.Daily, stock, Callback);
+         requestManager.Add(RequestType.Daily, stock, Callback);
          requestManager.Add(RequestType.Weekly, stock, Callback);
          requestManager.Add(RequestType.Monthly, stock, Callback);
 }
 requestManager.Stop(true);
 ```
 On remarque à la fin l’appel à la méthode `AvRequestManager.Stop` avec le paramètre `true`. La valeur `true` permet d’exécuter toutes les requêtes en attente avant d’arrêter le thread du `AvRequestManager`.
+
 
