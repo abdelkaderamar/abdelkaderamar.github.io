@@ -8,7 +8,7 @@ tags:
   - C++
 ---
 
-{% include toc %}
+{% include toc.html %}
 
 `std::optional` est une classe utilitaire qui permet de contenir un type et
 d'indiquer si la valeur contenue a été initialisée ou non. Cette fonctionnalité,
