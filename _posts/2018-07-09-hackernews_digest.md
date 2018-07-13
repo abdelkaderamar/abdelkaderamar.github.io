@@ -3,7 +3,7 @@ layout: single
 title:  "Hacker News Digest (30-06-2018 au 06-07-2018)"
 date:   2018-07-09 23:02:00 +0100
 categories:
-  - Posts
+  - hackernews
 tags:
   - hackernews
 ---
