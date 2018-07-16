@@ -5,7 +5,7 @@ title:  "Utilisation de *Boost Multi-index*"
 date:   2018-05-16 21:30:00 +0100
 categories:
   - Tutorials
-  - blog
+  - Posts
 tags::
   - C++
   - Boost

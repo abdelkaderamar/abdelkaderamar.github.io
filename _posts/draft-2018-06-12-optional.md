@@ -3,7 +3,7 @@ layout: single
 title:  "std::optional"
 date:   2018-06-12 16:00:00 +0100
 categories:
-  - blog
+  - Posts
 tags:
   - C++
 ---

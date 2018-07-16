@@ -3,7 +3,7 @@ layout: single
 title:  "Intel Threading Building Blocks : Les Conteneurs Concurrents"
 date:   2018-07-01 16:00:00 +0100
 categories:
-  - blog
+  - Posts
 tags:
   - C++
   -

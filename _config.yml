@@ -28,7 +28,7 @@ markdown: kramdown
 remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-feed
-  - jekyll-paginate-v2
+  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -46,18 +46,8 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-# configuration for previous pagination plugin
-#paginate: 5
-#paginate_path: /page:num/
-
-pagination:
-  enabled: true
-  # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
-  debug: false
-  # collection: 'posts'
-  per_page: 5
-  permalink: '/page/:num/'
-  sort_reverse: true
+paginate: 5
+paginate_path: /page:num/
 
 include:
     - _pages
@@ -87,3 +77,5 @@ analytics:
   google:
     tracking_id: "UA-119584387-1"
     anonymize_ip: false # default
+
+

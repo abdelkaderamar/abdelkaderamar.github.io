@@ -1,44 +1,18 @@
 ---
 layout: archive
-pagination:
-  enabled: true
-  per_page: 1
-  category: "hackernews"
-  trail:
-    before: 2
-    after: 2
 title: "Hacker News Digest"
 permalink: /hackernews/
 author_profile: false
 ---
 
-{% for post in paginator.posts %}
-  {% include archive-single.html %}
-{% endfor %}
+{% include base_path %}
+{% include group-by-array collection=site.posts field="categories" %}
 
-{% if paginator.page_trail %}
-<nav class="pagination">
-  <ul>
-  {% if paginator.previous_page %}
-  <li class="previous">
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Previous</a>
-  </li>
-  {% endif %}
-  {% for trail in paginator.page_trail %}
-    <li>
-    {% if page.url == trail.path %}
-      <a href="#" class="disabled current">{{ trail.num }}</a>
-    {% else %}
-      <a href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
-    {% endif %}
-    </li>
+{% for category in group_names %}
+ {% if category == "hackernews" %}
+  {% assign posts = group_items[forloop.index0] %}
+  {% for post in posts %}
+    {% include archive-single.html %}
   {% endfor %}
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &rarr;</a>
-  </li>
   {% endif %}
-</ul>
-</nav>
-
-{% endif %}
+{% endfor %}

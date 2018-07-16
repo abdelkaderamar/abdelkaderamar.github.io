@@ -5,7 +5,7 @@ title:  "*C++17 : Fold Expressions*"
 date:   2018-06-13 23:48:00 +0100
 categories:
   - Tutorials
-  - blog
+  - Posts
 tags::
   - C++
   - C+17
