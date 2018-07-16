@@ -44,14 +44,24 @@ Avec le focus directement dans la zone d'édition :
 ```
 - [Commentaires HN](https://news.ycombinator.com/item?id=17506753)
 
-### []()
-- [Commentaires HN]()
+### [Learn how to design large-scale systems](https://github.com/donnemartin/system-design-primer)
+Un projet Github intéressant qui décrit la conception de systèmes
+distribués à large échelle. En plus de la description des différentes
+composantes d'un système distribués, le projet contient une série de
+*Flashcards Anki* pour retenir les différents concepts et s'exercer aux
+algorithmes et à la programmation.
+- [Commentaires HN](https://news.ycombinator.com/item?id=17522362)
 
-### []()
-- [Commentaires HN]()
+### [Seedbank – Collection of Interactive Machine Learning Examples](http://tools.google.com/seedbank/)
+Un ensemble d'exemples de programmes *Python* sur le
+[*machine learning*](https://fr.wikipedia.org/wiki/Apprentissage_automatique).
+Ce sujet m'a permis de découvrir l'outil Google
+[*colab*](https://colab.research.google.com/)
+qui offre un environnement Python2/Python3 pour les tests sur le machine
+learning. Cet outil s'exécute sur un navigateur et propose d'utiliser
+des GPUs gratuitement (dans une certaine limite).
+- [Commentaires HN](https://news.ycombinator.com/item?id=17516709)
 
-### []()
-- [Commentaires HN]()
 
 ### [I'm basically giving myself a permanent vacation from being BDFL](https://mail.python.org/pipermail/python-committers/2018-July/005664.html)
 Le créateur du langage Python quitte ses fonctions de BDFL (*Benevolent Dictator for Life*). Après plus de 27 ans depuis la création de son langage, il veut
@@ -68,9 +78,6 @@ George Hotz is on a hacker crusade against the ‘scam’ of self-driving cars
 https://www.theverge.com/2018/7/13/17561484/george-hotz-comma-ai-self-driving-car-scam-diy-kit
 https://news.ycombinator.com/item?id=17522766
 
-Learn how to design large-scale systems
-https://github.com/donnemartin/system-design-primer
-https://news.ycombinator.com/item?id=17522362
 
 Ask HN: Staring in 2010, each year what is your favorite startup?
 https://news.ycombinator.com/item?id=17515664
@@ -100,9 +107,6 @@ Why Kubernetes Is the New Application Server
 https://developers.redhat.com/blog/2018/06/28/why-kubernetes-is-the-new-application-server/
 https://news.ycombinator.com/item?id=17516706
 
-Seedbank – Collection of Interactive Machine Learning Examples
-http://tools.google.com/seedbank/
-https://news.ycombinator.com/item?id=17516709
 
 The open-plan office is a terrible, horrible, no good, very bad idea
 https://m.signalvnoise.com/the-open-plan-office-is-a-terrible-horrible-no-good-very-bad-idea-42bd9cd294e3
