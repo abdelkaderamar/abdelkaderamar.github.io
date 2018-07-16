@@ -3,7 +3,7 @@ layout: single
 title:  "C++14 : Résumé des nouveautés du langage"
 date:   2000-07-13 16:00:00 +0100
 categories:
-  - Posts
+  - blog
 tags:
   - C++, C++14
 ---

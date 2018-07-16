@@ -1,5 +1,12 @@
 ---
 layout: archive
+pagination:
+  enabled: true
+  per_page: 5
+  category: "Blog"
+  trail:
+    before: 2
+    after: 2
 title: "Posts"
 permalink: /posts/
 author_profile: false
@@ -8,11 +15,34 @@ author_profile: false
 {% include base_path %}
 {% include group-by-array collection=site.posts field="categories" %}
 
-{% for category in group_names %}
- {% if category == "Posts" %}
-  {% assign posts = group_items[forloop.index0] %}
-  {% for post in posts %}
-    {% include archive-single.html %}
-  {% endfor %}
-  {% endif %}
+
+{% for post in paginator.posts %}
+  {% include archive-single.html %}
 {% endfor %}
+
+{% if paginator.page_trail %}
+<nav class="pagination">
+  <ul>
+  {% if paginator.previous_page %}
+  <li class="previous">
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Previous</a>
+  </li>
+  {% endif %}
+  {% for trail in paginator.page_trail %}
+    <li>
+    {% if page.url == trail.path %}
+      <a href="#" class="disabled current">{{ trail.num }}</a>
+    {% else %}
+      <a href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
+    {% endif %}
+    </li>
+  {% endfor %}
+  {% if paginator.next_page %}
+  <li class="next">
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &rarr;</a>
+  </li>
+  {% endif %}
+</ul>
+</nav>
+
+{% endif %}
