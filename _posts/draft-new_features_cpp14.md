@@ -10,6 +10,19 @@ tags:
 
 {% include toc %}
 
+La norme C++14 a été standardisée il y a déjà quatre ans. Cette norme est
+considérée comme mineure si on la compare au C++11 et le C++17. Dans ce post,
+je vais décrire très brièvement les changements apportés au langage (et pas la
+  STL). Des programmes exemples son disponible dans ce
+  [projet](https://github.com/abdelkaderamar/cpp-samples).
+
+J'ai également réalisé une cheatsheet qui peut être télécharger ci-dessous :
+
+![C++14 Language Cheatsheet]({{ site.url }}{{ site.baseurl }}/assets/images/cheatsheets/c++14_lang_cheatsheet.png )  
+**Download**  
+[PDF]({{ site.url }}{{ site.baseurl }}/assets/pdf/cheatsheets/c++14_lang_cheatsheet.pdf) (A4) |
+[Latex](https://github.com/abdelkaderamar/cheatsheets/blob/master/cpp/c%2B%2B14_lang_cheatsheet.tex)
+
 # `auto f(...)` : type de retour de fonction `auto`
 Il est possible avec la norme C++14 de déclarer des fonctions avec un type de
 retour `auto`. Ceci est rendu possible aussi pour les fonctions lambda.
