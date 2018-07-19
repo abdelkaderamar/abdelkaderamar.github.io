@@ -10,6 +10,18 @@ tags:
 
 {% include toc %}
 
+Dans ce post est similaire à celui déjà posté sur le [C++14](https://abdelkaderamar.github.io/posts/2018/07/19/cpp14_language_new_features.html)
+mais concerne comme le titre l'indique les nouveautés de la norme C++17 pour le
+langage et non la STL qui sera traité dans un autre article. Les exemples
+peuvent sont disponibles dans ce [repository](https://github.com/abdelkaderamar/cpp-samples/tree/master/src/c%2B%2B17).
+
+J'ai également réalisé une cheatsheet qui peut être télécharger ci-dessous :
+
+![C++17 Language Cheatsheet]({{ site.url }}{{ site.baseurl }}/assets/images/cheatsheets/c++17_lang_cheatsheet.png )  
+**Download**  
+[PDF]({{ site.url }}{{ site.baseurl }}/assets/pdf/cheatsheets/c++17_lang_cheatsheet.pdf) (A4) |
+[Latex](https://github.com/abdelkaderamar/cheatsheets/blob/master/cpp/c%2B%2B17_lang_cheatsheet.tex)
+
 # Déduction des arguments des templates de classe
 
 ```cpp
