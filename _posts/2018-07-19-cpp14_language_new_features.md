@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "C++14 : Résumé des nouveautés du langage"
-date:   2000-07-19 17:15:00 +0100
+date:   2018-07-19 17:15:00 +0100
 categories:
   - Posts
 tags:
