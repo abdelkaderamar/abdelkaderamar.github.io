@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "C++14 : Résumé des nouveautés du langage"
-date:   2000-07-13 16:00:00 +0100
+date:   2000-07-19 17:15:00 +0100
 categories:
   - Posts
 tags:
@@ -10,9 +10,9 @@ tags:
 
 {% include toc %}
 
-La norme C++14 a été standardisée il y a déjà quatre ans. Cette norme est
+La norme C++14 qui a été standardisée il y a déjà quatre ans, est
 considérée comme mineure si on la compare au C++11 et le C++17. Dans ce post,
-je vais décrire très brièvement les changements apportés au langage (et pas la
+je vais décrire brièvement les changements apportés au langage (mais pas la
   STL). Des programmes exemples son disponible dans ce
   [projet](https://github.com/abdelkaderamar/cpp-samples).
 
