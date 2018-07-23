@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Hacker News Digest (xx-07-2018 au yy-07-2018)"
-date:   2000-06-03 16:00:00 +0100
+date:   2018-0x-0x 16:00:00 +0100
 categories:
   - hackernews
 tags:
