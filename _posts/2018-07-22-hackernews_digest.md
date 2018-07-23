@@ -25,20 +25,13 @@ Le type permettant d'écrire des coroutines n'est pas encore défini mais les sp
 
 - [Commentaires HN](https://news.ycombinator.com/item?id=17527618)
 
-# [Show HN: How to make your Python code more idiomatic – 25 tips and tricks](https://github.com/jerry-git/learn-python3#idiomatic-python)
-
-Un projet *Github* qui propose un ensemble de recommandation pour améliorer son
-code *Python*
-
-- [Commentaires HN](https://news.ycombinator.com/item?id=17529326)
-
 # [Reflections on Three Years of Reading Knuth](http://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art070)
 
 L'auteur a passé trois ans à lire les trois tomes de "The Art of Programming" de
 *Donald Knuth* et résume ses impressions sur l'utilité de cet ouvrage considéré
 comme beaucoup comme une référence mais que très peu de personnes ont lu
 effectivement. L'auteur admet la difficulté de l'ouvrage et cite certaines
-parties qui sont inutiles maintenant (par exemple la partie sur la gestion de  
+parties qui sont inutiles maintenant (par exemple la partie sur la gestion de
 la mémoire sur bandes magnétique). L'avis de l'auteur peut se résumer ainsi :
 - l'ouvrage demande beaucoup de temps, si vous en manquez, dirigez vous plutôt
 vers des ouvrages plus orientés "entreprise"
@@ -54,13 +47,13 @@ Un projet qui a pour objectif de fournir un service de transfert de données
 entre différents fournisseurs. Pour cela, le projet s'intéresse à
 l'interopérabilité des services et à la portabilité des données. Parmi les
 exemples d'utilisation possible :
-- changement de fournisseur de services
-- utilisation d'un service d'un autre fournisseur que celui sur lequel sont
+- changement du fournisseur de services (photos, drive, etc.)
+- utilisation du service d'un autre fournisseur que celui sur lequel sont
 stockées les données
 - transfert des données à cause de la faillite du fournisseur de service
 - ...
 
-Le projet actuellement est en phase de développement. Le code se trouve
+Le projet est actuellement en phase de développement. Le code se trouve
 [ici](https://github.com/google/data-transfer-project). Les instructions
 d'utilisation sont [ici](https://github.com/google/data-transfer-project/blob/master/Documentation/RunningLocally.md)
 pour l'image Docker. A noter qu'il faut une clé développeur pour chaque
@@ -76,14 +69,14 @@ un mail de Google leur annonçant un changement de la politique tarifaire de ce
 dernier pour l'utilisation de son service Google Maps. Après avoir contacté
 le service client de Google, elle a eu les détails du changement :
 - l'usage gratuit passe de 750K requêtes à 28k requêtes (divisé par plus de 30).
-- le prix de l'utilisation commercial de chaque 1000 requêtes passe de 0.5$ à
+- le prix de l'utilisation commerciale de chaque 1000 requêtes passe de 0.5$ à
 7$ (multiplé par 14)
 
-Et la conséquence du changement est telle que le coût d'utilisation du service
+Et la conséquence du changement est telle que le coût mensuel d'utilisation du service
 pour cette startup est passé de 0 à 5000$. Après avoir étudier les alternatives,
 la startup a décidé de partir vers les concurrents de Google, en utilisant la
 librairie JavaScript open-source [Leaflet](https://leafletjs.com/) qui permet
-de choisir facilement de fournisseur de cartes. Le problème du
+de choisir facilement le fournisseur de cartes. Le problème du
 prix mis de côté, Google a la politique de prix la plus transparente, car les
 autres facturent en fonction du nombre de fragments et non en fonction du
 nombre de cartes. Mais en testant les deux concurrents *Mapbox* et *MapTiler*,
@@ -92,23 +85,31 @@ le coût quotidien d'utilisation est passé de 80$ (Google) à 9$ (*Mapbox* ou
 
 L'article soulève à la fin un point très important. Ce changement brusque des
 tarifs de Google va réduire la confiance des entreprises pour dépendre des
-autres services de Google. L'utilisation d'outils comme *Leaflet* peut s'avérer très utile pour éviter la dépendance d'un seul fournisseur.
+autres services de Google. L'utilisation d'outils comme *Leaflet* peut s'avérer très utile pour éviter la dépendance à un seul fournisseur.
 
 - [Commentaires HN](https://news.ycombinator.com/item?id=17570029)
 
-# [TODO]()
-- [Commentaires HN]()
+# [Show HN: How to make your Python code more idiomatic – 25 tips and tricks](https://github.com/jerry-git/learn-python3#idiomatic-python)
+
+Un projet *Github* qui propose un ensemble de recommandation pour améliorer son
+code *Python*.
+
+- [Commentaires HN](https://news.ycombinator.com/item?id=17529326)
+
+# [“Real developers don't use UIs”: The value of web UIs for CLI-oriented users](https://medium.com/design-ibm/real-developers-dont-use-uis-daea7404fb4e)
+Un article assez long mais divertissant sur interfaces utilisateurs en ligne
+de commande (CLI) versus les interfaces graphiques (GUI) dans le domaine du web
+en particulier. L'auteur détaille les avantages et les particularités de
+chacune des deux types d'interface. Il conclut sur le fait que les deux
+interfaces doivent être complémentaires et non redondantes.
+
+- [Commentaires HN](https://news.ycombinator.com/item?id=17559973)
 
 
----
 
-“Real developers don't use UIs”: The value of web UIs for CLI-oriented users
 
-https://medium.com/design-ibm/real-developers-dont-use-uis-daea7404fb4e
 
-https://news.ycombinator.com/item?id=17559973
-
----
+<!--
 
 The Effect of Sleep on Happiness
 
@@ -132,7 +133,9 @@ https://news.ycombinator.com/item?id=17530498
 
 https://news.ycombinator.com/item?id=17530498
 
----
+-->
+
+<!--
 
 Ask HN: How to Seriously Start with Machine Learning and AI
 
@@ -146,6 +149,7 @@ What is going on in tech industry today?
 https://news.ycombinator.com/item?id=17530580
 
 https://news.ycombinator.com/item?id=17530580
+-->
 
 <!--
 Ask HN: What was your best passive income in 2017?
