@@ -96,6 +96,10 @@ char c1 = u8'x';
 
 # Variable inline
 
+Avec cette fonctionnalité, les variable peuvent être déclarées avec le mot-clé
+*inline* comme pour les fonctions. Ceci peut s'avérer utile pour les
+bibliothèques à base de fichiers entêtes seulement.  
+
 ```cpp
 struct S { int x; };
 inline S x1 = S{321};
@@ -156,10 +160,39 @@ auto insert = [&](int key, int value) {
 
 # Suppression des trigraphes
 
+Les trigraphes sont un héritages des anciens systèmes qui ne supportaient pas
+l'ASCII 7 bits. Ils consistent en une séquence de caractères qui sont
+transformés par le préprocesseur du compilateur en un autre caractère. Par
+exemple `??/` est transformés en `\` et `??<` en `{`
 ```cpp
 ```
 
 # constexpr if
+
+Cette nouvelle fonctionnalité est très intéressante car elle permet au
+compilateur d'interpréter le résultat de la condition d'un `if` et de ne
+garder que la partie qui satisfait la condition. Dit autrement, cette
+fonctionnalité permet d'avoir un `if` statique.
+
+Avec cette fonctionalité, il n'est plus nécessaire de passer par le mécanisme
+de *SFINAE* (ou même dans certains cas par des *#ifdef*).
+
+A noter que la syntaxe est la suivante (les parenthèses sont autour de la
+condition seulement):
+
+```cpp
+if constrexpr (cond)
+  statement
+else
+  statement
+```
+
+Dans l'exemple ci-dessous, la fonction *template* compute est généré
+différemment en fonction du type fourni. Si c'est un type entier qui est
+utilisé, le compilateur gardera l'instruction `x * x`, et supprimera les deux
+autres branches. Si c'est type `foo` ou dérivé de `foo` qui est utilisé, les
+deux premières branches sont supprimés et c'est les instructions
+`x.bar(); return 0;` qui seront gardées.
 
 ```cpp
 struct foo {
@@ -187,6 +220,23 @@ int main(int argc, char *agrv[]) {
 
 # Constantes hexadécimale en virgule-flottante
 
+Les constantes en virgulent flottante peuvent être définies avec la syntaxe suivante :
+
+```cpp
+0x<hex digit sequence><exponent><suffix>
+0x<hex digit sequence>.<exponent><suffix>
+0x<hex digit sequence>.<hex digit sequence><exponent><suffix>
+```
+Avec *exponent* qui a la syntaxe suivante :
+```cpp
+p|P<exponent sign><digit sequence>
+```
+Par exemple, si on convertit en décimal la constante `0x50.8p5` :
+```cpp
+0x50.8p5 = (5*16 + 0 + 0.5) * 2^5 = 80.5 * 32 = 2576
+```
+
+
 ```cpp
 cout << 0x10.1p0 << endl // 16.0625
   << 0X0.8p0 << endl     // 0.5
@@ -194,6 +244,9 @@ cout << 0x10.1p0 << endl // 16.0625
 ```
 
 # Initialisation directe des enums
+
+Les *enums* de type *class* peuvent être initialisés avec des entiers
+directement en utilisant les accolades `{}`
 
 ```cpp
 enum class color : char { red, blue, green };
