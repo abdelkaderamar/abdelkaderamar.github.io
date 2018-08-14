@@ -203,6 +203,12 @@ color c1 { 3 }, c2 { 88 };
 
 # [[fallthrough]]
 
+L'attribut `fallthrough` peut être utilisé dans les instructions `switch` pour
+supprimer le message d'avertissement lorsque deux `case` se suivent sans
+instruction `break` entre les deux. Dans l'exemple suivant, le compilateur
+affichera un message d'erreur pour le `case 2`, alors qu'il ignorera le
+`case 3`.
+
 ```cpp
   int i;
   cin >> i;
@@ -216,7 +222,11 @@ color c1 { 3 }, c2 { 88 };
   }
 ```
 
+**Remarque** : sous *gcc* activer l'option `-Wimplicit-fallthrough` ou `-Wextra`.
+
 # [[nodiscard]]
+L'attribut `nodiscard` permet d'avoir un message d'avertissement du compilateur
+si la valeur retourné par une fonction n'est pas utilisée.
 
 ```cpp
 [[nodiscard]] int foo() { return 1; };
@@ -225,7 +235,17 @@ void bar() {
 }
 ```
 
+On peut également marquer un type avec l'attribut `nodiscard`. Dans ce cas, le
+message d'avertissement sera affiché pour toutes les fonctions qui retournent
+ce type.
+
+```cpp
+```
+
+
 # [[maybe_unused]]
+L'attribut `maybe_unused` permet de supprimer le message d'avertissement du
+compilateur si la fonction ou la variable n'est pas initialisé.
 
 ```cpp
 static void f() {  } // Compilers may warn about this
@@ -236,6 +256,9 @@ int x = 42;
 ```
 
 # static_assert sans message
+
+Le mot clé `static_assert` peut être utilisé maintenant sans avoir à spécifier
+un message d'erreur.
 
 ```cpp
 static_assert(VERSION >= 2);
