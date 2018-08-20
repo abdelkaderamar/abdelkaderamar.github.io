@@ -1,7 +1,7 @@
 ---
 layout: single
-title:  "C++17 : Résumé des nouveautés du langage"
-date:   2000-07-22 16:00:00 +0100
+title:  "C++17 : Résumé des nouveautés du langage ( + Cheatsheet)"
+date:   2018-08-21 10:00:00 +0100
 categories:
   - Posts
 tags:
@@ -68,26 +68,70 @@ auto sum_fold_exp(const Ts& ... ts) {
 }
 ```
 
-# Déclarer les paramètres des templates avec `auto`
+# Déclarer les paramètres des templates (*template non-type arguments*) avec `auto`
+
+Il est possible maintenant des déclarer les paramètres des templates (*template
+non-type arguments*) avec le mot-clé `auto`. Avant cette fonctionnalité, pour
+écrire une constante template :
 
 ```cpp
+template <typename Type, Type value> constexpr Type constant = value;
+constexpr auto const my_constant = constant<int, 42>;
 ```
+
+Maintenant cela peut s'écrire :
+
+```cpp
+template <auto value> constexpr auto constant = value;
+constexpr auto const my_constant = constant<42>;
+```
+Voici un autre exemple d'utilisation avec les *variadic template* :
+
+```cpp
+template <auto ... vs> struct heterogenous_list {};
+using list = heterogenous_list<1, 2, 'A', 4>;
+```
+*Remarque* : le standard n'accepte pas les types en virgule-flottante (float,
+  double) et les string pour les *template non-type arguments*.
+
 
 # Nouvelles règles de déduction pour l'initialisation par {}
 
+Les règles de déduction pour les `{}` avec auto ont été changé. Auparavant
+`auto x{1}` déduisait un `x` de type `std::initializer_list<int>`, avec la
+nouvelle norme, `x` est de type `int`.
+
 ```cpp
+auto x1 {1};
+static_assert(is_same<decltype(x1), int>::value == 1);
+
+auto x2 = {1};
+static_assert(is_same<decltype(x2), initializer_list<int>>::value == 1);
+
+// auto x3 {1, 2, 3}; // syntax error
+// gcc error message :
+//    direct-list-initialization of ‘auto’ requires exactly one element
+
+auto x4 = {1, 2, 3};
+static_assert(is_same<decltype(x4), initializer_list<int>>::value == 1);
 ```
 
 # constexpr lambda
 
+Les expressions lambda peuvent être marqué avec `constexpr` pour permettre au
+compilateur d'évaluer les appels à la compilation.
+
 ```cpp
+auto identity = [](int n) constexpr { return n; };
+static_assert(identity(123) == 123);
 ```
 
-# Constantes UTF-8
-Les constantes UTF-8 de type `char` commence par le préfixe `u8`.
-
 ```cpp
-char c1 = u8'x';
+constexpr auto inc(auto n) { return n + 1; }
+
+// ...
+
+static_assert(inc(1) == 2);
 ```
 
 # Capture de `this` par valeur dans les lambda
@@ -102,15 +146,14 @@ code asynchrone mais montre la copie de l'objet appelant.
 ```cpp
 struct foo
 {
-  foo() : _x{0} {}
+  foo() : x{0} {}
   int _x;
   auto log_by_ref() {
-    return [this]() { cout << _x << endl; };
+    return [this]() { cout << x << endl; };
   }
   auto log_by_val() {
-    return [*this]() { cout << _x << endl; };
+    return [*this]() { cout << x << endl; };
   }
-
 };
 
 struct foo f;
@@ -119,11 +162,12 @@ auto ref = f.log_by_ref();
 auto val = f.log_by_val();
 ref();  // print 1234
 val();  // print 1234
-f._x = 4321;
+f.x = 4321;
 ref();  // print 4321
 val();  // print 1234, the copy of is not modified
-
 ```
+
+<!-- *comment* -->
 
 # Variable inline
 
@@ -424,4 +468,11 @@ un message d'erreur.
 
 ```cpp
 static_assert(VERSION >= 2);
+```
+
+# Constantes UTF-8
+Les constantes UTF-8 de type `char` commence par le préfixe `u8`.
+
+```cpp
+char c1 = u8'x';
 ```
