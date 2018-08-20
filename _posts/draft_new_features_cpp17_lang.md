@@ -84,6 +84,7 @@ auto sum_fold_exp(const Ts& ... ts) {
 ```
 
 # Constantes UTF-8
+Les constantes UTF-8 de type `char` commence par le préfixe `u8`.
 
 ```cpp
 char c1 = u8'x';
@@ -91,7 +92,37 @@ char c1 = u8'x';
 
 # Capture de `this` par valeur dans les lambda
 
+La capture de `this` étaient jusqu'au C++17 par référence uniquement. Ce mode de
+passage peut poser des problèmes dans certaines situations comme celle d'appel
+de code asynchrone où la callback peut avoir besoin de l'objet appelant, même
+après sa destruction éventuelle. Il est maintenant possible de faire une copie
+de `this` en utilisant la syntaxe `[*this]`. L'exemple suivant n'utilise pas du
+code asynchrone mais montre la copie de l'objet appelant.
+
 ```cpp
+struct foo
+{
+  foo() : _x{0} {}
+  int _x;
+  auto log_by_ref() {
+    return [this]() { cout << _x << endl; };
+  }
+  auto log_by_val() {
+    return [*this]() { cout << _x << endl; };
+  }
+
+};
+
+struct foo f;
+f._x = 1234;
+auto ref = f.log_by_ref();
+auto val = f.log_by_val();
+ref();  // print 1234
+val();  // print 1234
+f._x = 4321;
+ref();  // print 4321
+val();  // print 1234, the copy of is not modified
+
 ```
 
 # Variable inline
@@ -124,13 +155,20 @@ namespace A
 }
 ```
 L'écriture du code précédent peut se faire plus simplement comme ci-dessous :
+
 ```cpp
 namespace A::B::C {
   class foo;
-}```
+}
+```
 
 # Structured bindings
 
+Avec cette fonctionnalité, il est possible d'écrire des expressions de type
+`auto [x, y, z] = expr` où le type de `expr` est un type *tuple like* (`pair`,
+`tuple`, `array` ou structure)
+
+**Example avec `pair`**
 ```cpp
 template<typename T>
 pair<T, bool> racine(T d) {
@@ -144,18 +182,89 @@ int main(int argc, char *agrv[])
   if (success) cout << s << endl;
 }
 ```
+**Example avec `tuple`**
+```cpp
+tuple<int, int, int> make_random_tuple()
+{
+  return tuple(rand(), rand(), rand());
+}
+
+//...
+
+auto [a, b, c] = make_random_tuple();
+```
+
+**Example avec une structure**
+```cpp
+struct foo {
+  int i;
+  double d;
+  char c;
+};
+
+foo make_foo() {
+  foo f{rand(), rand(), 32 + rand() % 128};
+  return f;
+}
+
+//...
+
+foo f = make_foo();
+auto [i, d, c] = f;
+cout << "i = " << i << endl << "d = " << d << endl << "c = " << c << endl;
+```
+
+**Example avec `array`**
+```cpp
+array<int, 4> make_random_array() {
+  return array{rand(), rand(), rand(), rand()};
+}
+
+// ...
+
+auto [i0, i1, i2, i3] = make_random_array();
+cout << "i0 = " << i0 << endl;
+```
+
 
 # Déclaration et initialisation dans les conditions `if` et `switch`
 
+Pour réduire le scope des variables, il maintenant possible de les déclarer
+à l'intérieur de la condition du `if` ou du `switch`.
+
+**if**
 ```cpp
 map<int, int> m;
-for (int i=0; i<10; ++i) m[i] = i+(i/2);
+
+// ...
 
 auto insert = [&](int key, int value) {
   if (auto res = m.insert({key, value}); res.second) {
     cout << key << "/" << value << " inserted" << endl;
   }
 };
+```
+
+**switch**
+```cpp
+enum class color : char { red, blue, green };
+
+//...
+
+switch (auto c = get_color()) {
+case color::red:
+  cout << "red" << endl;
+  break;
+case color::blue:
+  cout << "blue" << endl;
+  break;
+case color::green:
+  cout << "green" << endl;
+  break;
+default:
+  cout << "unknown color" << endl;
+  break;
+}
 ```
 
 # Suppression des trigraphes
