@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "C++14 : Résumé des nouveautés du langage"
+title:  "C++14 : Résumé des nouveautés du langage (+Cheatsheet)"
 date:   2018-07-19 17:15:00 +0100
 categories:
   - Posts

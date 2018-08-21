@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "C++17 : Résumé des nouveautés du langage ( + Cheatsheet)"
+title:  "C++17 : Résumé des nouveautés du langage (+Cheatsheet)"
 date:   2018-08-21 10:00:00 +0100
 categories:
   - Posts
