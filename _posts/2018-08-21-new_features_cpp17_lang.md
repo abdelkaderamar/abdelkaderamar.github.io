@@ -12,10 +12,10 @@ tags:
 
 Ce post est similaire à celui déjà posté sur le [C++14](https://abdelkaderamar.github.io/posts/2018/07/19/cpp14_language_new_features.html)
 mais concerne comme le titre l'indique les nouveautés de la norme C++17 pour le
-langage et non la STL qui sera traité dans un autre article. Les exemples
+langage (et non la STL qui sera traité dans un autre article). Les exemples
 sont disponibles dans ce [repository](https://github.com/abdelkaderamar/cpp-samples/tree/master/src/c%2B%2B17).
 
-J'ai également réalisé une cheatsheet qui peut être télécharger ci-dessous :
+J'ai également réalisé une cheatsheet qui peut être téléchargéé ci-dessous :
 
 ![C++17 Language Cheatsheet]({{ site.url }}{{ site.baseurl }}/assets/images/cheatsheets/c++17_lang_cheatsheet.png )  
 **Download**  
@@ -68,6 +68,9 @@ auto sum_fold_exp(const Ts& ... ts) {
 }
 ```
 
+Plus de détails sur cette fonctionnalité sont disponibles dans ce
+[post](https://abdelkaderamar.github.io/tutorials/posts/2018/06/13/fold_expression.html).
+
 # Déclarer les paramètres des templates (*template non-type arguments*) avec `auto`
 
 Il est possible maintenant des déclarer les paramètres des templates (*template
@@ -92,12 +95,12 @@ template <auto ... vs> struct heterogenous_list {};
 using list = heterogenous_list<1, 2, 'A', 4>;
 ```
 *Remarque* : le standard n'accepte pas les types en virgule-flottante (float,
-  double) et les string pour les *template non-type arguments*.
+  double) et les string pour les *"template non-type arguments"*.
 
 
 # Nouvelles règles de déduction pour l'initialisation par {}
 
-Les règles de déduction pour les `{}` avec auto ont été changé. Auparavant
+Les règles de déduction pour les `{}` avec auto ont été changées. Auparavant
 `auto x{1}` déduisait un `x` de type `std::initializer_list<int>`, avec la
 nouvelle norme, `x` est de type `int`.
 
@@ -118,7 +121,7 @@ static_assert(is_same<decltype(x4), initializer_list<int>>::value == 1);
 
 # constexpr lambda
 
-Les expressions lambda peuvent être marqué avec `constexpr` pour permettre au
+Les expressions lambda peuvent être marquées avec `constexpr` pour permettre au
 compilateur d'évaluer les appels à la compilation.
 
 ```cpp
@@ -137,7 +140,7 @@ static_assert(inc(1) == 2);
 # Capture de `this` par valeur dans les lambda
 
 La capture de `this` étaient jusqu'au C++17 par référence uniquement. Ce mode de
-passage peut poser des problèmes dans certaines situations comme celle d'appel
+passage peut poser des problèmes dans certaines situations comme celles d'appel
 de code asynchrone où la callback peut avoir besoin de l'objet appelant, même
 après sa destruction éventuelle. Il est maintenant possible de faire une copie
 de `this` en utilisant la syntaxe `[*this]`. L'exemple suivant n'utilise pas du
@@ -198,7 +201,8 @@ namespace A
   }
 }
 ```
-L'écriture du code précédent peut se faire plus simplement comme ci-dessous :
+Avec le C++17, l'écriture du code précédent peut se faire plus simplement comme
+ci-dessous :
 
 ```cpp
 namespace A::B::C {
@@ -313,12 +317,10 @@ default:
 
 # Suppression des trigraphes
 
-Les trigraphes sont un héritages des anciens systèmes qui ne supportaient pas
+Les trigraphes sont un héritage des anciens systèmes qui ne supportaient pas
 l'ASCII 7 bits. Ils consistent en une séquence de caractères qui sont
 transformés par le préprocesseur du compilateur en un autre caractère. Par
-exemple `??/` est transformés en `\` et `??<` en `{`
-```cpp
-```
+exemple `??/` sont transformés en `\` et `??<` en `{`
 
 # constexpr if
 
@@ -340,11 +342,11 @@ else
   statement
 ```
 
-Dans l'exemple ci-dessous, la fonction *template* compute est généré
+Dans l'exemple ci-dessous, la fonction *template* `compute` est générée
 différemment en fonction du type fourni. Si c'est un type entier qui est
 utilisé, le compilateur gardera l'instruction `x * x`, et supprimera les deux
-autres branches. Si c'est type `foo` ou dérivé de `foo` qui est utilisé, les
-deux premières branches sont supprimés et c'est les instructions
+autres branches. Si c'est le type `foo` ou un type dérivé de `foo` qui est
+utilisé, les deux premières branches sont supprimées et c'est les instructions
 `x.bar(); return 0;` qui seront gardées.
 
 ```cpp
@@ -373,7 +375,8 @@ int main(int argc, char *agrv[]) {
 
 # Constantes hexadécimale en virgule-flottante
 
-Les constantes en virgulent flottante peuvent être définies avec la syntaxe suivante :
+Les constantes en virgule flottante peuvent être définies avec la syntaxe
+suivante :
 
 ```cpp
 0x<hex digit sequence><exponent><suffix>
@@ -432,7 +435,7 @@ affichera un message d'erreur pour le `case 2`, alors qu'il ignorera le
 
 # [[nodiscard]]
 L'attribut `nodiscard` permet d'avoir un message d'avertissement du compilateur
-si la valeur retourné par une fonction n'est pas utilisée.
+si la valeur retournée par une fonction n'est pas utilisée.
 
 ```cpp
 [[nodiscard]] int foo() { return 1; };
@@ -445,13 +448,10 @@ On peut également marquer un type avec l'attribut `nodiscard`. Dans ce cas, le
 message d'avertissement sera affiché pour toutes les fonctions qui retournent
 ce type.
 
-```cpp
-```
-
 
 # [[maybe_unused]]
 L'attribut `maybe_unused` permet de supprimer le message d'avertissement du
-compilateur si la fonction ou la variable n'est pas initialisé.
+compilateur si la fonction ou la variable n'est pas utilisée.
 
 ```cpp
 static void f() {  } // Compilers may warn about this
