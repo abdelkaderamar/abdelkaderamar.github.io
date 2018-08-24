@@ -27,6 +27,20 @@ Déduction des arguments des templates de classe Avant le C++17, la déduction d
     </item>
     
     <item>
+      <title>To Remove : C&#43;&#43;17 : Résumé des nouveautés du langage (&#43;Cheatsheet)</title>
+      <link>https://abdelkaderamar.github.io/post/blog/2018-08-23-new_features_cpp17_lang/</link>
+      <pubDate>Tue, 21 Aug 2018 10:00:00 +0000</pubDate>
+      <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
+      <guid>https://abdelkaderamar.github.io/post/blog/2018-08-23-new_features_cpp17_lang/</guid>
+      <description>{% include toc %}
+Ce post est similaire à celui déjà posté sur le C++14 mais concerne comme le titre l&amp;rsquo;indique les nouveautés de la norme C++17 pour le langage (et non la STL qui sera traité dans un autre article). Les exemples sont disponibles dans ce repository.
+J&amp;rsquo;ai également réalisé une cheatsheet qui peut être téléchargéé ci-dessous :
+Download
+PDF (A4) | Latex
+Déduction des arguments des templates de classe Avant le C++17, la déduction des types des templates était possible uniquement pour les fonctions, mais pas pour les classes.</description>
+    </item>
+    
+    <item>
       <title>Hacker News Digest (14-07-2018 au 20-07-2018)</title>
       <link>https://abdelkaderamar.github.io/post/hackernews/2018-07-22-hackernews_digest/</link>
       <pubDate>Sun, 22 Jul 2018 12:00:00 +0000</pubDate>
