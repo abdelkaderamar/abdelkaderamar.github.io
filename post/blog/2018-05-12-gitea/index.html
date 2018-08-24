@@ -5,9 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>404 Page not found</title>
-  <meta property="og:title" content="404 Page not found" />
-  <meta name="twitter:title" content="404 Page not found" />
+  <title>Gitea, une forge Git simple et rapide</title>
+  <meta property="og:title" content="Gitea, une forge Git simple et rapide" />
+  <meta name="twitter:title" content="Gitea, une forge Git simple et rapide" />
+  <meta name="description" content="Gitea est un outil permettant d&rsquo;héberger un service de forge utilisant Git. Il est similaire à Gitlab ou Github. La première chose qu&rsquo;on note en l&rsquo;essayant est la facilité avec laquelle il s&rsquo;installe. Le logiciel se présente sous la forme d&rsquo;un seule binaire et son installation se résume à quelques étapes de configuration via l&rsquo;interface web. Il supporte plusieurs base de données dont SQLite.
+Une fois lancé, il faut ouvrir la page http://localhost:3000 et configurer le service.">
+  <meta property="og:description" content="Gitea est un outil permettant d&rsquo;héberger un service de forge utilisant Git. Il est similaire à Gitlab ou Github. La première chose qu&rsquo;on note en l&rsquo;essayant est la facilité avec laquelle il s&rsquo;installe. Le logiciel se présente sous la forme d&rsquo;un seule binaire et son installation se résume à quelques étapes de configuration via l&rsquo;interface web. Il supporte plusieurs base de données dont SQLite.
+Une fois lancé, il faut ouvrir la page http://localhost:3000 et configurer le service.">
+  <meta name="twitter:description" content="Gitea est un outil permettant d&rsquo;héberger un service de forge utilisant Git. Il est similaire à Gitlab ou Github. La première chose qu&rsquo;on note en l&rsquo;essayant est la facilité avec …">
   <meta name="author" content="Abdelkader Amar"/>
   <link href='https://abdelkaderamar.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://abdelkaderamar.github.io/img/avatar-icon.png" />
@@ -15,12 +20,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@aamar" />
   <meta name="twitter:creator" content="@aamar" />
-  <meta property="og:url" content="https://abdelkaderamar.github.io" />
+  <meta property="og:url" content="https://abdelkaderamar.github.io/post/blog/2018-05-12-gitea/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="A. Amar" />
 
   <meta name="generator" content="Hugo 0.40.1" />
-  <link rel="canonical" href="https://abdelkaderamar.github.io" />
+  <link rel="canonical" href="https://abdelkaderamar.github.io/post/blog/2018-05-12-gitea/" />
   <link rel="alternate" href="https://abdelkaderamar.github.io/index.xml" type="application/rss+xml" title="A. Amar">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -163,14 +168,131 @@
 
 
     
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
     
-  <div role="main" class="container main-content">
-    <div class="text-center">
-      <h1>Ourp, cette page n&#39;existe pas. (erreur 404)</h1>
-      <br/>
-      <img src="https://abdelkaderamar.github.io/img/404-southpark.jpg" />
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Gitea, une forge Git simple et rapide</h1>
+                
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posté le May 12, 2018
+  
+  
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p><em>Gitea</em> est un outil permettant d&rsquo;héberger un service de forge utilisant Git.
+Il est similaire à <em>Gitlab</em> ou <em>Github</em>. La première chose qu&rsquo;on note en
+l&rsquo;essayant est la facilité avec laquelle il s&rsquo;installe. Le logiciel se présente
+sous la forme d&rsquo;un seule binaire et son installation se résume à quelques
+étapes de configuration via l&rsquo;interface web. Il supporte plusieurs base de
+données dont <em>SQLite</em>.</p>
+
+<p>Une fois lancé, il faut ouvrir la page <code>http://localhost:3000</code> et configurer
+le service. Presque tous les paramètres sont préconfigurés. Seule la base de
+donnée nécessite une configuration mais en choisissant une base de type
+<em>SQLite</em> réduit la configuration à une seule sélection.</p>
+
+<p><img src="{{ site.url }}{{ site.baseurl }}/assets/images/gitea-screenshot-initial.png" alt="Gitea configuration" /></p>
+
+<p>Si vous avez choisi un mot de passe dans l&rsquo;écran de configuration, vous pouvez
+vous connecter en utilisant l&rsquo;utilisateur choisi. Dans le cas contraire, il
+faut juste créer un utilisateur qui automatiquement aura les droit
+administrateur.</p>
+
+<p><img src="{{ site.url }}{{ site.baseurl }}/assets/images/gitea-login-screen.png" alt="Gitea configuration" /></p>
+
+<p>A partir de l&rsquo;écran d&rsquo;accueil (vide au départ), l&rsquo;utilisateur peut configurer
+facilement le système :
+- Ajouter des repositories
+- Créer des tickets
+- Faire des demandes d&rsquo;ajouts
+- Gérer les organisations et les équipes</p>
+
+<hr />
+
+<p><img src="{{ site.url }}{{ site.baseurl }}/assets/images/gitea-main-screen.png" alt="Gitea configuration" /></p>
+
+<hr />
+
+<p><img src="{{ site.url }}{{ site.baseurl }}/assets/images/gitea-repository-screen.png" alt="Gitea configuration" /></p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+<li><a href="https://gitea.io/">Gitea</a></li>
+<li><a href="https://github.com/go-gitea/gitea">Gitea Github page</a></li>
+</ul>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://abdelkaderamar.github.io/tags/tools/">Tools</a>&nbsp;
+            
+          </div>
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://abdelkaderamar.github.io/post/blog/2018-05-08-gcc-8.1/" data-toggle="tooltip" data-placement="top" title="GCC 8.1 : Nouveautés du langage C&#43;&#43;">&larr; Post précédent</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://abdelkaderamar.github.io/post/blog/2018-05-16-boost_multiindex_tutorial/" data-toggle="tooltip" data-placement="top" title="Utilisation de *Boost Multi-index*">Post suivant &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
     </div>
   </div>
+</div>
 
     <footer>
   <div class="container">
