@@ -17,7 +17,7 @@ semaine précédente.
 ### Conversations with a six-year-old on functional programming
 Un billet de blog d'un professeur d'université dans lequel il décrit comment
 il a expliqué à son fils de six ans la programmation
-fonctionnelle avec un jeu de devinettes de *function machines*.
+fonctionnelle avec un jeu de devinettes de *function machines*.  
 - [Lien](https://byorgey.wordpress.com/2018/05/06/conversations-with-a-six-year-old-on-functional-programming/)
 - [Commentaires](https://news.ycombinator.com/item?id=17015661)
 
@@ -30,7 +30,6 @@ peu importe l'age qu'on a. Je trouve la conclusion magnifique.
   <summary>Conclusion de l'article</summary>
   I’m not thrilled about looking older. But what unsettles me most about the 40s is the implication that I’m now a grown-up myself. I fear I’ve been promoted beyond my competence. What is a grown-up anyway? Do they really exist? If so, what exactly do they know? Will my mind ever catch up with my face?  
 </details>
-
 - [Lien](https://www.nytimes.com/2018/05/04/opinion/sunday/how-to-survive-your-40s.html)
 - [Commentaires](https://news.ycombinator.com/item?id=17010756)
 
@@ -38,14 +37,14 @@ peu importe l'age qu'on a. Je trouve la conclusion magnifique.
 La nouvelle technologie de Google d'une IA capable de mener des conversations
 téléphonies. Elle est appliquée au domaine de réservation et de gestion des
 rendez-vous. Les tests sur l'assistant Google sont prévus pour bientôt (été
-2018). Les conversations à écouter dans l'article sont impressionantes.
+2018). Les conversations à écouter dans l'article sont impressionnantes.  
 - [Lien](https://ai.googleblog.com/2018/05/duplex-ai-system-for-natural-conversation.html)
 - [Commentaires](https://news.ycombinator.com/item?id=17022963)
 
 ### Why is it hard to make friends over 30?
 Un article du *NewYork Times* qui parle des difficultés (intérieures et
 extérieures) à avoir des amis après la trentaine. Un article de 2012 mais qui a
-été remis en avant car le sujet est intemporel.
+été remis en avant car le sujet est intemporel.  
 - [Lien](https://www.nytimes.com/2012/07/15/fashion/the-challenge-of-making-friends-as-an-adult.html)
 - [Commentaires](https://news.ycombinator.com/item?id=16424954)
 
@@ -60,14 +59,13 @@ L'auteur parle de son expérience personnelle pour gérer ses tâches. Il prése
 l'utilisation de [Taskwarrior](https://taskwarrior.org/), un outil en ligne
 de commande. L'auteur décrit aussi les outils précédents qu'il a utilisé avant :
 l'approche *Inbox Zero*, le site [FollowUpThen](https://www.followupthen.com/)
-ainsi que ses propres programmes qu'il a développés.
-
+ainsi que ses propres programmes qu'il a développés.  
 - [Lien](https://blog.djy.io/taskwarrior-where-have-you-been-all-my-life/)
 - [Commentaires](https://news.ycombinator.com/item?id=17029560)
 
 ### Ask HN: What are your favorite terminal programs?
 Une question qui m'a permis de découvrir ou redécouvrir un certain nombre
-de programmes.
+de programmes.  
 - [Commentaires](https://news.ycombinator.com/item?id=17011227)
 
 #### Programmes
