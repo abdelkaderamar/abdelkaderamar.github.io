@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>abdelkader.amar@gmail.com (Abdelkader Amar)</managingEditor>
     <webMaster>abdelkader.amar@gmail.com (Abdelkader Amar)</webMaster>
-    <lastBuildDate>Tue, 21 Aug 2018 10:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Aug 2018 10:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://abdelkaderamar.github.io/post/blog/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>(Migration Test) C&#43;&#43;17 : Résumé des nouveautés du langage (&#43;Cheatsheet)</title>
       <link>https://abdelkaderamar.github.io/post/blog/2018-08-23-new_features_cpp17_lang2/</link>
-      <pubDate>Tue, 21 Aug 2018 10:00:00 +0000</pubDate>
+      <pubDate>Thu, 23 Aug 2018 10:00:00 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
       <guid>https://abdelkaderamar.github.io/post/blog/2018-08-23-new_features_cpp17_lang2/</guid>
       <description>{% include toc %}
