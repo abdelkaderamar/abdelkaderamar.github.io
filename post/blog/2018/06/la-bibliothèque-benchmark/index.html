@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>La bibliothèque *Benchmark*</title>
+  <meta property="og:title" content="La bibliothèque *Benchmark*" />
+  <meta name="twitter:title" content="La bibliothèque *Benchmark*" />
+  <meta name="description" content="Introduction Benchmark est une bibliothèque C&#43;&#43; développée par Google pour faire des mesures de performances de fonctions. Son installation sous linux peut se faire soit par compilation du code source disponible sur Github ou si la distribution la propose en utilisant le gestionnaire de package. Ubuntu dans sa version 18.1 propose la version 1.36 dans ses sources apt.
+utilisation L&rsquo;utilisation de base est simple. On commence par une fonction qui a le prototype suivant :">
+  <meta property="og:description" content="Introduction Benchmark est une bibliothèque C&#43;&#43; développée par Google pour faire des mesures de performances de fonctions. Son installation sous linux peut se faire soit par compilation du code source disponible sur Github ou si la distribution la propose en utilisant le gestionnaire de package. Ubuntu dans sa version 18.1 propose la version 1.36 dans ses sources apt.
+utilisation L&rsquo;utilisation de base est simple. On commence par une fonction qui a le prototype suivant :">
+  <meta name="twitter:description" content="Introduction Benchmark est une bibliothèque C&#43;&#43; développée par Google pour faire des mesures de performances de fonctions. Son installation sous linux peut se faire soit par compilation du code source …">
+  <meta name="author" content="Abdelkader Amar"/>
+  <link href='https://abdelkaderamar.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://abdelkaderamar.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://abdelkaderamar.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@aamar" />
+  <meta name="twitter:creator" content="@aamar" />
+  <meta property="og:url" content="https://abdelkaderamar.github.io/post/blog/2018/06/la-biblioth%C3%A8que-benchmark/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="A. Amar" />
+
+  <meta name="generator" content="Hugo 0.40.1" />
+  <link rel="canonical" href="https://abdelkaderamar.github.io/post/blog/2018/06/la-biblioth%C3%A8que-benchmark/" />
+  <link rel="alternate" href="https://abdelkaderamar.github.io/index.xml" type="application/rss+xml" title="A. Amar">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://abdelkaderamar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://abdelkaderamar.github.io/css/syntax.css" /><link rel="stylesheet" href="https://abdelkaderamar.github.io/css/codeblock.css" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-119584387-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://abdelkaderamar.github.io">A. Amar</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="https://abdelkaderamar.github.io/post/blog">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Hacker News Digest" href="https://abdelkaderamar.github.io/post/hackernews">Hacker News Digest</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tutoriaux" href="https://abdelkaderamar.github.io/post/blog/tutorials">Tutoriaux</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="https://abdelkaderamar.github.io/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="A Propos" href="https://abdelkaderamar.github.io/page/about/">A Propos</a>
+            </li>
+          
+        
+
+        
+          
+            <li>
+              
+                
+                  <a href="https://abdelkaderamar.github.io/en" lang="en">en</a>
+                
+              
+                
+              
+            </li>
+          
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="A. Amar" href="https://abdelkaderamar.github.io">
+            <img class="avatar-img" src="https://abdelkaderamar.github.io/img/avatar-icon.png" alt="A. Amar" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>La bibliothèque *Benchmark*</h1>
+                
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posté le June 6, 2018
+  
+  
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<h2 id="introduction">Introduction</h2>
+
+<p><em>Benchmark</em> est une bibliothèque C++ développée par <em>Google</em> pour faire des
+mesures de performances de fonctions. Son installation sous linux peut se faire
+soit par compilation du code source disponible sur <em>Github</em> ou si la
+distribution la propose en utilisant le gestionnaire de package. <em>Ubuntu</em> dans
+sa version 18.1 propose la version 1.36 dans ses sources <em>apt</em>.</p>
+
+<h2 id="utilisation">utilisation</h2>
+
+<p>L&rsquo;utilisation de base est simple. On commence par une fonction qui a le
+prototype suivant :</p>
+
+<pre><code class="language-cpp">void benchmark_function_1(benchmark::State&amp; state)
+{
+    for (auto _ : state) {
+        // Code a mesurer
+    }
+}
+</code></pre>
+
+<p>Après, il suffit d&rsquo;enregistrer la fonction en appelant la méthode
+<em>RegisterBenchmark</em>, initialiser la librarie, puis de lancer l&rsquo;exécution
+avec un appel à <em>RunSpecifiedBenchmark</em>.</p>
+
+<pre><code class="language-cpp">int main(int argc, char* argv[])
+{
+  benchmark::RegisterBenchmark(&quot;benchmark_function_1&quot;, benchmark_function_1);
+  benchmark::Initialize(&amp;argc, argv);
+  benchmark::RunSpecifiedBenchmarks();
+}
+</code></pre>
+
+<p>Le screenshot ci-dessous montre le résultat d&rsquo;exécution :</p>
+
+<p><img src="{{ site.url }}{{ site.baseurl }}/assets/images/google-benchmark-screenshot-01.png" alt="Benchrmark - Premier test" /></p>
+
+<p>Les deux colonnes <em>Time</em> et <em>CPU</em> correspondent respectivement au temps
+d&rsquo;exécution moyen de la fonction et au temps d&rsquo;exécution CPU moyen. La dernière
+colonne montre le nombre d&rsquo;exécution de la fonction à mesurer (le code à
+  l&rsquo;intérieur de la boucle <code>for (auto _ : state)</code>).</p>
+
+<p>Par défaut, c&rsquo;est la bibliothèque qui détermine le nombre d&rsquo;itération. La règle utilisée (pour la version testée) est de faire un nombre d&rsquo;itération
+qui respecte les deux conditions suivantes :
+- Pas plus d&rsquo;un milliard d&rsquo;itérations.
+- Le temps d&rsquo;exécution CPU total dépasse le paramètre
+<code>benchmark_min_time</code> (il est de 0.5 seconde par défaut) ou le temps
+d&rsquo;exécution total dépasse cinq fois le temps <code>benchmark_min_time</code>.</p>
+
+<p>Dans les détails, la règle est un peu plus complexe. Le code suivant
+(tiré du fichier <code>benchmark.cc</code>) montre la condition complète :</p>
+
+<pre><code class="language-cpp">      // Determine if this run should be reported; Either it has
+      // run for a sufficient amount of time or because an error was reported.
+      const bool should_report =  repetition_num &gt; 0
+        || has_explicit_iteration_count  // An exact iteration count was requested
+        || results.has_error_
+        || iters &gt;= kMaxIterations  // No chance to try again, we hit the limit.
+        || seconds &gt;= min_time  // the elapsed time is large enough
+        // CPU time is specified but the elapsed real time greatly exceeds the
+        // minimum time. Note that user provided timers are except from this
+        // sanity check.
+        || ((results.real_time_used &gt;= 5 * min_time) &amp;&amp; !b.use_manual_time);
+</code></pre>
+
+<p>Prenons par exemple ces deux fonctions :</p>
+
+<pre><code class="language-cpp">int inc(const int x) { return x + 1; }
+int inc_and_wait(const int x) {
+  std::this_thread::sleep_for(3s);
+  return x + 1;
+}
+</code></pre>
+
+<p>Le résultat du benchmarking est le suivant :
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/google-benchmark-screenshot-02.png" alt="Benchrmark - Deuxième test" /></p>
+
+<p>La première a été exécutée jusqu&rsquo;à ce que le temps CPU consommé dépasse
+0.5 seconde (43801038 x 15 ns), alors que la seconde s&rsquo;est exécutée une
+fois car le temps global d&rsquo;exécution a dépassé 2.5 secondes (3 secondes).</p>
+
+<p>Reprenons l&rsquo;exemple <code>inc_and_wait</code> et modifions le temps d&rsquo;attente de 3 à 2 secondes :</p>
+
+<pre><code class="language-cpp">int inc_and_wait(const int x) {
+  std::this_thread::sleep_for(2s);
+  return x + 1;
+}
+</code></pre>
+
+<p><img src="{{ site.url }}{{ site.baseurl }}/assets/images/google-benchmark-screenshot-03.png" alt="Benchrmark - Premier test" /></p>
+
+<p>On remarque que le nombre d&rsquo;itération n&rsquo;est pas de 2 (2x2=4 &gt; 2.5) mais
+de dix. En effet, la bibliothèque utilise un facteur d&rsquo;expansion de 10
+pour les fonctions dont le temps d&rsquo;exécution est inférieur à 10% du
+<code>benchmark_min_time</code>.</p>
+
+<p>Pour la fonction suivante, le nombre d&rsquo;itérations sera de 1000 (avec un
+  temps d&rsquo;exécution global de 10s).</p>
+
+<pre><code class="language-cpp">int inc_and_wait(const int x) {
+  std::this_thread::sleep_for(0.01s);
+  return x + 1;
+}
+</code></pre>
+
+<p><img src="{{ site.url }}{{ site.baseurl }}/assets/images/google-benchmark-screenshot-04.png" alt="Benchrmark - Premier test" /></p>
+
+<h2 id="macros">Macros</h2>
+
+<p>La bibliothèque fournit quelques macros qui permettent d&rsquo;enregistrer et d&rsquo;exécuter des benchrmarks. La macro <code>BENCHMARK</code>
+permet d&rsquo;enregistrer la fonction et de donner automatiquement un
+nom au benchmark.</p>
+
+<pre><code class="language-cpp">BENCHMARK(benchmark_function);
+</code></pre>
+
+<p>Et à la place de la fonction main, on peut utiliser la macro <code>BENCHMARK_MAIN</code>.</p>
+
+<pre><code class="language-cpp">BENCHMARK_MAIN();
+</code></pre>
+
+<h2 id="génération-de-plusieurs-benchmarks">Génération de plusieurs benchmarks</h2>
+
+<p>Dans le cas où on veut effectuer le benchmarking d&rsquo;une fonction plusieurs fois
+avec des paramètres différents, la bibliothèque propose deux méthode de le faire :
+- En faisant appel à la méthode <code>Arg(int)</code>. Le paramètre de cette dernière est
+passé à l&rsquo;objet <code>state</code> et peut être récupéré avec la méthode <code>state.range(0)</code>.</p>
+
+<pre><code>    bench-&gt;Arg(32)
+</code></pre>
+
+<ul>
+<li>L&rsquo;inconvénient de la méthode précédente est qu&rsquo;elle ne génère qu&rsquo;un seul
+benchmark. Si on veut générer plusieurs benchmarks, il faut faire appel autant de
+fois à la méthode <code>Arg</code>. Dans ces cas, on peut utiliser la méthode
+<code>Range(start, end)</code> qui permet de générer des benchmarks ayant comme arguments
+les entiers de <code>start</code> à <code>end</code> avec un facteur multiplicateur de 8. Par exemple,
+l&rsquo;appel suivant :
+<code>
+bench-&gt;Range(1, 4096)
+</code>
+Va générer des benchmarks avec les arguments (<code>state.range(0)</code>) 1, 8, 64, 512,
+4096.
+On peut aussi modifier le facteur multiplicateur avec la méthode
+<code>RangeMultiplier</code>.
+<code>
+bench-&gt;RangeMultiplier(2)
+</code></li>
+</ul>
+
+<p>Les différentes méthodes <code>Arg</code>, <code>RangeMultiplier</code> et <code>Range</code> retournent
+l&rsquo;objet <code>benchmark</code>. Ceci permet de faire appel à plusieurs méthodes dans la
+même instruction. Par exemple, on peut définir 4 benchmarks avec <code>Arg</code> comme
+ceci :</p>
+
+<pre><code class="language-cpp">   bench-&gt;Arg(5)-&gt;Arg(16)-&gt;Arg(27)-&gt;Arg(38)
+</code></pre>
+
+<p>Ou générer des benchmark sur l&rsquo;intervalle [1, 4096] avec un facteur
+multiplicateur de 2</p>
+
+<pre><code class="language-cpp">   bench-&gt;Range(1, 4096)-&gt;RangeMultiplier(2)
+</code></pre>
+
+<p>La valeur du paramètre de la fonction <code>Arg</code> ou les nombres générés par la
+fonction <code>Range</code> peut être récupérée comme ceci :</p>
+
+<pre><code class="language-cpp">int sz = state.range(0);
+</code></pre>
+
+<h2 id="passage-de-paramètres">Passage de paramètres</h2>
+
+<p>Prenons la fonction suivante comme exemple :</p>
+
+<pre><code class="language-cpp">void benchmark_with_arguments(benchmark::State &amp;state, const int x,
+                              const string &amp;s) {
+  for (auto _ : state) {
+  }
+}
+</code></pre>
+
+<p>On peut passer des paramètres de deux manières différentes syntaxiquement (mais
+  équivalentes).</p>
+
+<p>Avec la <code>RegisterBenchmark</code>, il suffit d&rsquo;ajouter les paramètres dans l&rsquo;appel :</p>
+
+<pre><code class="language-cpp">benchmark::RegisterBenchmark(&quot;benchmark_with_arguments&quot;,
+                             benchmark_with_arguments, 1, std::string(&quot;foo&quot;));
+</code></pre>
+
+<p>On peut aussi utiliser la macro <code>BENCHMARK_CAPTURE</code> pour enregister le
+benchmark et lui passer des paramètres.</p>
+
+<pre><code class="language-cpp">BENCHMARK_CAPTURE(benchmark_with_arguments, &quot;benchmark_with_arguments&quot;, 1,    
+                                    std::string(&quot;foo&quot;));
+</code></pre>
+
+<h2 id="complexité">Complexité</h2>
+
+<p>La bibliothèque permet aussi de mesurer la complexité <em>O(n)</em>. Généralement,
+cette complexité est calculé en fonction d&rsquo;un paramètre passé avec la méthode
+<code>Range</code>. Pour la mesurer il faut faire appel à la méthode <code>state.SetComplexityN(...);</code>. Dans l&rsquo;exemple suivant, nous allons mesurer la
+complexité d&rsquo;insertion dans un <code>vector</code> et une <code>map</code>.</p>
+
+<pre><code class="language-cpp">void benchmark_insert_vector(benchmark::State &amp;state) {
+  int sz = state.range(0);
+  for (auto _ : state) {
+    vector&lt;int&gt; v;
+    for (int i = 0; i &lt; sz; ++i)
+      v.push_back(i);
+  }
+  state.SetComplexityN(state.range(0));
+}
+
+void benchmark_insert_map(benchmark::State &amp;state) {
+  int sz = state.range(0);
+  for (auto _ : state) {
+    map&lt;int, int&gt; m;
+    for (int i = 0; i &lt; sz; ++i)
+      m[i] = i + 1;
+  }
+  state.SetComplexityN(state.range(0));
+}
+</code></pre>
+
+<p>Pour pouvoir mesurer la complexité, il faut fournir au moins deux benchmarks.
+Nous allons utiliser la méthode <code>Range</code> pour définir un ensemble de benchmarks.
+Le calcul de la complexité est activé en appelant la méthode <code>Complexity</code>.</p>
+
+<pre><code class="language-cpp">BENCHMARK(benchmark_insert_vector)
+    -&gt;RangeMultiplier(2)
+    -&gt;Range(1 &lt;&lt; 10, 1 &lt;&lt; 11)
+    -&gt;Complexity();
+
+BENCHMARK(benchmark_insert_map)
+    -&gt;RangeMultiplier(2)
+    -&gt;Range(1 &lt;&lt; 10, 1 &lt;&lt; 11)
+    -&gt;Complexity();
+</code></pre>
+
+<p>Le résultat est illustré dans le screenshot ci-dessous:
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/google-benchmark-screenshot-05.png" alt="Benchrmark - Premier test" /></p>
+
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://abdelkaderamar.github.io/post/blog/2018/05/utilisation-de-boost-multi-index/" data-toggle="tooltip" data-placement="top" title="Utilisation de *Boost Multi-index*">&larr; Post précédent</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://abdelkaderamar.github.io/post/blog/2018/06/c--17--fold-expressions/" data-toggle="tooltip" data-placement="top" title="*C&#43;&#43;17 : Fold Expressions*">Post suivant &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:abdelkader.amar@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/abdelkaderamar" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/abdelkaderamar" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/aamar" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/abdelkader-amar-5560723" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            
+            <a href="https://abdelkaderamar.github.io/index.xml" title="RSS">
+            
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Abdelkader Amar
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://abdelkaderamar.github.io">A. Amar</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Carbure avec <a href="http://gohugo.io">Hugo v0.40.1</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapté en <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://abdelkaderamar.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://abdelkaderamar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+

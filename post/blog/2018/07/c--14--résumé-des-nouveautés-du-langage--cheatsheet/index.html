@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>C&#43;&#43;14 : Résumé des nouveautés du langage (&#43;Cheatsheet)</title>
+  <meta property="og:title" content="C&#43;&#43;14 : Résumé des nouveautés du langage (&#43;Cheatsheet)" />
+  <meta name="twitter:title" content="C&#43;&#43;14 : Résumé des nouveautés du langage (&#43;Cheatsheet)" />
+  <meta name="description" content="La norme C&#43;&#43;14 qui a été standardisée il y a déjà quatre ans, est considérée comme mineure si on la compare au C&#43;&#43;11 et le C&#43;&#43;17. Dans ce post, je vais décrire brièvement les changements apportés au langage (mais pas la STL). Des programmes exemples son disponible dans ce projet.
+J&rsquo;ai également réalisé une cheatsheet qui peut être télécharger ci-dessous :
+Download
+PDF (A4) | Latex
+auto f(...) : type de retour de fonction auto Il est possible avec la norme C&#43;&#43;14 de déclarer des fonctions avec un type de retour auto.">
+  <meta property="og:description" content="La norme C&#43;&#43;14 qui a été standardisée il y a déjà quatre ans, est considérée comme mineure si on la compare au C&#43;&#43;11 et le C&#43;&#43;17. Dans ce post, je vais décrire brièvement les changements apportés au langage (mais pas la STL). Des programmes exemples son disponible dans ce projet.
+J&rsquo;ai également réalisé une cheatsheet qui peut être télécharger ci-dessous :
+Download
+PDF (A4) | Latex
+auto f(...) : type de retour de fonction auto Il est possible avec la norme C&#43;&#43;14 de déclarer des fonctions avec un type de retour auto.">
+  <meta name="twitter:description" content="La norme C&#43;&#43;14 qui a été standardisée il y a déjà quatre ans, est considérée comme mineure si on la compare au C&#43;&#43;11 et le C&#43;&#43;17. Dans ce post, je vais décrire brièvement les changements apportés au …">
+  <meta name="author" content="Abdelkader Amar"/>
+  <link href='https://abdelkaderamar.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://abdelkaderamar.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://abdelkaderamar.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@aamar" />
+  <meta name="twitter:creator" content="@aamar" />
+  <meta property="og:url" content="https://abdelkaderamar.github.io/post/blog/2018/07/c--14--r%C3%A9sum%C3%A9-des-nouveaut%C3%A9s-du-langage--cheatsheet/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="A. Amar" />
+
+  <meta name="generator" content="Hugo 0.40.1" />
+  <link rel="canonical" href="https://abdelkaderamar.github.io/post/blog/2018/07/c--14--r%C3%A9sum%C3%A9-des-nouveaut%C3%A9s-du-langage--cheatsheet/" />
+  <link rel="alternate" href="https://abdelkaderamar.github.io/index.xml" type="application/rss+xml" title="A. Amar">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://abdelkaderamar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://abdelkaderamar.github.io/css/syntax.css" /><link rel="stylesheet" href="https://abdelkaderamar.github.io/css/codeblock.css" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-119584387-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://abdelkaderamar.github.io">A. Amar</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="https://abdelkaderamar.github.io/post/blog">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Hacker News Digest" href="https://abdelkaderamar.github.io/post/hackernews">Hacker News Digest</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tutoriaux" href="https://abdelkaderamar.github.io/post/blog/tutorials">Tutoriaux</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="https://abdelkaderamar.github.io/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="A Propos" href="https://abdelkaderamar.github.io/page/about/">A Propos</a>
+            </li>
+          
+        
+
+        
+          
+            <li>
+              
+                
+                  <a href="https://abdelkaderamar.github.io/en" lang="en">en</a>
+                
+              
+                
+              
+            </li>
+          
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="A. Amar" href="https://abdelkaderamar.github.io">
+            <img class="avatar-img" src="https://abdelkaderamar.github.io/img/avatar-icon.png" alt="A. Amar" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>C&#43;&#43;14 : Résumé des nouveautés du langage (&#43;Cheatsheet)</h1>
+                
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posté le July 19, 2018
+  
+  
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>La norme C++14 qui a été standardisée il y a déjà quatre ans, est
+considérée comme mineure si on la compare au C++11 et le C++17. Dans ce post,
+je vais décrire brièvement les changements apportés au langage (mais pas la
+  STL). Des programmes exemples son disponible dans ce
+  <a href="https://github.com/abdelkaderamar/cpp-samples/tree/master/src/c%2B%2B14">projet</a>.</p>
+
+<p>J&rsquo;ai également réalisé une cheatsheet qui peut être télécharger ci-dessous :</p>
+
+<p><img src="https://abdelkaderamar.github.io/assets/images/cheatsheets/c++14_lang_cheatsheet.png" alt="C++14 Language Cheatsheet" /><br />
+<strong>Download</strong><br />
+<a href="https://abdelkaderamar.github.io/assets/pdf/cheatsheets/c++14_lang_cheatsheet.pdf">PDF</a> (A4) |
+<a href="https://github.com/abdelkaderamar/cheatsheets/blob/master/cpp/c%2B%2B14_lang_cheatsheet.tex">Latex</a></p>
+
+<h1 id="auto-f-type-de-retour-de-fonction-auto"><code>auto f(...)</code> : type de retour de fonction <code>auto</code></h1>
+
+<p>Il est possible avec la norme C++14 de déclarer des fonctions avec un type de
+retour <code>auto</code>. Ceci est rendu possible aussi pour les fonctions lambda.</p>
+
+<pre><code class="language-cpp">auto f_cpp14() {
+  return 1;
+}
+
+auto f_cpp11() -&gt; int {
+  return 1;
+}
+</code></pre>
+
+<h1 id="contrainte-sur-les-fonctions-constexpr">Contrainte sur les fonctions constexpr</h1>
+
+<p>Avec le C++11, il était possible de déclarer une fonction <em>constexpr</em> à
+condition qu&rsquo;elle ne contienne qu&rsquo;une seule expression. Cette contrainte est
+assouplie avec le C++14.</p>
+
+<pre><code class="language-cpp">constexpr int f_cpp14(int x) {
+  if (x % 2 == 0)
+    return x * 10;
+  return x;
+}
+</code></pre>
+
+<h1 id="variable-template">Variable template</h1>
+
+<p>Jusqu&rsquo;au C++14, seule les fonctions et les classes peuvent être templatées.
+Maintenant il est possible de déclarer des variables de type template.</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt;
+constexpr T pi = T(3.141592653589793238462643383);
+
+template&lt;&gt;
+constexpr const char* pi&lt;const char*&gt; = &quot;pi&quot;;
+
+cout.precision(numeric_limits&lt; long double &gt;::max_digits10);
+
+cout &lt;&lt; pi&lt;long double&gt; &lt;&lt; endl;
+cout &lt;&lt; pi&lt;double&gt; &lt;&lt; endl;
+cout &lt;&lt; pi&lt;float&gt; &lt;&lt; endl;
+
+cout &lt;&lt; pi&lt;const char*&gt; &lt;&lt; endl;
+</code></pre>
+
+<h1 id="initialisation-regroupée-de-membres">Initialisation regroupée de membres</h1>
+
+<p>Avec le C++11, les classes possédant une Initialisation de membre ne pouvait
+pas être initialisée en utilisant l&rsquo;initialisation groupée.
+Le C++14 supprime cette contrainte et permet d&rsquo;utiliser l&rsquo;initialisation groupée
+même pour ces classes.</p>
+
+<pre><code class="language-cpp">struct foo_2 {
+  int x{10}, y, z;
+};
+struct foo_2 f2 { 1, 2 };  // error with c++11
+
+struct foo_3 {
+  int x{1}, y{2}, z{3};
+};
+struct foo_3 f3_a { 1, 2 }; // error with c++11
+
+</code></pre>
+
+<h1 id="lambda-générique">Lambda générique</h1>
+
+<p>Les paramètres d&rsquo;une lambda peuvent être déclarés avec le type <code>auto</code>.</p>
+
+<pre><code class="language-cpp">auto lambda = [](auto x, auto y) { return x + y; };
+
+cout &lt;&lt; lambda(1, 2) &lt;&lt; endl;
+cout &lt;&lt; lambda(1.6, 2.5) &lt;&lt; endl;
+string s1{&quot;1&quot;}, s2{&quot;.5&quot;};
+cout &lt;&lt; lambda(s1, s2) &lt;&lt; endl;
+</code></pre>
+
+<h1 id="littéraux-binaires">Littéraux binaires</h1>
+
+<p>Les nombres binaires peuvent être définis avec les préfixes <code>0b</code> ou <code>0B</code>.</p>
+
+<pre><code class="language-cpp">short i = 0b0101010101010101;
+short j = 0B1101010101010101;
+</code></pre>
+
+<h1 id="les-séparateurs-de-chiffres">Les séparateurs de chiffres</h1>
+
+<p>Il est possible d&rsquo;utiliser une apostrophe (<em>single quote</em>) comme séparateur de
+chiffres pour améliorer la lisibilité des grands nombres. La position de ce
+séparateur est libre</p>
+
+<pre><code class="language-cpp">int i = 1'928'229'292;
+int j = 1928'2'292'92;
+</code></pre>
+
+<h1 id="l-attribut-deprecated">L&rsquo;attribut <em>deprecated</em></h1>
+
+<p>L&rsquo;attribut <code>deprecated</code> permet de marquer une fonction ou un attribut comme
+obsolète. C&rsquo;est à la compilation que l&rsquo;avertissement est remonté. Un message
+optionnel peut être défini qui s&rsquo;ajoutera au message d&rsquo;avertissement standard
+du compilateur.</p>
+
+<pre><code class="language-cpp">[[deprecated]] void f() {};
+
+[[deprecated(&quot;g will not be supported from next release&quot;)]] void g() {};
+
+class foo
+{
+public:
+  [[deprecated(&quot;x is not protected. Use getter instead&quot;)]]
+  int x;
+};
+</code></pre>
+
+<h1 id="capture-des-variables-dans-une-lambda">Capture des variables dans une lambda</h1>
+
+<p>Le C++11 permettait à une lambda de capturer les valeurs des variables soit par
+valeur soit par référence. Le C++14 améliore cette fonctionnalité en permettant
+de déclarer de nouvelles variables initialisées par <code>move</code> ou avec une
+expression quelconque.</p>
+
+<pre><code class="language-cpp">auto lambda_func_call = [value = f(argc)](int x) { return value * x; };
+
+string s{&quot;foo&quot;};
+auto lambda_move = [value = move(s)](int x) { return value + to_string(x); };
+</code></pre>
+
+<h1 id="déduction-de-type-decltype-auto">Déduction de type <code>decltype(auto)</code></h1>
+
+<p>La norme C++14 permet d&rsquo;avoir la déclaration <code>decltype(auto)</code>. Cette
+fonctionnalité peut être utile dans certains cas où la fonction doit transférer
+le bon type (référence ou valeur) sans le transformer. En effet, <code>auto</code> déduit
+toujours un type <em>non référence</em>, ce qui n&rsquo;est pas le cas de <code>decltype</code>.
+L&rsquo;utilisation dans ce genre de situation de <code>decltype(auto)</code> permet de retourner
+le type référence ou valeur selon l&rsquo;expression utilisée.</p>
+
+<p>Voici quelques exemples tirés du standard :</p>
+
+<pre><code class="language-cpp">int i;
+int&amp;&amp; f();
+auto x3a = i;                  // decltype(x3a) is int
+decltype(auto) x3d = i;        // decltype(x3d) is int
+auto x4a = (i);                // decltype(x4a) is int
+decltype(auto) x4d = (i);      // decltype(x4d) is int&amp;
+auto x5a = f();                // decltype(x5a) is int
+decltype(auto) x5d = f();      // decltype(x5d) is int&amp;&amp;
+auto x6a = { 1, 2 };           // decltype(x6a) is std::initializer_list&lt;int&gt;
+decltype(auto) x6d = { 1, 2 }; // error, { 1, 2 } is not an expression
+auto *x7a = &amp;i;                // decltype(x7a) is int*
+decltype(auto)*x7d = &amp;i;       // error, declared type is not plain decltype(auto)
+</code></pre>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://abdelkaderamar.github.io/tags/c&#43;&#43;-c&#43;&#43;14/">C&#43;&#43;, C&#43;&#43;14</a>&nbsp;
+            
+          </div>
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://abdelkaderamar.github.io/post/blog/2018/07/av.net--une-biblioth%C3%A8que-c#-pour-alphavantage/" data-toggle="tooltip" data-placement="top" title="AV.NET : Une bibliothèque C# pour AlphaVantage">&larr; Post précédent</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://abdelkaderamar.github.io/post/blog/2018/08/c--17--r%C3%A9sum%C3%A9-des-nouveaut%C3%A9s-du-langage--cheatsheet/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43;17 : Résumé des nouveautés du langage (&#43;Cheatsheet)">Post suivant &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:abdelkader.amar@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/abdelkaderamar" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/abdelkaderamar" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/aamar" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/abdelkader-amar-5560723" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            
+            <a href="https://abdelkaderamar.github.io/index.xml" title="RSS">
+            
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Abdelkader Amar
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://abdelkaderamar.github.io">A. Amar</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Carbure avec <a href="http://gohugo.io">Hugo v0.40.1</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapté en <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://abdelkaderamar.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://abdelkaderamar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+

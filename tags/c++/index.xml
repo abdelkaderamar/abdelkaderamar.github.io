@@ -14,20 +14,20 @@
     
     <item>
       <title>std::optional</title>
-      <link>https://abdelkaderamar.github.io/post/draft-2018-06-12-optional/</link>
+      <link>https://abdelkaderamar.github.io/post/2018/06/stdoptional/</link>
       <pubDate>Tue, 12 Jun 2018 16:00:00 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
-      <guid>https://abdelkaderamar.github.io/post/draft-2018-06-12-optional/</guid>
+      <guid>https://abdelkaderamar.github.io/post/2018/06/stdoptional/</guid>
       <description>{% include toc.html %}
 std::optional est une classe utilitaire qui permet de contenir un type et d&amp;rsquo;indiquer si la valeur contenue a été initialisée ou non. Cette fonctionnalité, appelée souvent nullable types peut être obtenue aussi en utilisant des valeurs spéciales(-1, nullptr, chaine vide, ect.). Ce type est déjà disponible dans d&amp;rsquo;autres langages comme Java, mais le type boost::optional a été introduit dans la fameuse bibliothèque C++ bien avant ( en 2003).</description>
     </item>
     
     <item>
       <title>GCC 8.1 : Nouveautés du langage C&#43;&#43;</title>
-      <link>https://abdelkaderamar.github.io/post/blog/2018-05-08-gcc-8.1/</link>
+      <link>https://abdelkaderamar.github.io/post/blog/2018/05/gcc-8.1--nouveaut%C3%A9s-du-langage-c--/</link>
       <pubDate>Tue, 08 May 2018 17:03:31 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
-      <guid>https://abdelkaderamar.github.io/post/blog/2018-05-08-gcc-8.1/</guid>
+      <guid>https://abdelkaderamar.github.io/post/blog/2018/05/gcc-8.1--nouveaut%C3%A9s-du-langage-c--/</guid>
       <description>Introduction La version 8.1 du compilateur GCC est sortie le 25 Avril 2018. Les nouveautés de cette version pour les différents langages sont disponibles ici. Dans ce post, nous allons voir les nouveautés qui concernent le langage C++.
 Support expériemental de certaines fonctionalités du prochain standard C++2a Le compilateur propose les options -std=c++2a ou std=gnu++2a pour utiliser certaines fonctionalités du standard C++2a en cours de finalisation.
 C++2a (langage) Initialisation par défaut des membres de type bit Les membres de classes/structures de type bit peuvent avoir leur initialisation par défaut.</description>

@@ -14,10 +14,10 @@
     
     <item>
       <title>Hacker News Digest (14-07-2018 au 20-07-2018)</title>
-      <link>https://abdelkaderamar.github.io/post/hackernews/2018-07-22-hackernews_digest/</link>
+      <link>https://abdelkaderamar.github.io/post/hackernews/2018/07/hacker-news-digest-14-07-2018-au-20-07-2018/</link>
       <pubDate>Sun, 22 Jul 2018 12:00:00 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
-      <guid>https://abdelkaderamar.github.io/post/hackernews/2018-07-22-hackernews_digest/</guid>
+      <guid>https://abdelkaderamar.github.io/post/hackernews/2018/07/hacker-news-digest-14-07-2018-au-20-07-2018/</guid>
       <description>Ma sélection personnelle des sujets de la semaine sur Hacker News
 C++ Coroutine Types Un article qui parle du design des coroutines dans la prochaine norme C++20. Cette fonctionnalité permettra d&amp;rsquo;écrire des fonctions qui peuvent être suspendues puis redémarrées, le but étant de pouvoir écrire plus facilement du code asynchrone.
 Le type permettant d&amp;rsquo;écrire des coroutines n&amp;rsquo;est pas encore défini mais les spécifications s&amp;rsquo;orientent vers un type dans la STL qui s&amp;rsquo;appelera std::task&amp;lt;T&amp;gt;.</description>
@@ -25,30 +25,30 @@ Le type permettant d&amp;rsquo;écrire des coroutines n&amp;rsquo;est pas encore
     
     <item>
       <title>Hacker News Digest (07-07-2018 au 13-07-2018)</title>
-      <link>https://abdelkaderamar.github.io/post/hackernews/2018-07-15-hackernews_digest/</link>
+      <link>https://abdelkaderamar.github.io/post/hackernews/2018/07/hacker-news-digest-07-07-2018-au-13-07-2018/</link>
       <pubDate>Sun, 15 Jul 2018 16:35:00 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
-      <guid>https://abdelkaderamar.github.io/post/hackernews/2018-07-15-hackernews_digest/</guid>
+      <guid>https://abdelkaderamar.github.io/post/hackernews/2018/07/hacker-news-digest-07-07-2018-au-13-07-2018/</guid>
       <description>Ma sélection personnelle des sujets de la semaine sur Hacker News
 Ask HN: 2018 Summer Reading List? Ce sujet est l&amp;rsquo;occasion de découvrir les choix de la communauté de HackerNews en terme de lecture. Voici ma short liste de livres à tester : - 12 Rules for Life de Jordan Peterson - Why We Sleep de Matthew Walker - The Millionaire Next Door de Thomas J. Stanley - Deep work de Cal Newport</description>
     </item>
     
     <item>
       <title>Hacker News Digest (30-06-2018 au 06-07-2018)</title>
-      <link>https://abdelkaderamar.github.io/post/hackernews/2018-07-09-hackernews_digest/</link>
+      <link>https://abdelkaderamar.github.io/post/hackernews/2018/07/hacker-news-digest-30-06-2018-au-06-07-2018/</link>
       <pubDate>Mon, 09 Jul 2018 23:02:00 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
-      <guid>https://abdelkaderamar.github.io/post/hackernews/2018-07-09-hackernews_digest/</guid>
+      <guid>https://abdelkaderamar.github.io/post/hackernews/2018/07/hacker-news-digest-30-06-2018-au-06-07-2018/</guid>
       <description>Ma sélection personnelle des sujets de la semaine sur Hacker News
 How to read Dans cet article, l&amp;rsquo;auteur parle du système qu&amp;rsquo;il a mis en place pour ses lectures de livres. Tout est parti le jour où il a constaté qu&amp;rsquo;il avait du mal à se rappeler du contenu des livres qu&amp;rsquo;il lisait. En discutant avec ses collègues au sujet d&amp;rsquo;un livre très célèbre Thinking, Fast and Slow, il avait du mal à décrire et à parler contenu de ce livre.</description>
     </item>
     
     <item>
       <title>Hacker News Digest (09-06-2018 au 15-06-2018)</title>
-      <link>https://abdelkaderamar.github.io/post/hackernews/2018-06-17-hackernews_digest/</link>
+      <link>https://abdelkaderamar.github.io/post/hackernews/2018/06/hacker-news-digest-09-06-2018-au-15-06-2018/</link>
       <pubDate>Sun, 17 Jun 2018 15:54:00 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
-      <guid>https://abdelkaderamar.github.io/post/hackernews/2018-06-17-hackernews_digest/</guid>
+      <guid>https://abdelkaderamar.github.io/post/hackernews/2018/06/hacker-news-digest-09-06-2018-au-15-06-2018/</guid>
       <description>Ma sélection personnelle des sujets de la semaine sur Hacker News
 GitLab Web IDE Gitlab annonce son nouvel IDE Web. Pour l&amp;rsquo;instant c&amp;rsquo;est un simple éditeur et un gestionnaire Git, mais selon l&amp;rsquo;annonce d&amp;rsquo;autres fonctionnalités sont à venir. Le lien suivant awesome-online-ide contient une liste des IDEs web disponible.
  Commentaires HN  Alternatives to Google Products Après l&amp;rsquo;acquisition la semaine dernière de Github par Microsoft et la prolifération des articles sur les alternatives possible à Github, cet article traite des alternatives aux services de Google (recherche, mail, cloud, chrome, youtube, analytics, maps, play store, calendar).</description>
@@ -56,49 +56,49 @@ GitLab Web IDE Gitlab annonce son nouvel IDE Web. Pour l&amp;rsquo;instant c&amp
     
     <item>
       <title>Hacker News Digest (02-06-2018 au 08-06-2018)</title>
-      <link>https://abdelkaderamar.github.io/post/hackernews/2018-06-11-hackernews_digest/</link>
+      <link>https://abdelkaderamar.github.io/post/hackernews/2018/06/hacker-news-digest-02-06-2018-au-08-06-2018/</link>
       <pubDate>Mon, 11 Jun 2018 16:00:00 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
-      <guid>https://abdelkaderamar.github.io/post/hackernews/2018-06-11-hackernews_digest/</guid>
+      <guid>https://abdelkaderamar.github.io/post/hackernews/2018/06/hacker-news-digest-02-06-2018-au-08-06-2018/</guid>
       <description>Ma sélection personnelle des sujets de la semaine sur Hacker News. La semaine qui vient de s&amp;rsquo;écouler a vu la plupart des sujets tourner autour de l&amp;rsquo;acquisition de Github par Microsoft. Cette nouvelle a généré une myriades de sujets où les anti et les pro Microsoft ont échangé leurs arguments. Je n&amp;rsquo;ai pas retenu ces sujets car il y en avait tellement. J&amp;rsquo;ai gardé juste un sur les alternatives à Github.</description>
     </item>
     
     <item>
       <title>Hacker News Digest (26-05-2018 au 01-06-2018)</title>
-      <link>https://abdelkaderamar.github.io/post/hackernews/2018-06-03-hackernews_digest/</link>
+      <link>https://abdelkaderamar.github.io/post/hackernews/2018/06/hacker-news-digest-26-05-2018-au-01-06-2018/</link>
       <pubDate>Sun, 03 Jun 2018 16:00:00 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
-      <guid>https://abdelkaderamar.github.io/post/hackernews/2018-06-03-hackernews_digest/</guid>
+      <guid>https://abdelkaderamar.github.io/post/hackernews/2018/06/hacker-news-digest-26-05-2018-au-01-06-2018/</guid>
       <description>Ma sélection personnelle des sujets de la semaine sur Hacker News
 Why Is Front-End Development So Unstable? Dans cet article l&amp;rsquo;auteur parle du changement rapide dans les technologies du web côté frontend, et donc dans les changements fréquents dans les bibliothèques Javascript. En étudiant les dix projets les plus populaire sur Github, la plus jeune bibliothèques a seulement deux ans, et les deux premières, React et Vue, ont respectivement 3 et 2,5 ans.</description>
     </item>
     
     <item>
       <title>Hacker News Digest (19-05-2018 au 25-05-2018)</title>
-      <link>https://abdelkaderamar.github.io/post/hackernews/2018-05-27-hackernews_digest/</link>
+      <link>https://abdelkaderamar.github.io/post/hackernews/2018/05/hacker-news-digest-19-05-2018-au-25-05-2018/</link>
       <pubDate>Sun, 27 May 2018 15:00:00 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
-      <guid>https://abdelkaderamar.github.io/post/hackernews/2018-05-27-hackernews_digest/</guid>
+      <guid>https://abdelkaderamar.github.io/post/hackernews/2018/05/hacker-news-digest-19-05-2018-au-25-05-2018/</guid>
       <description>Ma sélection personnelle des sujets de la semaine sur Hacker News
 Amazon device recorded private conversation, sent it out to random contact L&amp;rsquo;histoire d&amp;rsquo;un couple dont la conversation privée a été envoyée par l&amp;rsquo;assistant d&amp;rsquo;Amazon Alexa à un de leurs contacts. Amazon qui a confirmé l&amp;rsquo;incident a fourni une explication assez improbable selon laquelle l&amp;rsquo;assistant Alexa a interprété la conversation comme une suite d&amp;rsquo;actions et de confirmations. - Le couple : conversation =&amp;gt; Alexa entend &amp;ldquo;Send a message&amp;ldquo; - Alexa : &amp;ldquo;To whom ?</description>
     </item>
     
     <item>
       <title>Hacker News Digest (12-05-2018 au 18-05-2018)</title>
-      <link>https://abdelkaderamar.github.io/post/hackernews/2018-05-20-hackernews_digest/</link>
+      <link>https://abdelkaderamar.github.io/post/hackernews/2018/05/hacker-news-digest-12-05-2018-au-18-05-2018/</link>
       <pubDate>Sun, 20 May 2018 11:09:11 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
-      <guid>https://abdelkaderamar.github.io/post/hackernews/2018-05-20-hackernews_digest/</guid>
+      <guid>https://abdelkaderamar.github.io/post/hackernews/2018/05/hacker-news-digest-12-05-2018-au-18-05-2018/</guid>
       <description>Ma sélection personnelle des sujets de la semaine sur Hacker News.
 Did Google Fake Its Big A.I. Demo? Un article qui reprend un sujet soulevé par le site AXIOS qui a posé quelques interrogations sur la façon dont la démo a été présentée (pas d&amp;rsquo;identification de la personne qui répond ni de l&amp;rsquo;IA, pas de bruit de fond dans le salon de coiffure, pas de numéro de téléphone fournie après confirmation de la réservation).</description>
     </item>
     
     <item>
       <title>Hacker News Digest (04-05-2018 au 11-05-2018)</title>
-      <link>https://abdelkaderamar.github.io/post/hackernews/2018-05-13-hackernews_digest/</link>
+      <link>https://abdelkaderamar.github.io/post/hackernews/2018/05/hacker-news-digest-04-05-2018-au-11-05-2018/</link>
       <pubDate>Sun, 13 May 2018 10:10:11 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
-      <guid>https://abdelkaderamar.github.io/post/hackernews/2018-05-13-hackernews_digest/</guid>
+      <guid>https://abdelkaderamar.github.io/post/hackernews/2018/05/hacker-news-digest-04-05-2018-au-11-05-2018/</guid>
       <description>Dans cette série de billets, je listerai une sélection personnelle de quelques soumissions sur le site Hacker News de la semaine précédente.
 Conversations with a six-year-old on functional programming Un billet de blog d&amp;rsquo;un professeur d&amp;rsquo;université dans lequel il décrit comment il a expliqué à son fils de six ans la programmation fonctionnelle avec un jeu de devinettes de function machines.
 - Lien - Commentaires
