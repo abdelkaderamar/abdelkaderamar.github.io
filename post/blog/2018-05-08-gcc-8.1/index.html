@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>GCC 8.1 : Nouveautés du langage C&#43;&#43;</title>
+  <meta property="og:title" content="GCC 8.1 : Nouveautés du langage C&#43;&#43;" />
+  <meta name="twitter:title" content="GCC 8.1 : Nouveautés du langage C&#43;&#43;" />
+  <meta name="description" content="{% include toc %}
+Introduction La version 8.1 du compilateur GCC est sortie le 25 Avril 2018. Les nouveautés de cette version pour les différents langages sont disponibles ici. Dans ce post, nous allons voir les nouveautés qui concernent le langage C&#43;&#43;.
+Support expériemental de certaines fonctionalités du prochain standard C&#43;&#43;2a Le compilateur propose les options -std=c&#43;&#43;2a ou std=gnu&#43;&#43;2a pour utiliser certaines fonctionalités du standard C&#43;&#43;2a en cours de finalisation.">
+  <meta property="og:description" content="{% include toc %}
+Introduction La version 8.1 du compilateur GCC est sortie le 25 Avril 2018. Les nouveautés de cette version pour les différents langages sont disponibles ici. Dans ce post, nous allons voir les nouveautés qui concernent le langage C&#43;&#43;.
+Support expériemental de certaines fonctionalités du prochain standard C&#43;&#43;2a Le compilateur propose les options -std=c&#43;&#43;2a ou std=gnu&#43;&#43;2a pour utiliser certaines fonctionalités du standard C&#43;&#43;2a en cours de finalisation.">
+  <meta name="twitter:description" content="{% include toc %}
+Introduction La version 8.1 du compilateur GCC est sortie le 25 Avril 2018. Les nouveautés de cette version pour les différents langages sont disponibles ici. Dans ce post, nous …">
+  <meta name="author" content="Abdelkader Amar"/>
+  <link href='https://abdelkaderamar.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://abdelkaderamar.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://abdelkaderamar.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@aamar" />
+  <meta name="twitter:creator" content="@aamar" />
+  <meta property="og:url" content="https://abdelkaderamar.github.io/post/blog/2018-05-08-gcc-8.1/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="A. Amar" />
+
+  <meta name="generator" content="Hugo 0.40.1" />
+  <link rel="canonical" href="https://abdelkaderamar.github.io/post/blog/2018-05-08-gcc-8.1/" />
+  <link rel="alternate" href="https://abdelkaderamar.github.io/index.xml" type="application/rss+xml" title="A. Amar">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://abdelkaderamar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://abdelkaderamar.github.io/css/syntax.css" /><link rel="stylesheet" href="https://abdelkaderamar.github.io/css/codeblock.css" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://abdelkaderamar.github.io">A. Amar</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="https://abdelkaderamar.github.io/post/blog">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Hacker News Digest" href="https://abdelkaderamar.github.io/post/hackernews">Hacker News Digest</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tutoriaux" href="https://abdelkaderamar.github.io/post/blog/tutorials">Tutoriaux</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="https://abdelkaderamar.github.io/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="A Propos" href="https://abdelkaderamar.github.io/page/about/">A Propos</a>
+            </li>
+          
+        
+
+        
+          
+            <li>
+              
+                
+                  <a href="https://abdelkaderamar.github.io/en" lang="en">en</a>
+                
+              
+                
+              
+            </li>
+          
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="A. Amar" href="https://abdelkaderamar.github.io">
+            <img class="avatar-img" src="https://abdelkaderamar.github.io/img/avatar-icon.png" alt="A. Amar" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>GCC 8.1 : Nouveautés du langage C&#43;&#43;</h1>
+                
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posté le May 8, 2018
+  
+  
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>{% include toc %}</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>La version 8.1 du compilateur GCC est sortie le 25 Avril 2018. Les nouveautés de
+cette version pour les différents langages sont disponibles
+<a href="https://gcc.gnu.org/gcc-8/changes.html">ici</a>. Dans ce post, nous allons voir
+les nouveautés qui concernent le langage C++.</p>
+
+<h2 id="support-expériemental-de-certaines-fonctionalités-du-prochain-standard-c-2a">Support expériemental de certaines fonctionalités du prochain standard C++2a</h2>
+
+<p>Le compilateur propose les options <code>-std=c++2a</code> ou <code>std=gnu++2a</code> pour utiliser
+certaines fonctionalités du standard C++2a en cours de finalisation.</p>
+
+<h3 id="c-2a-langage">C++2a (langage)</h3>
+
+<h4 id="initialisation-par-défaut-des-membres-de-type-bit">Initialisation par défaut des membres de type <em>bit</em></h4>
+
+<p>Les membres de classes/structures de type <em>bit</em> peuvent avoir leur
+initialisation par défaut. Même si l&rsquo;otpion <code>-stc=c++2a</code> n&rsquo;est pas utilisée,
+le compilateur acceptera l&rsquo;instruction avec un message d&rsquo;avertissement.</p>
+
+<pre><code>default_init_bit_field.cpp:7:15: warning: default member initializers for bit-fields only available with -std=c++2a or -std=gnu++2a
+     int x : 3 = 2;
+</code></pre>
+
+<h4 id="capture-this">Capture <code>[=, this]</code></h4>
+
+<p>Cette fonctionalité mineure autorise l&rsquo;utilisation de la syntaxe suivante
+<code>[=, this]</code> qui était considérée comme une erreur. Elle est équivalente à la
+syntaxe <code>[=]</code> mais son autorisation permet de faire la différence plus
+clairement avec la syntaxe <code>[=, *this]</code>.</p>
+
+<h4 id="les-pointeurs-vers-des-membres-const-par-référence">Les pointeurs vers des membres const par référence</h4>
+
+<p>Cette fonctionalité corrige un problème dans l&rsquo;interprétation des pointeurs vers
+membres qui sont <code>const &amp;</code>.</p>
+
+<p>Avant de voir le changement, commençons par utiliser un membre  <em>ref qualified</em></p>
+
+<pre><code class="language-cpp">struct foo
+{
+    void f() &amp;;
+};
+</code></pre>
+
+<p>Cette déclaration interdit d&rsquo;avoir un appel de ce type</p>
+
+<pre><code class="language-cpp">  foo{}.f();
+</code></pre>
+
+<p>Par contre on peut faire ceci:</p>
+
+<pre><code class="language-cpp">struct foo
+{
+    void f() const &amp; {};
+};
+
+int main(int argc, char *argv[])
+{
+    foo{}.f();
+}
+</code></pre>
+
+<p>Par contre, lors de l&rsquo;utilisation de <code>.*</code> avec un objet temporaire (ou pour
+être plus précis une <em>rvalue</em>), le langage interdisait d&rsquo;avoir un pointeur
+vers une fonction membre avec le <em>qualifier &amp;</em>. Ceci donnait une incohérence
+entre l&rsquo;interprétation de deux instructions équivalentes.</p>
+
+<pre><code class="language-cpp">struct foo
+{
+    void f() const &amp; {};
+};
+
+int main(int argc, char *argv[])
+{
+    foo{}.f();
+    (foo{}.*(&amp;foo::f))();
+}
+</code></pre>
+
+<p>La compilation du programme ci-dessous donnait le résultat suivant:</p>
+
+<pre><code>error: pointer-to-member-function type 'void (foo::*)() const &amp;' requires an lvalue
+     (foo{}.*(&amp;foo::f))();
+</code></pre>
+
+<p>La norme c++2a permet de remédier à cette incohérence, et les deux syntaxes sont
+acceptées. A noter que l&rsquo;utilisation de l&rsquo;option <code>-std=c++2a</code> n&rsquo;est pas
+nécessaire avec <em>gcc</em> pour compiler le programme précédent.</p>
+
+<h4 id="simplication-des-règles-pour-les-boucles-sur-une-plage-range-based-loop">Simplication des règles pour les boucles sur une plage (<em>range-based loop</em>)</h4>
+
+<p>Quand un type définit un membre <code>begin</code> mais pas de membre <code>end</code> (ou l&rsquo;inverse),
+l&rsquo;utilisation des boucle de plage est impossible (jusqu&rsquo;au prochain standard
+C++20). Avec ce changement, on peut définir des méthodes <code>begin/end</code> externes
+et les utiliser.</p>
+
+<p>Pour illustrer ce changement, considérons la classe suivante (avec les deux
+  opérations <code>begin/end</code> définies)</p>
+
+<pre><code class="language-cpp">struct foo{
+  foo() {
+    generate(&amp;tab[0], &amp;tab[10], [n = 0]() mutable { return n++; });
+  }
+
+  int *begin() { return &amp;tab[0]; }
+  int *end() { return &amp;tab[10]; }
+
+  int tab[10];
+  int past_last;
+};
+
+int main(int argc, char *argv[]) {
+    foo f;
+    for (auto i : f) { cout &lt;&lt; i &lt;&lt; &quot;/&quot;; }
+    cout &lt;&lt; endl;
+}
+</code></pre>
+
+<p>Si on enlève les deux méthodes et qu&rsquo;on définisse des méthodes externes, le
+programme reste correct.</p>
+
+<pre><code class="language-cpp">struct foo{
+  foo() {
+    generate(&amp;tab[0], &amp;tab[10], [n = 0]() mutable { return n++; });
+  }
+
+  int tab[10];
+  int past_last;
+};
+
+int *begin(foo &amp;f) { return &amp;f.tab[0]; }
+int *end(foo &amp;f) { cout &lt;&lt; &quot;y&quot;; return &amp;f.tab[10]; }
+
+int main(int argc, char *argv[]) {
+    foo f;
+    for (auto i : f) { cout &lt;&lt; i &lt;&lt; &quot;/&quot;; }
+    cout &lt;&lt; endl;
+}
+</code></pre>
+
+<p>Par contre si on enlève seulement une des deux méthodes, le programme devient
+incorrect.</p>
+
+<pre><code class="language-cpp">struct foo{
+  foo() {
+    generate(&amp;tab[0], &amp;tab[10], [n = 0]() mutable { return n++; });
+  }
+
+  // int *begin() { return &amp;tab[0]; }
+  int *end() { return &amp;tab[10]; }
+
+  int tab[10];
+  int past_last;
+};
+
+int *begin(foo &amp;f) { return &amp;f.tab[0]; }
+int *end(foo &amp;f) { return &amp;f.tab[10]; }
+
+int main(int argc, char *argv[]) {
+    foo f;
+    for (auto i : f) { cout &lt;&lt; i &lt;&lt; &quot;/&quot;; }
+    cout &lt;&lt; endl;
+}
+</code></pre>
+
+<p>Avec ce changement, il est possible d&rsquo;avoir une des deux méthodes membres
+<code>begin/end</code> définie et d&rsquo;utiliser les boucle de plage en définissant les
+deux méthodes à l&rsquo;extérieur de la classe.</p>
+
+<h4 id="clarification-de-la-déduction-des-règles-de-déduction-des-arguments-des-templates">Clarification de la déduction des règles de déduction des arguments des templates</h4>
+
+<p>Avec la déduction des paramètres des template, une incohérence est apparue
+avec les constructeurs acceptant une liste et en particulier lors de leur
+utilisation avec un seul élément.</p>
+
+<p>Par exemple avec la définition ci-dessous, le type déduit est
+<code>vector&lt;vector&lt;int&gt;</code>.</p>
+
+<pre><code class="language-cpp">    vector v{vector{1, 2, 3}};
+</code></pre>
+
+<p>Cette déduction peut être perçue comme incohérente lorsqu&rsquo;une définition
+similaire utilise le constructeur par copie comme ci-dessous (déduction de
+  <code>tuple&lt;int, int, int&gt;</code>).</p>
+
+<pre><code class="language-cpp">    tuple t{tuple{1, 2, 3}};
+</code></pre>
+
+<p>Avec ce changement, lorsqu&rsquo;un seul élément est présent dans la liste, le type
+déduit est <code>vector&lt;int&gt;</code>. La même chose s&rsquo;applique au type <code>list</code>.</p>
+
+<h3 id="c-2a-libstdc">C++2a (libstdc++)</h3>
+
+<ol>
+<li>Implémentation expériementale des fonction <code>std::to_address</code> et <code>std::endian</code>.</li>
+<li>Implémentation du type <code>std::experimental::source_location</code> : voici un exemple
+d&rsquo;utilisation</li>
+</ol>
+
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;experimental/source_location&gt;
+
+using namespace std;
+
+int main(int, char *[]) {
+  experimental::source_location l = experimental::source_location::current();
+  cout &lt;&lt; l.file_name() &lt;&lt; &quot;/&quot; &lt;&lt; l.function_name() &lt;&lt; &quot;/&quot; &lt;&lt; l.line() &lt;&lt; &quot;/&quot;
+       &lt;&lt; l.column() &lt;&lt; endl;
+}
+</code></pre>
+
+<h2 id="amélioration-de-la-gestion-des-erreurs-de-compilation">Amélioration de la gestion des erreurs de compilation</h2>
+
+<h3 id="accès-à-un-membre-privé-lorsqu-un-accesseur-est-disponible">Accès à un membre privé lorsqu&rsquo;un accesseur est disponible</h3>
+
+<p>Cette fonctionalité permet si on accède à un membre privé d&rsquo;afficher l&rsquo;accesseur
+correspondant. Un exemple montrant son Utilisation</p>
+
+<pre><code class="language-cpp">struct foo
+{
+public:
+    int get_x() const { return x; }
+private:
+    int x;
+};
+
+int main(int, char*argv[]) {
+    foo f;
+    cout &lt;&lt; f.x &lt;&lt; endl;
+}
+</code></pre>
+
+<pre><code>gcc8_getter.cpp: In function 'int main(int, char**)':
+gcc8_getter.cpp:15:15: error: 'int foo::x' is private within this context
+     cout &lt;&lt; f.x &lt;&lt; endl;
+               ^~
+gcc8_getter.cpp:10:9: note: declared private here
+     int x;
+         ^~
+gcc8_getter.cpp:15:15: note: field 'int foo::x' can be accessed via 'int foo::get_x() const'
+     cout &lt;&lt; f.x &lt;&lt; endl;
+               ^~
+      get_x()
+</code></pre>
+
+<h3 id="utilisation-d-un-macro-utilisée-avant-sa-définition">Utilisation d&rsquo;un macro utilisée avant sa définition</h3>
+
+<p>Cette aide à la compilation permet d&rsquo;indiquer si la macro a été utilisée avant
+sa définition.</p>
+
+<pre><code class="language-cpp">const int x = 3 * PI;
+
+#define PI 3.14
+
+int main(int, char*argv[]) {
+}
+</code></pre>
+
+<h3 id="cast">Cast</h3>
+
+<p>L&rsquo;option <code>-Wold-style-cast</code> permet d&rsquo;afficher un message d&rsquo;aide pour indique
+quand utiliser <code>static_cast</code>, &lsquo;const_cast&rsquo; ou &lsquo;reinterpret_cast&rsquo;</p>
+
+<pre><code class="language-cpp">struct base {};
+struct foo : public base {};
+int main(int, char *argv[]) {
+  {
+    base *b = new foo;
+    foo *f = (foo *)b;
+    delete b;
+  }
+  {
+    const foo f1;
+    foo &amp;f2 = (foo &amp;)f1;
+  }
+}
+</code></pre>
+
+<pre><code>gcc8_cast.cpp: In function 'int main(int, char**)':
+gcc8_cast.cpp:8:21: warning: use of old-style cast to 'struct foo*' [-Wold-style-cast]
+     foo *f = (foo *)b;
+                     ^
+              --------
+              static_cast&lt;foo *&gt; (b)
+gcc8_cast.cpp:13:22: warning: use of old-style cast to 'struct foo&amp;' [-Wold-style-cast]
+     foo &amp;f2 = (foo &amp;)f1;
+                      ^~
+               ---------
+               const_cast&lt;foo &amp;&gt; (f1)
+</code></pre>
+
+<h3 id="erreur-dans-un-bloc-extern-c">Erreur dans un bloc <code>extern &quot;C&quot;</code></h3>
+
+<p>Lorsqu&rsquo;une erreur à l&rsquo;intérieur d&rsquo;un bloc <code>extern &quot;C&quot;</code> est détectée, le
+compilateur affiche le début du bloc <code>extern &quot;C&quot;</code>.</p>
+
+<h3 id="arguments-des-templates-non-concordants">Arguments des templates non concordants</h3>
+
+<p>Lorsque le compilateur détecte une différence des types des paramètres d&rsquo;un
+template, le compilateur met en évidence le type différent et remplace les
+paramètres concordants par trois points <em>&hellip;</em> dans le message d&rsquo;erreur.</p>
+
+<p>Il y a aussi une nouvelle option <code>-fdiagnostics-show-template-tree</code> qui permet
+d&rsquo;afficher les templates qui ne correspondent pas sous forme d&rsquo;arbre.</p>
+
+<h2 id="libstdc">LIBSTDC++</h2>
+
+<ol>
+<li>Implémentation de l&rsquo;API système de fichier <em>std::filesystem</em></li>
+<li><em>std::char_traits<char></em> et <em>std::char_traits<wchar_t></em> peuvent être utilisé
+dans des expressions constantes</li>
+<li>Implémentation partielles des fonction <em>std::to_chars</em> et <em>std::from_chars</em>
+Ces fonctions intégrées à la norme C++17 ont été partiellement implémentées car
+elles ne supportent actuellement que les types entiers.</li>
+</ol>
+
+<pre><code class="language-cpp">#include &lt;array&gt;
+#include &lt;charconv&gt;
+#include &lt;system_error&gt;
+#include &lt;iostream&gt;
+#include &lt;string_view&gt;
+
+using namespace std;
+
+int main(int, char*[]){
+    array&lt;char, 10&gt; str;
+    auto res = to_chars(str.data(), str.data() + str.size(), 42);
+    if (res.ec == errc()) cout &lt;&lt; string_view(str.data(), res.ptr - str.data());
+}
+</code></pre>
+
+<pre><code class="language-cpp">#include &lt;array&gt;
+#include &lt;charconv&gt;
+#include &lt;iostream&gt;
+#include &lt;string_view&gt;
+
+using namespace std;
+
+int main(int, char*[]){
+    array&lt;char, 10&gt; str{&quot;42&quot;};
+    int res;
+    from_chars(str.data(), str.data() + str.size(), res);
+    cout &lt;&lt; res &lt;&lt; endl;
+}
+</code></pre>
+
+<h2 id="divers">Divers</h2>
+
+<h4 id="l-option-wreturn-type-activée-par-défaut">L&rsquo;option <em>-Wreturn-type</em> activée par défaut</h4>
+
+<p>L&rsquo;option <code>-Wreturn-type</code> est activée par défaut, ce qui n&rsquo;était pas le cas dans
+<em>gcc7</em></p>
+
+<pre><code class="language-cpp">int foo(const bool b) {
+  if (b) return 1;
+}
+</code></pre>
+
+<h4 id="l-option-wclass-memaccess-incluse-dans-wall">L&rsquo;option <em>-Wclass-memaccess</em> incluse dans <em>-Wall</em></h4>
+
+<p>Cette option de gestion des avertissements permet d&rsquo;avertir lorsque des classes
+complexes sont manipulées avec des fonctions de gestion de mémoire telle
+<code>memcpy</code>. Cette option est incluse dans l&rsquo;option <code>-Wall</code></p>
+
+<pre><code class="language-cpp">struct foo1 {
+  int x = 0;
+  double y = 0;
+};
+struct foo2 {
+  int x;
+  double y;
+  virtual void f() {}
+};
+
+struct foo3 {
+    int x;
+    vector&lt;int&gt; v;
+};
+
+int main(int, char*[])
+{
+    foo1 f1a, f1b;
+    memcpy(&amp;f1a, &amp;f1b, sizeof(foo1));
+
+    foo2 f2a, f2b;
+    memcpy(&amp;f2a, &amp;f2b, sizeof(foo2));
+
+    foo3 f3a, f3b;
+    memcpy(&amp;f3a, &amp;f3b, sizeof(foo3));
+}
+</code></pre>
+
+<p>Le résultat avec l&rsquo;option activée est le suivant (seul le type simple <em>foo1</em>
+est accepté )</p>
+
+<pre><code>memaccess.cpp:28:36: warning: 'void* memcpy(void*, const void*, size_t)' writing to an object of type 'struct foo2' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+     memcpy(&amp;f2a, &amp;f2b, sizeof(foo2));
+                                    ^
+memaccess.cpp:11:8: note: 'struct foo2' declared here
+ struct foo2 {
+        ^~~~
+memaccess.cpp:31:36: warning: 'void* memcpy(void*, const void*, size_t)' writing to an object of type 'struct foo3' with no trivial copy-assignment; use copy-assignment or copy-initialization instead [-Wclass-memaccess]
+     memcpy(&amp;f3a, &amp;f3b, sizeof(foo3));
+                                    ^
+memaccess.cpp:17:8: note: 'struct foo3' declared here
+ struct foo3 {
+        ^~~~
+</code></pre>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://abdelkaderamar.github.io/tags/c&#43;&#43;/">C&#43;&#43;</a>&nbsp;
+            
+              <a href="https://abdelkaderamar.github.io/tags/gcc/">gcc</a>&nbsp;
+            
+          </div>
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+            <li class="next">
+              <a href="https://abdelkaderamar.github.io/post/blog/2018-05-12-gitea/" data-toggle="tooltip" data-placement="top" title="Gitea, une forge Git simple et rapide">Post suivant &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:abdelkader.amar@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/abdelkaderamar" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/abdelkaderamar" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/aamar" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/abdelkader-amar-5560723" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            
+            <a href="https://abdelkaderamar.github.io/index.xml" title="RSS">
+            
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Abdelkader Amar
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://abdelkaderamar.github.io">A. Amar</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Carbure avec <a href="http://gohugo.io">Hugo v0.40.1</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapté en <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://abdelkaderamar.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://abdelkaderamar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+
