@@ -7,52 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>abdelkader.amar@gmail.com (Abdelkader Amar)</managingEditor>
     <webMaster>abdelkader.amar@gmail.com (Abdelkader Amar)</webMaster>
-    <lastBuildDate>Thu, 23 Aug 2018 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Aug 2018 10:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://abdelkaderamar.github.io/post/blog/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>(Migration Test 3) C&#43;&#43;17 : Résumé des nouveautés du langage (&#43;Cheatsheet)</title>
-      <link>https://abdelkaderamar.github.io/post/blog/2018-08-23-new_features_cpp17_lang4/</link>
-      <pubDate>Thu, 23 Aug 2018 12:00:00 +0000</pubDate>
-      <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
-      <guid>https://abdelkaderamar.github.io/post/blog/2018-08-23-new_features_cpp17_lang4/</guid>
-      <description>{% include toc %}
-Ce post est similaire à celui déjà posté sur le C++14 mais concerne comme le titre l&amp;rsquo;indique les nouveautés de la norme C++17 pour le langage (et non la STL qui sera traité dans un autre article). Les exemples sont disponibles dans ce repository.
-J&amp;rsquo;ai également réalisé une cheatsheet qui peut être téléchargéé ci-dessous :
-Download
-PDF (A4) | Latex
-Déduction des arguments des templates de classe Avant le C++17, la déduction des types des templates était possible uniquement pour les fonctions, mais pas pour les classes.</description>
-    </item>
-    
-    <item>
-      <title>(Migration Test 2) C&#43;&#43;17 : Résumé des nouveautés du langage (&#43;Cheatsheet)</title>
-      <link>https://abdelkaderamar.github.io/post/blog/2018-08-23-new_features_cpp17_lang3/</link>
-      <pubDate>Thu, 23 Aug 2018 11:00:00 +0000</pubDate>
-      <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
-      <guid>https://abdelkaderamar.github.io/post/blog/2018-08-23-new_features_cpp17_lang3/</guid>
-      <description>{% include toc %}
-Ce post est similaire à celui déjà posté sur le C++14 mais concerne comme le titre l&amp;rsquo;indique les nouveautés de la norme C++17 pour le langage (et non la STL qui sera traité dans un autre article). Les exemples sont disponibles dans ce repository.
-J&amp;rsquo;ai également réalisé une cheatsheet qui peut être téléchargéé ci-dessous :
-Download
-PDF (A4) | Latex
-Déduction des arguments des templates de classe Avant le C++17, la déduction des types des templates était possible uniquement pour les fonctions, mais pas pour les classes.</description>
-    </item>
-    
-    <item>
-      <title>(Migration Test) C&#43;&#43;17 : Résumé des nouveautés du langage (&#43;Cheatsheet)</title>
-      <link>https://abdelkaderamar.github.io/post/blog/2018-08-23-new_features_cpp17_lang2/</link>
-      <pubDate>Thu, 23 Aug 2018 10:00:00 +0000</pubDate>
-      <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
-      <guid>https://abdelkaderamar.github.io/post/blog/2018-08-23-new_features_cpp17_lang2/</guid>
-      <description>{% include toc %}
-Ce post est similaire à celui déjà posté sur le C++14 mais concerne comme le titre l&amp;rsquo;indique les nouveautés de la norme C++17 pour le langage (et non la STL qui sera traité dans un autre article). Les exemples sont disponibles dans ce repository.
-J&amp;rsquo;ai également réalisé une cheatsheet qui peut être téléchargéé ci-dessous :
-Download
-PDF (A4) | Latex
-Déduction des arguments des templates de classe Avant le C++17, la déduction des types des templates était possible uniquement pour les fonctions, mais pas pour les classes.</description>
-    </item>
     
     <item>
       <title>C&#43;&#43;17 : Résumé des nouveautés du langage (&#43;Cheatsheet)</title>
