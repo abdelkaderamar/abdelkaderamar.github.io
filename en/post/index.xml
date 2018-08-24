@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on A. Amar&#39;s Blog</title>
+    <link>https://abdelkaderamar.github.io/en/post/</link>
+    <description>Recent content in Posts on A. Amar&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>abdelkader.amar@gmail.com (Abdelkader Amar)</managingEditor>
+    <webMaster>abdelkader.amar@gmail.com (Abdelkader Amar)</webMaster>
+    
+	<atom:link href="https://abdelkaderamar.github.io/en/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

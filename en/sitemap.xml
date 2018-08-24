@@ -3,6 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://abdelkaderamar.github.io/en/post/blog/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://abdelkaderamar.github.io/post/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://abdelkaderamar.github.io/en/post/blog/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.github.io/en/post/blog/tutorials/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://abdelkaderamar.github.io/post/blog/tutorials/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://abdelkaderamar.github.io/en/post/blog/tutorials/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.github.io/en/post/hackernews/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://abdelkaderamar.github.io/post/hackernews/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://abdelkaderamar.github.io/en/post/hackernews/"
+                />
+  </url>
+  
+  <url>
     <loc>https://abdelkaderamar.github.io/en/</loc>
     <priority>0</priority>
     <xhtml:link
@@ -14,6 +56,50 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://abdelkaderamar.github.io/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.github.io/en/page/about/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://abdelkaderamar.github.io/page/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://abdelkaderamar.github.io/en/page/about/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.github.io/en/page/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://abdelkaderamar.github.io/page/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://abdelkaderamar.github.io/en/page/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.github.io/en/post/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://abdelkaderamar.github.io/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://abdelkaderamar.github.io/en/post/"
                 />
   </url>
   
