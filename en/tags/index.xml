@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on A. Amar&#39;s Blog</title>
-    <link>https://abdelkaderamar.gitlab.io/en/tags/</link>
+    <link>https://abdelkaderamar.github.io/en/tags/</link>
     <description>Recent content in Tags on A. Amar&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>abdelkader.amar@gmail.com (Abdelkader Amar)</managingEditor>
     <webMaster>abdelkader.amar@gmail.com (Abdelkader Amar)</webMaster>
     
-	<atom:link href="https://abdelkaderamar.gitlab.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abdelkaderamar.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on A. Amar</title>
-    <link>https://abdelkaderamar.gitlab.io/tags/tools/</link>
+    <link>https://abdelkaderamar.github.io/tags/tools/</link>
     <description>Recent content in Tools on A. Amar</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>abdelkader.amar@gmail.com (Abdelkader Amar)</managingEditor>
     <webMaster>abdelkader.amar@gmail.com (Abdelkader Amar)</webMaster>
     <lastBuildDate>Sat, 12 May 2018 12:01:50 +0000</lastBuildDate>
     
-	<atom:link href="https://abdelkaderamar.gitlab.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abdelkaderamar.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Gitea, une forge Git simple et rapide</title>
-      <link>https://abdelkaderamar.gitlab.io/post/blog/2018-05-12-gitea/</link>
+      <link>https://abdelkaderamar.github.io/post/blog/2018-05-12-gitea/</link>
       <pubDate>Sat, 12 May 2018 12:01:50 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
-      <guid>https://abdelkaderamar.gitlab.io/post/blog/2018-05-12-gitea/</guid>
+      <guid>https://abdelkaderamar.github.io/post/blog/2018-05-12-gitea/</guid>
       <description>Gitea est un outil permettant d&amp;rsquo;héberger un service de forge utilisant Git. Il est similaire à Gitlab ou Github. La première chose qu&amp;rsquo;on note en l&amp;rsquo;essayant est la facilité avec laquelle il s&amp;rsquo;installe. Le logiciel se présente sous la forme d&amp;rsquo;un seule binaire et son installation se résume à quelques étapes de configuration via l&amp;rsquo;interface web. Il supporte plusieurs base de données dont SQLite.
 Une fois lancé, il faut ouvrir la page http://localhost:3000 et configurer le service.</description>
     </item>
