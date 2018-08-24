@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Finance on A. Amar</title>
+    <link>https://abdelkaderamar.github.io/tags/finance/</link>
+    <description>Recent content in Finance on A. Amar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>abdelkader.amar@gmail.com (Abdelkader Amar)</managingEditor>
+    <webMaster>abdelkader.amar@gmail.com (Abdelkader Amar)</webMaster>
+    <lastBuildDate>Wed, 11 Jul 2018 11:31:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://abdelkaderamar.github.io/tags/finance/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AV.NET : Une bibliothèque CSharp pour AlphaVantage</title>
+      <link>https://abdelkaderamar.github.io/post/blog/2018/07/av.net--une-biblioth%C3%A8que-csharp-pour-alphavantage/</link>
+      <pubDate>Wed, 11 Jul 2018 11:31:00 +0000</pubDate>
+      <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
+      <guid>https://abdelkaderamar.github.io/post/blog/2018/07/av.net--une-biblioth%C3%A8que-csharp-pour-alphavantage/</guid>
+      <description>Introduction AlphaVantage est un service web qui donne la possibilité de récupérer (gratuitement) des données historiques sur des instruments financiers.
+Pour les actions, ce service (qui rappelle le défunt Yahoo Finance) offre une API web REST pour consulter les données suivantes : - Données intraday : OHLC (Open, High, Low et Close) et volume de la journée courante (ou précédente si le marché est fermée). On doit préciser l&amp;rsquo;intervalle de temps (1, 5, 15, 30 ou 60 minutes) et le nombre de données à récupérer (les 100 dernières par défaut ou toute la journée).</description>
+    </item>
+    
+  </channel>
+</rss>

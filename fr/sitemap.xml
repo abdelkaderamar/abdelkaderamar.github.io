@@ -131,8 +131,14 @@
   </url>
   
   <url>
-    <loc>https://abdelkaderamar.github.io/tags/c#-finance-alphavantage-market-data/</loc>
+    <loc>https://abdelkaderamar.github.io/tags/alphavantage/</loc>
     <lastmod>2018-07-11T11:31:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.github.io/tags/boost/</loc>
+    <lastmod>2018-05-16T21:30:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -143,14 +149,32 @@
   </url>
   
   <url>
-    <loc>https://abdelkaderamar.github.io/tags/c&#43;&#43;-c&#43;&#43;14/</loc>
+    <loc>https://abdelkaderamar.github.io/tags/cpp/</loc>
+    <lastmod>2018-08-21T10:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.github.io/tags/cpp14/</loc>
     <lastmod>2018-07-19T17:15:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abdelkaderamar.github.io/tags/c&#43;&#43;-c&#43;&#43;17/</loc>
+    <loc>https://abdelkaderamar.github.io/tags/cpp17/</loc>
     <lastmod>2018-08-21T10:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.github.io/tags/csharp/</loc>
+    <lastmod>2018-07-11T11:31:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.github.io/tags/finance/</loc>
+    <lastmod>2018-07-11T11:31:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -161,13 +185,31 @@
   </url>
   
   <url>
+    <loc>https://abdelkaderamar.github.io/tags/git/</loc>
+    <lastmod>2018-05-12T12:01:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://abdelkaderamar.github.io/tags/hackernews/</loc>
     <lastmod>2018-07-22T12:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://abdelkaderamar.github.io/tags/market-data/</loc>
+    <lastmod>2018-07-11T11:31:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://abdelkaderamar.github.io/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.github.io/tags/performance/</loc>
+    <lastmod>2018-06-06T21:30:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

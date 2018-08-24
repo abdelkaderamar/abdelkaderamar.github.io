@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Performance on A. Amar</title>
+    <link>https://abdelkaderamar.github.io/tags/performance/</link>
+    <description>Recent content in Performance on A. Amar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>abdelkader.amar@gmail.com (Abdelkader Amar)</managingEditor>
+    <webMaster>abdelkader.amar@gmail.com (Abdelkader Amar)</webMaster>
+    <lastBuildDate>Wed, 06 Jun 2018 21:30:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://abdelkaderamar.github.io/tags/performance/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>La bibliothèque *Benchmark*</title>
+      <link>https://abdelkaderamar.github.io/post/blog/2018/06/la-biblioth%C3%A8que-benchmark/</link>
+      <pubDate>Wed, 06 Jun 2018 21:30:00 +0000</pubDate>
+      <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
+      <guid>https://abdelkaderamar.github.io/post/blog/2018/06/la-biblioth%C3%A8que-benchmark/</guid>
+      <description>Introduction Benchmark est une bibliothèque C++ développée par Google pour faire des mesures de performances de fonctions. Son installation sous linux peut se faire soit par compilation du code source disponible sur Github ou si la distribution la propose en utilisant le gestionnaire de package. Ubuntu dans sa version 18.1 propose la version 1.36 dans ses sources apt.
+utilisation L&amp;rsquo;utilisation de base est simple. On commence par une fonction qui a le prototype suivant :</description>
+    </item>
+    
+  </channel>
+</rss>

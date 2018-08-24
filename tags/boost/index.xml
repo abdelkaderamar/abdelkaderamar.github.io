@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Boost on A. Amar</title>
+    <link>https://abdelkaderamar.github.io/tags/boost/</link>
+    <description>Recent content in Boost on A. Amar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>abdelkader.amar@gmail.com (Abdelkader Amar)</managingEditor>
+    <webMaster>abdelkader.amar@gmail.com (Abdelkader Amar)</webMaster>
+    <lastBuildDate>Wed, 16 May 2018 21:30:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://abdelkaderamar.github.io/tags/boost/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Utilisation de *Boost Multi-index*</title>
+      <link>https://abdelkaderamar.github.io/post/blog/2018/05/utilisation-de-boost-multi-index/</link>
+      <pubDate>Wed, 16 May 2018 21:30:00 +0000</pubDate>
+      <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
+      <guid>https://abdelkaderamar.github.io/post/blog/2018/05/utilisation-de-boost-multi-index/</guid>
+      <description>Introduction Boost Multi-Index est une librairie qui fournit un type de conteneur de données appelé multi_index_container. La particularité de ce type est de fournir un ou plusieurs index permettant ainsi plusieurs méthodes d&amp;rsquo;accès dans le même conteneur. Par exemple, on peut indexer des données en définissant deux clés distinctes. Avec les conteneurs STL, il faut utiliser deux map, une pour chaque clé et s&amp;rsquo;assurer que les deux conteneurs sont mis à jours simultanément.</description>
+    </item>
+    
+  </channel>
+</rss>
