@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>C&#43;&#43;17 : Résumé des nouveautés du langage (&#43;Cheatsheet)</title>
+  <meta property="og:title" content="C&#43;&#43;17 : Résumé des nouveautés du langage (&#43;Cheatsheet)" />
+  <meta name="twitter:title" content="C&#43;&#43;17 : Résumé des nouveautés du langage (&#43;Cheatsheet)" />
+  <meta name="description" content="{% include toc %}
+Ce post est similaire à celui déjà posté sur le C&#43;&#43;14 mais concerne comme le titre l&rsquo;indique les nouveautés de la norme C&#43;&#43;17 pour le langage (et non la STL qui sera traité dans un autre article). Les exemples sont disponibles dans ce repository.
+J&rsquo;ai également réalisé une cheatsheet qui peut être téléchargéé ci-dessous :
+Download
+PDF (A4) | Latex
+Déduction des arguments des templates de classe Avant le C&#43;&#43;17, la déduction des types des templates était possible uniquement pour les fonctions, mais pas pour les classes.">
+  <meta property="og:description" content="{% include toc %}
+Ce post est similaire à celui déjà posté sur le C&#43;&#43;14 mais concerne comme le titre l&rsquo;indique les nouveautés de la norme C&#43;&#43;17 pour le langage (et non la STL qui sera traité dans un autre article). Les exemples sont disponibles dans ce repository.
+J&rsquo;ai également réalisé une cheatsheet qui peut être téléchargéé ci-dessous :
+Download
+PDF (A4) | Latex
+Déduction des arguments des templates de classe Avant le C&#43;&#43;17, la déduction des types des templates était possible uniquement pour les fonctions, mais pas pour les classes.">
+  <meta name="twitter:description" content="{% include toc %}
+Ce post est similaire à celui déjà posté sur le C&#43;&#43;14 mais concerne comme le titre l&rsquo;indique les nouveautés de la norme C&#43;&#43;17 pour le langage (et non la STL qui sera traité …">
+  <meta name="author" content="Abdelkader Amar"/>
+  <link href='https://abdelkaderamar.gitlab.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://abdelkaderamar.gitlab.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://abdelkaderamar.gitlab.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@aamar" />
+  <meta name="twitter:creator" content="@aamar" />
+  <meta property="og:url" content="https://abdelkaderamar.gitlab.io/post/blog/2018-08-21-new_features_cpp17_lang/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="A. Amar" />
+
+  <meta name="generator" content="Hugo 0.40.1" />
+  <link rel="canonical" href="https://abdelkaderamar.gitlab.io/post/blog/2018-08-21-new_features_cpp17_lang/" />
+  <link rel="alternate" href="https://abdelkaderamar.gitlab.io/index.xml" type="application/rss+xml" title="A. Amar">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://abdelkaderamar.gitlab.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://abdelkaderamar.gitlab.io/css/syntax.css" /><link rel="stylesheet" href="https://abdelkaderamar.gitlab.io/css/codeblock.css" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://abdelkaderamar.gitlab.io">A. Amar</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="https://abdelkaderamar.gitlab.io/post/blog">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Hacker News Digest" href="https://abdelkaderamar.gitlab.io/post/hackernews">Hacker News Digest</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tutoriaux" href="https://abdelkaderamar.gitlab.io/post/blog/tutorials">Tutoriaux</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="https://abdelkaderamar.gitlab.io/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="A Propos" href="https://abdelkaderamar.gitlab.io/page/about/">A Propos</a>
+            </li>
+          
+        
+
+        
+          
+            <li>
+              
+                
+                  <a href="https://abdelkaderamar.gitlab.io/en" lang="en">en</a>
+                
+              
+                
+              
+            </li>
+          
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="A. Amar" href="https://abdelkaderamar.gitlab.io">
+            <img class="avatar-img" src="https://abdelkaderamar.gitlab.io/img/avatar-icon.png" alt="A. Amar" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>C&#43;&#43;17 : Résumé des nouveautés du langage (&#43;Cheatsheet)</h1>
+                
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posté le August 21, 2018
+  
+  
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>{% include toc %}</p>
+
+<p>Ce post est similaire à celui déjà posté sur le <a href="https://abdelkaderamar.github.io/posts/2018/07/19/cpp14_language_new_features.html">C++14</a>
+mais concerne comme le titre l&rsquo;indique les nouveautés de la norme C++17 pour le
+langage (et non la STL qui sera traité dans un autre article). Les exemples
+sont disponibles dans ce <a href="https://github.com/abdelkaderamar/cpp-samples/tree/master/src/c%2B%2B17">repository</a>.</p>
+
+<p>J&rsquo;ai également réalisé une cheatsheet qui peut être téléchargéé ci-dessous :</p>
+
+<p><img src="{{ site.url }}{{ site.baseurl }}/assets/images/cheatsheets/c++17_lang_cheatsheet.png" alt="C++17 Language Cheatsheet" /><br />
+<strong>Download</strong><br />
+<a href="{{ site.url }}{{ site.baseurl }}/assets/pdf/cheatsheets/c++17_lang_cheatsheet.pdf">PDF</a> (A4) |
+<a href="https://github.com/abdelkaderamar/cheatsheets/blob/master/cpp/c%2B%2B17_lang_cheatsheet.tex">Latex</a></p>
+
+<h1 id="déduction-des-arguments-des-templates-de-classe">Déduction des arguments des templates de classe</h1>
+
+<p>Avant le C++17, la déduction des types des templates était possible uniquement
+pour les fonctions, mais pas pour les classes. Par exemple pour instancier un
+objet <code>pair&lt;int, double&gt;</code>, il fallait expliciter les types
+<code>pair&lt;int, double&gt;(1, 2.0)</code> ou passer par des fonctions utilitaires
+(comme <code>make_pair</code>) qui utilise la déduction de paramètres pour les fonctions.
+Il est maintenant possible de déduire le type à partir des paramètres du
+constructeur (par exemple <code>pair(1, 2)</code>).</p>
+
+<pre><code class="language-cpp">pair p1{1, 2.0};
+// before c++17
+pair&lt;int, double&gt; p1{1, 2.0};
+auto p2 = make_pair(1, 2.0);
+
+// with c++17
+pair p3{1, 2.0};
+</code></pre>
+
+<h1 id="fold-expressions">Fold expressions</h1>
+
+<p>Les <em>Fold expressions</em> permettrent d&rsquo;écrire un code plus compact avec les
+<em>variadic templates</em> sans devoir utiliser une récursivité explicite.<br />
+Par exemple pour écrire une fonction <code>sum</code> avant le C++17 :</p>
+
+<pre><code class="language-cpp">// before c++17
+auto sum() {
+  return 0;
+}
+
+template&lt;typename T, typename ... Ts&gt;
+auto sum(const T&amp; t, const Ts&amp; ... ts) {
+  return t + sum(ts ... );
+}
+</code></pre>
+
+<p>Avec les <em>fold expressions</em>, l&rsquo;écriture d&rsquo;une telle fonction est plus simple :</p>
+
+<pre><code class="language-cpp">// with c++17
+template&lt;typename ... Ts&gt;
+auto sum_fold_exp(const Ts&amp; ... ts) {
+  return (3 + ... + ts);
+}
+</code></pre>
+
+<p>Plus de détails sur cette fonctionnalité sont disponibles dans ce
+<a href="https://abdelkaderamar.github.io/tutorials/posts/2018/06/13/fold_expression.html">post</a>.</p>
+
+<h1 id="déclarer-les-paramètres-des-templates-template-non-type-arguments-avec-auto">Déclarer les paramètres des templates (<em>template non-type arguments</em>) avec <code>auto</code></h1>
+
+<p>Il est possible maintenant des déclarer les paramètres des templates (<em>template
+non-type arguments</em>) avec le mot-clé <code>auto</code>. Avant cette fonctionnalité, pour
+écrire une constante template :</p>
+
+<pre><code class="language-cpp">template &lt;typename Type, Type value&gt; constexpr Type constant = value;
+constexpr auto const my_constant = constant&lt;int, 42&gt;;
+</code></pre>
+
+<p>Maintenant cela peut s&rsquo;écrire :</p>
+
+<pre><code class="language-cpp">template &lt;auto value&gt; constexpr auto constant = value;
+constexpr auto const my_constant = constant&lt;42&gt;;
+</code></pre>
+
+<p>Voici un autre exemple d&rsquo;utilisation avec les <em>variadic template</em> :</p>
+
+<pre><code class="language-cpp">template &lt;auto ... vs&gt; struct heterogenous_list {};
+using list = heterogenous_list&lt;1, 2, 'A', 4&gt;;
+</code></pre>
+
+<p><em>Remarque</em> : le standard n&rsquo;accepte pas les types en virgule-flottante (float,
+  double) et les string pour les <em>&ldquo;template non-type arguments&rdquo;</em>.</p>
+
+<h1 id="nouvelles-règles-de-déduction-pour-l-initialisation-par">Nouvelles règles de déduction pour l&rsquo;initialisation par {}</h1>
+
+<p>Les règles de déduction pour les <code>{}</code> avec auto ont été changées. Auparavant
+<code>auto x{1}</code> déduisait un <code>x</code> de type <code>std::initializer_list&lt;int&gt;</code>, avec la
+nouvelle norme, <code>x</code> est de type <code>int</code>.</p>
+
+<pre><code class="language-cpp">auto x1 {1};
+static_assert(is_same&lt;decltype(x1), int&gt;::value == 1);
+
+auto x2 = {1};
+static_assert(is_same&lt;decltype(x2), initializer_list&lt;int&gt;&gt;::value == 1);
+
+// auto x3 {1, 2, 3}; // syntax error
+// gcc error message :
+//    direct-list-initialization of ‘auto’ requires exactly one element
+
+auto x4 = {1, 2, 3};
+static_assert(is_same&lt;decltype(x4), initializer_list&lt;int&gt;&gt;::value == 1);
+</code></pre>
+
+<h1 id="constexpr-lambda">constexpr lambda</h1>
+
+<p>Les expressions lambda peuvent être marquées avec <code>constexpr</code> pour permettre au
+compilateur d&rsquo;évaluer les appels à la compilation.</p>
+
+<pre><code class="language-cpp">auto identity = [](int n) constexpr { return n; };
+static_assert(identity(123) == 123);
+</code></pre>
+
+<pre><code class="language-cpp">constexpr auto inc(auto n) { return n + 1; }
+
+// ...
+
+static_assert(inc(1) == 2);
+</code></pre>
+
+<h1 id="capture-de-this-par-valeur-dans-les-lambda">Capture de <code>this</code> par valeur dans les lambda</h1>
+
+<p>La capture de <code>this</code> étaient jusqu&rsquo;au C++17 par référence uniquement. Ce mode de
+passage peut poser des problèmes dans certaines situations comme celles d&rsquo;appel
+de code asynchrone où la callback peut avoir besoin de l&rsquo;objet appelant, même
+après sa destruction éventuelle. Il est maintenant possible de faire une copie
+de <code>this</code> en utilisant la syntaxe <code>[*this]</code>. L&rsquo;exemple suivant n&rsquo;utilise pas du
+code asynchrone mais montre la copie de l&rsquo;objet appelant.</p>
+
+<pre><code class="language-cpp">struct foo
+{
+  foo() : x{0} {}
+  int _x;
+  auto log_by_ref() {
+    return [this]() { cout &lt;&lt; x &lt;&lt; endl; };
+  }
+  auto log_by_val() {
+    return [*this]() { cout &lt;&lt; x &lt;&lt; endl; };
+  }
+};
+
+struct foo f;
+f._x = 1234;
+auto ref = f.log_by_ref();
+auto val = f.log_by_val();
+ref();  // print 1234
+val();  // print 1234
+f.x = 4321;
+ref();  // print 4321
+val();  // print 1234, the copy of is not modified
+</code></pre>
+
+<!-- *comment* -->
+
+<h1 id="variable-inline">Variable inline</h1>
+
+<p>Avec cette fonctionnalité, les variable peuvent être déclarées avec le mot-clé
+<em>inline</em> comme pour les fonctions. Ceci peut s&rsquo;avérer utile pour les
+bibliothèques à base de fichiers entêtes seulement.</p>
+
+<pre><code class="language-cpp">struct S { int x; };
+inline S x1 = S{321};
+</code></pre>
+
+<h1 id="namespaces-imbriqués">Namespaces imbriqués</h1>
+
+<p>L&rsquo;écriture des namespaces imbriqués devait déclarer chaque namespace
+séparément. Le résultat était parfois pas très élégant, en particulier pour les
+<em>forward declaration</em>.</p>
+
+<pre><code class="language-cpp">// Before c++17
+namespace A
+{
+  namespace
+  {
+    namespace C
+    {
+      class foo;
+    }
+  }
+}
+</code></pre>
+
+<p>Avec le C++17, l&rsquo;écriture du code précédent peut se faire plus simplement comme
+ci-dessous :</p>
+
+<pre><code class="language-cpp">namespace A::B::C {
+  class foo;
+}
+</code></pre>
+
+<h1 id="structured-bindings">Structured bindings</h1>
+
+<p>Avec cette fonctionnalité, il est possible d&rsquo;écrire des expressions de type
+<code>auto [x, y, z] = expr</code> où le type de <code>expr</code> est un type <em>tuple like</em> (<code>pair</code>,
+<code>tuple</code>, <code>array</code> ou structure)</p>
+
+<p><strong>Example avec <code>pair</code></strong></p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt;
+pair&lt;T, bool&gt; racine(T d) {
+  if (d&lt;0) return pair(-1, false);
+  return pair(sqrt(d), true);
+}
+
+int main(int argc, char *agrv[])
+{
+  auto [s, success] = racine(1998.0);
+  if (success) cout &lt;&lt; s &lt;&lt; endl;
+}
+</code></pre>
+
+<p><strong>Example avec <code>tuple</code></strong></p>
+
+<pre><code class="language-cpp">tuple&lt;int, int, int&gt; make_random_tuple()
+{
+  return tuple(rand(), rand(), rand());
+}
+
+//...
+
+auto [a, b, c] = make_random_tuple();
+</code></pre>
+
+<p><strong>Example avec une structure</strong></p>
+
+<pre><code class="language-cpp">struct foo {
+  int i;
+  double d;
+  char c;
+};
+
+foo make_foo() {
+  foo f{rand(), rand(), 32 + rand() % 128};
+  return f;
+}
+
+//...
+
+foo f = make_foo();
+auto [i, d, c] = f;
+cout &lt;&lt; &quot;i = &quot; &lt;&lt; i &lt;&lt; endl &lt;&lt; &quot;d = &quot; &lt;&lt; d &lt;&lt; endl &lt;&lt; &quot;c = &quot; &lt;&lt; c &lt;&lt; endl;
+</code></pre>
+
+<p><strong>Example avec <code>array</code></strong></p>
+
+<pre><code class="language-cpp">array&lt;int, 4&gt; make_random_array() {
+  return array{rand(), rand(), rand(), rand()};
+}
+
+// ...
+
+auto [i0, i1, i2, i3] = make_random_array();
+cout &lt;&lt; &quot;i0 = &quot; &lt;&lt; i0 &lt;&lt; endl;
+</code></pre>
+
+<h1 id="déclaration-et-initialisation-dans-les-conditions-if-et-switch">Déclaration et initialisation dans les conditions <code>if</code> et <code>switch</code></h1>
+
+<p>Pour réduire le scope des variables, il maintenant possible de les déclarer
+à l&rsquo;intérieur de la condition du <code>if</code> ou du <code>switch</code>.</p>
+
+<p><strong>if</strong></p>
+
+<pre><code class="language-cpp">map&lt;int, int&gt; m;
+
+// ...
+
+auto insert = [&amp;](int key, int value) {
+  if (auto res = m.insert({key, value}); res.second) {
+    cout &lt;&lt; key &lt;&lt; &quot;/&quot; &lt;&lt; value &lt;&lt; &quot; inserted&quot; &lt;&lt; endl;
+  }
+};
+</code></pre>
+
+<p><strong>switch</strong></p>
+
+<pre><code class="language-cpp">enum class color : char { red, blue, green };
+
+//...
+
+switch (auto c = get_color()) {
+case color::red:
+  cout &lt;&lt; &quot;red&quot; &lt;&lt; endl;
+  break;
+case color::blue:
+  cout &lt;&lt; &quot;blue&quot; &lt;&lt; endl;
+  break;
+case color::green:
+  cout &lt;&lt; &quot;green&quot; &lt;&lt; endl;
+  break;
+default:
+  cout &lt;&lt; &quot;unknown color&quot; &lt;&lt; endl;
+  break;
+}
+</code></pre>
+
+<h1 id="suppression-des-trigraphes">Suppression des trigraphes</h1>
+
+<p>Les trigraphes sont un héritage des anciens systèmes qui ne supportaient pas
+l&rsquo;ASCII 7 bits. Ils consistent en une séquence de caractères qui sont
+transformés par le préprocesseur du compilateur en un autre caractère. Par
+exemple <code>??/</code> sont transformés en <code>\</code> et <code>??&lt;</code> en <code>{</code></p>
+
+<h1 id="constexpr-if">constexpr if</h1>
+
+<p>Cette nouvelle fonctionnalité est très intéressante car elle permet au
+compilateur d&rsquo;interpréter le résultat de la condition d&rsquo;un <code>if</code> et de ne
+garder que la partie qui satisfait la condition. Dit autrement, cette
+fonctionnalité permet d&rsquo;avoir un <code>if</code> statique.</p>
+
+<p>Avec cette fonctionalité, il n&rsquo;est plus nécessaire de passer par le mécanisme
+de <em>SFINAE</em> (ou même dans certains cas par des <em>#ifdef</em>).</p>
+
+<p>A noter que la syntaxe est la suivante (les parenthèses sont autour de la
+condition seulement):</p>
+
+<pre><code class="language-cpp">if constrexpr (cond)
+  statement
+else
+  statement
+</code></pre>
+
+<p>Dans l&rsquo;exemple ci-dessous, la fonction <em>template</em> <code>compute</code> est générée
+différemment en fonction du type fourni. Si c&rsquo;est un type entier qui est
+utilisé, le compilateur gardera l&rsquo;instruction <code>x * x</code>, et supprimera les deux
+autres branches. Si c&rsquo;est le type <code>foo</code> ou un type dérivé de <code>foo</code> qui est
+utilisé, les deux premières branches sont supprimées et c&rsquo;est les instructions
+<code>x.bar(); return 0;</code> qui seront gardées.</p>
+
+<pre><code class="language-cpp">struct foo {
+  void bar() { cout &lt;&lt; &quot;calling bar&quot; &lt;&lt; endl; }
+};
+
+template &lt;typename T&gt; int compute(T x) {
+  if constexpr (std::is_integral&lt;T&gt;::value) {
+    return x * x;
+  } else if constexpr (std::is_same&lt;T, string&gt;::value) {
+    return x.size();
+  } else if constexpr (std::is_base_of&lt;foo, T&gt;::value) {
+    x.bar();
+    return 0;
+  }
+  return 0;
+}
+int main(int argc, char *agrv[]) {
+  cout &lt;&lt; compute(5) &lt;&lt; endl;
+  cout &lt;&lt; compute(string{&quot;constexpr if&quot;}) &lt;&lt; endl;
+  struct foo f;
+  compute(f);
+}
+</code></pre>
+
+<h1 id="constantes-hexadécimale-en-virgule-flottante">Constantes hexadécimale en virgule-flottante</h1>
+
+<p>Les constantes en virgule flottante peuvent être définies avec la syntaxe
+suivante :</p>
+
+<pre><code class="language-cpp">0x&lt;hex digit sequence&gt;&lt;exponent&gt;&lt;suffix&gt;
+0x&lt;hex digit sequence&gt;.&lt;exponent&gt;&lt;suffix&gt;
+0x&lt;hex digit sequence&gt;.&lt;hex digit sequence&gt;&lt;exponent&gt;&lt;suffix&gt;
+</code></pre>
+
+<p>Avec <em>exponent</em> qui a la syntaxe suivante :</p>
+
+<pre><code class="language-cpp">p|P&lt;exponent sign&gt;&lt;digit sequence&gt;
+</code></pre>
+
+<p>Par exemple, si on convertit en décimal la constante <code>0x50.8p5</code> :</p>
+
+<pre><code class="language-cpp">0x50.8p5 = (5*16 + 0 + 0.5) * 2^5 = 80.5 * 32 = 2576
+</code></pre>
+
+<pre><code class="language-cpp">cout &lt;&lt; 0x10.1p0 &lt;&lt; endl // 16.0625
+  &lt;&lt; 0X0.8p0 &lt;&lt; endl     // 0.5
+  &lt;&lt; 0X50.8p5 &lt;&lt; endl;   // 2576
+</code></pre>
+
+<h1 id="initialisation-directe-des-enums">Initialisation directe des enums</h1>
+
+<p>Les <em>enums</em> de type <em>class</em> peuvent être initialisés avec des entiers
+directement en utilisant les accolades <code>{}</code></p>
+
+<pre><code class="language-cpp">enum class color : char { red, blue, green };
+
+color c1 { 3 }, c2 { 88 };
+</code></pre>
+
+<h1 id="fallthrough">[[fallthrough]]</h1>
+
+<p>L&rsquo;attribut <code>fallthrough</code> peut être utilisé dans les instructions <code>switch</code> pour
+supprimer le message d&rsquo;avertissement lorsque deux <code>case</code> se suivent sans
+instruction <code>break</code> entre les deux. Dans l&rsquo;exemple suivant, le compilateur
+affichera un message d&rsquo;erreur pour le <code>case 2</code>, alors qu&rsquo;il ignorera le
+<code>case 3</code>.</p>
+
+<pre><code class="language-cpp">  int i;
+  cin &gt;&gt; i;
+  switch (i) {
+  case 1:
+    cout &lt;&lt; &quot;one&quot; &lt;&lt; endl;
+  case 2:
+    cout &lt;&lt; &quot;two&quot; &lt;&lt; endl;
+  [[fallthrough]];
+  case 3 : cout &lt;&lt; &quot;three&quot; &lt;&lt; endl;
+  }
+</code></pre>
+
+<p><strong>Remarque</strong> : sous <em>gcc</em> activer l&rsquo;option <code>-Wimplicit-fallthrough</code> ou <code>-Wextra</code>.</p>
+
+<h1 id="nodiscard">[[nodiscard]]</h1>
+
+<p>L&rsquo;attribut <code>nodiscard</code> permet d&rsquo;avoir un message d&rsquo;avertissement du compilateur
+si la valeur retournée par une fonction n&rsquo;est pas utilisée.</p>
+
+<pre><code class="language-cpp">[[nodiscard]] int foo() { return 1; };
+void bar() {
+  foo(); // Warning
+}
+</code></pre>
+
+<p>On peut également marquer un type avec l&rsquo;attribut <code>nodiscard</code>. Dans ce cas, le
+message d&rsquo;avertissement sera affiché pour toutes les fonctions qui retournent
+ce type.</p>
+
+<h1 id="maybe-unused">[[maybe_unused]]</h1>
+
+<p>L&rsquo;attribut <code>maybe_unused</code> permet de supprimer le message d&rsquo;avertissement du
+compilateur si la fonction ou la variable n&rsquo;est pas utilisée.</p>
+
+<pre><code class="language-cpp">static void f() {  } // Compilers may warn about this
+[[maybe_unused]] static void g() {  } // Warning suppressed
+
+int x = 42;
+[[maybe_unused]] int y = 42; // Warning suppressed
+</code></pre>
+
+<h1 id="static-assert-sans-message">static_assert sans message</h1>
+
+<p>Le mot clé <code>static_assert</code> peut être utilisé maintenant sans avoir à spécifier
+un message d&rsquo;erreur.</p>
+
+<pre><code class="language-cpp">static_assert(VERSION &gt;= 2);
+</code></pre>
+
+<h1 id="constantes-utf-8">Constantes UTF-8</h1>
+
+<p>Les constantes UTF-8 de type <code>char</code> commence par le préfixe <code>u8</code>.</p>
+
+<pre><code class="language-cpp">char c1 = u8'x';
+</code></pre>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://abdelkaderamar.gitlab.io/tags/c&#43;&#43;-c&#43;&#43;17/">C&#43;&#43;, C&#43;&#43;17</a>&nbsp;
+            
+          </div>
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://abdelkaderamar.gitlab.io/post/blog/2018-07-19-cpp14_language_new_features/" data-toggle="tooltip" data-placement="top" title="C&#43;&#43;14 : Résumé des nouveautés du langage (&#43;Cheatsheet)">&larr; Post précédent</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:abdelkader.amar@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/abdelkaderamar" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/abdelkaderamar" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/aamar" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/abdelkader-amar-5560723" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            
+            <a href="https://abdelkaderamar.gitlab.io/index.xml" title="RSS">
+            
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Abdelkader Amar
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://abdelkaderamar.gitlab.io">A. Amar</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Carbure avec <a href="http://gohugo.io">Hugo v0.40.1</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapté en <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://abdelkaderamar.gitlab.io/js/main.js"></script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://abdelkaderamar.gitlab.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+

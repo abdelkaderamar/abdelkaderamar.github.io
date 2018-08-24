@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/blog/2018-08-21-new_features_cpp17_lang/</loc>
+    <lastmod>2018-08-21T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/hackernews/2018-07-22-hackernews_digest/</loc>
+    <lastmod>2018-07-22T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/blog/2018-07-19-cpp14_language_new_features/</loc>
+    <lastmod>2018-07-19T17:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/hackernews/2018-07-15-hackernews_digest/</loc>
+    <lastmod>2018-07-15T16:35:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/blog/2018-07-11-av.net/</loc>
+    <lastmod>2018-07-11T11:31:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/hackernews/2018-07-09-hackernews_digest/</loc>
+    <lastmod>2018-07-09T23:02:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/hackernews/2018-06-17-hackernews_digest/</loc>
+    <lastmod>2018-06-17T15:54:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/blog/2018-06-13-fold_expression/</loc>
+    <lastmod>2018-06-13T23:48:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/draft-2018-06-12-optional/</loc>
+    <lastmod>2018-06-12T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/hackernews/2018-06-11-hackernews_digest/</loc>
+    <lastmod>2018-06-11T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/blog/2018-06-06-benchmark_library_tutorial/</loc>
+    <lastmod>2018-06-06T21:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/hackernews/2018-06-03-hackernews_digest/</loc>
+    <lastmod>2018-06-03T16:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/hackernews/2018-05-27-hackernews_digest/</loc>
+    <lastmod>2018-05-27T15:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/hackernews/2018-05-20-hackernews_digest/</loc>
+    <lastmod>2018-05-20T11:09:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/blog/2018-05-16-boost_multiindex_tutorial/</loc>
+    <lastmod>2018-05-16T21:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/hackernews/2018-05-13-hackernews_digest/</loc>
+    <lastmod>2018-05-13T10:10:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/blog/2018-05-12-gitea/</loc>
+    <lastmod>2018-05-12T12:01:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/blog/2018-05-08-gcc-8.1/</loc>
+    <lastmod>2018-05-08T17:03:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/blog/</loc>
+    <lastmod>2018-08-21T10:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/blog/tutorials/</loc>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/hackernews/</loc>
+    <lastmod>2018-07-22T12:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/page/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/</loc>
+    <lastmod>2018-08-21T10:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://abdelkaderamar.gitlab.io/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://abdelkaderamar.gitlab.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/page/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/tags/c#-finance-alphavantage-market-data/</loc>
+    <lastmod>2018-07-11T11:31:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/tags/c&#43;&#43;/</loc>
+    <lastmod>2018-06-12T16:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/tags/c&#43;&#43;-c&#43;&#43;14/</loc>
+    <lastmod>2018-07-19T17:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/tags/c&#43;&#43;-c&#43;&#43;17/</loc>
+    <lastmod>2018-08-21T10:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/tags/gcc/</loc>
+    <lastmod>2018-05-08T17:03:31+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/tags/hackernews/</loc>
+    <lastmod>2018-07-22T12:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/page/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/post/</loc>
+    <lastmod>2018-06-12T16:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/tags/</loc>
+    <lastmod>2018-07-11T11:31:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://abdelkaderamar.gitlab.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://abdelkaderamar.gitlab.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://abdelkaderamar.gitlab.io/tags/tools/</loc>
+    <lastmod>2018-05-12T12:01:50+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
