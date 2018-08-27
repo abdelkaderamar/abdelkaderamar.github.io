@@ -8,13 +8,9 @@
   <title>Hacker News Digest (14-07-2018 au 20-07-2018)</title>
   <meta property="og:title" content="Hacker News Digest (14-07-2018 au 20-07-2018)" />
   <meta name="twitter:title" content="Hacker News Digest (14-07-2018 au 20-07-2018)" />
-  <meta name="description" content="C&#43;&#43; Coroutine Types Un article qui parle du design des coroutines dans la prochaine norme C&#43;&#43;20. Cette fonctionnalité permettra d&rsquo;écrire des fonctions qui peuvent être suspendues puis redémarrées, le but étant de pouvoir écrire plus facilement du code asynchrone.
-Le type permettant d&rsquo;écrire des coroutines n&rsquo;est pas encore défini mais les spécifications s&rsquo;orientent vers un type dans la STL qui s&rsquo;appelera std::task&lt;T&gt;.
- Commentaires HN  Reflections on Three Years of Reading Knuth L&rsquo;auteur a passé trois ans à lire les trois tomes de &ldquo;The Art of Programming&rdquo; de Donald Knuth et résume ses impressions sur l&rsquo;utilité de cet ouvrage considéré comme beaucoup comme une référence mais que très peu de personnes ont lu effectivement.">
-  <meta property="og:description" content="C&#43;&#43; Coroutine Types Un article qui parle du design des coroutines dans la prochaine norme C&#43;&#43;20. Cette fonctionnalité permettra d&rsquo;écrire des fonctions qui peuvent être suspendues puis redémarrées, le but étant de pouvoir écrire plus facilement du code asynchrone.
-Le type permettant d&rsquo;écrire des coroutines n&rsquo;est pas encore défini mais les spécifications s&rsquo;orientent vers un type dans la STL qui s&rsquo;appelera std::task&lt;T&gt;.
- Commentaires HN  Reflections on Three Years of Reading Knuth L&rsquo;auteur a passé trois ans à lire les trois tomes de &ldquo;The Art of Programming&rdquo; de Donald Knuth et résume ses impressions sur l&rsquo;utilité de cet ouvrage considéré comme beaucoup comme une référence mais que très peu de personnes ont lu effectivement.">
-  <meta name="twitter:description" content="C&#43;&#43; Coroutine Types Un article qui parle du design des coroutines dans la prochaine norme C&#43;&#43;20. Cette fonctionnalité permettra d&rsquo;écrire des fonctions qui peuvent être suspendues puis …">
+  <meta name="description" content="">
+  <meta property="og:description" content="">
+  <meta name="twitter:description" content="">
   <meta name="author" content="Abdelkader Amar"/>
   <link href='https://abdelkaderamar.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://abdelkaderamar.github.io/img/avatar-icon.png" />
@@ -223,10 +219,21 @@ ga('send', 'pageview');
       <article role="main" class="blog-post">
         
 	
-
+          <nav id="TableOfContents">
+<ul>
+<li><a href="#c-coroutine-types">C++ Coroutine Types</a></li>
+<li><a href="#reflections-on-three-years-of-reading-knuth">Reflections on Three Years of Reading Knuth</a></li>
+<li><a href="#the-data-transfer-project">The Data Transfer Project</a></li>
+<li><a href="#farewell-google-maps">Farewell, Google Maps</a></li>
+<li><a href="#show-hn-how-to-make-your-python-code-more-idiomatic-25-tips-and-tricks">Show HN: How to make your Python code more idiomatic – 25 tips and tricks</a></li>
+<li><a href="#real-developers-don-t-use-uis-the-value-of-web-uis-for-cli-oriented-users">“Real developers don&rsquo;t use UIs”: The value of web UIs for CLI-oriented users</a></li>
+</ul>
+</nav>
         
 
-<h1 id="c-coroutine-types-https-abseil-io-blog-20180713-coroutine-types"><a href="https://abseil.io/blog/20180713-coroutine-types">C++ Coroutine Types</a></h1>
+        <p></p>
+
+<h1 id="c-coroutine-types">C++ Coroutine Types</h1>
 
 <p>Un article qui parle du design des coroutines dans la prochaine norme C++20.
 Cette fonctionnalité permettra d&rsquo;écrire des fonctions qui peuvent être
@@ -236,39 +243,51 @@ du code asynchrone.</p>
 <p>Le type permettant d&rsquo;écrire des coroutines n&rsquo;est pas encore défini mais les spécifications s&rsquo;orientent vers un type dans la STL qui s&rsquo;appelera
 <code>std::task&lt;T&gt;</code>.</p>
 
+<p><strong>Liens</strong></p>
+
 <ul>
+<li><a href="https://abseil.io/blog/20180713-coroutine-types">Article</a></li>
 <li><a href="https://news.ycombinator.com/item?id=17527618">Commentaires HN</a></li>
 </ul>
 
-<h1 id="reflections-on-three-years-of-reading-knuth-http-commandlinefanatic-com-cgi-bin-showarticle-cgi-article-art070"><a href="http://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art070">Reflections on Three Years of Reading Knuth</a></h1>
+<h1 id="reflections-on-three-years-of-reading-knuth">Reflections on Three Years of Reading Knuth</h1>
 
 <p>L&rsquo;auteur a passé trois ans à lire les trois tomes de &ldquo;The Art of Programming&rdquo; de
 <em>Donald Knuth</em> et résume ses impressions sur l&rsquo;utilité de cet ouvrage considéré
 comme beaucoup comme une référence mais que très peu de personnes ont lu
 effectivement. L&rsquo;auteur admet la difficulté de l&rsquo;ouvrage et cite certaines
 parties qui sont inutiles maintenant (par exemple la partie sur la gestion de
-la mémoire sur bandes magnétique). L&rsquo;avis de l&rsquo;auteur peut se résumer ainsi :
-- l&rsquo;ouvrage demande beaucoup de temps, si vous en manquez, dirigez vous plutôt
-vers des ouvrages plus orientés &ldquo;entreprise&rdquo;
-- l&rsquo;assembleur n&rsquo;est pas un obstacle pour la compréhension car il ne représente
-qu&rsquo;une petite partie du code. Le reste est fait en pseudocode facile à
-comprendre.</p>
+la mémoire sur bandes magnétique). L&rsquo;avis de l&rsquo;auteur peut se résumer ainsi :</p>
 
 <ul>
+<li>l&rsquo;ouvrage demande beaucoup de temps, si vous en manquez, dirigez vous plutôt
+vers des ouvrages plus orientés &ldquo;entreprise&rdquo;</li>
+<li>l&rsquo;assembleur n&rsquo;est pas un obstacle pour la compréhension car il ne représente
+qu&rsquo;une petite partie du code. Le reste est fait en pseudocode facile à
+comprendre.</li>
+</ul>
+
+<p><strong>Liens</strong></p>
+
+<ul>
+<li><a href="http://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art070">Reflections on Three Years of Reading Knuth</a></li>
 <li><a href="https://news.ycombinator.com/item?id=17546734">Commentaires HN</a></li>
 </ul>
 
-<h1 id="the-data-transfer-project-https-datatransferproject-dev"><a href="https://datatransferproject.dev/">The Data Transfer Project</a></h1>
+<h1 id="the-data-transfer-project">The Data Transfer Project</h1>
 
 <p>Un projet qui a pour objectif de fournir un service de transfert de données
 entre différents fournisseurs. Pour cela, le projet s&rsquo;intéresse à
 l&rsquo;interopérabilité des services et à la portabilité des données. Parmi les
-exemples d&rsquo;utilisation possible :
-- changement du fournisseur de services (photos, drive, etc.)
-- utilisation du service d&rsquo;un autre fournisseur que celui sur lequel sont
-stockées les données
-- transfert des données à cause de la faillite du fournisseur de service
-- &hellip;</p>
+exemples d&rsquo;utilisation possible :</p>
+
+<ul>
+<li>changement du fournisseur de services (photos, drive, etc.)</li>
+<li>utilisation du service d&rsquo;un autre fournisseur que celui sur lequel sont
+stockées les données</li>
+<li>transfert des données à cause de la faillite du fournisseur de service</li>
+<li>&hellip;</li>
+</ul>
 
 <p>Le projet est actuellement en phase de développement. Le code se trouve
 <a href="https://github.com/google/data-transfer-project">ici</a>. Les instructions
@@ -277,19 +296,25 @@ pour l&rsquo;image Docker. A noter qu&rsquo;il faut une clé développeur pour c
 fournisseur de service à utiliser. Parmi les fournisseurs impliqués dans ce
 projet, on trouve Google, Twitter, Microsoft, et Instagram.</p>
 
+<p><strong>Liens</strong></p>
+
 <ul>
+<li><a href="https://datatransferproject.dev/">The Data Transfer Project</a></li>
 <li><a href="https://news.ycombinator.com/item?id=17574707">Commentaires HN</a></li>
 </ul>
 
-<h1 id="farewell-google-maps-https-www-inderapotheke-de-blog-farewell-google-maps"><a href="https://www.inderapotheke.de/blog/farewell-google-maps">Farewell, Google Maps</a></h1>
+<h1 id="farewell-google-maps">Farewell, Google Maps</h1>
 
 <p>Cette startup allemande a eu la mauvaise surprise de recevoir au mois de Juin
 un mail de Google leur annonçant un changement de la politique tarifaire de ce
 dernier pour l&rsquo;utilisation de son service Google Maps. Après avoir contacté
-le service client de Google, elle a eu les détails du changement :
-- l&rsquo;usage gratuit passe de 750K requêtes à 28k requêtes (divisé par plus de 30).
-- le prix de l&rsquo;utilisation commerciale de chaque 1000 requêtes passe de 0.5$ à
-7$ (multiplé par 14)</p>
+le service client de Google, elle a eu les détails du changement :</p>
+
+<ul>
+<li>l&rsquo;usage gratuit passe de 750K requêtes à 28k requêtes (divisé par plus de 30).</li>
+<li>le prix de l&rsquo;utilisation commerciale de chaque 1000 requêtes passe de 0.5$ à
+7$ (multiplé par 14)</li>
+</ul>
 
 <p>Et la conséquence du changement est telle que le coût mensuel d&rsquo;utilisation du service
 pour cette startup est passé de 0 à 5000$. Après avoir étudier les alternatives,
@@ -306,20 +331,26 @@ le coût quotidien d&rsquo;utilisation est passé de 80$ (Google) à 9$ (<em>Map
 tarifs de Google va réduire la confiance des entreprises pour dépendre des
 autres services de Google. L&rsquo;utilisation d&rsquo;outils comme <em>Leaflet</em> peut s&rsquo;avérer très utile pour éviter la dépendance à un seul fournisseur.</p>
 
+<p><strong>Liens</strong></p>
+
 <ul>
+<li><a href="https://www.inderapotheke.de/blog/farewell-google-maps">Farewell, Google Maps</a></li>
 <li><a href="https://news.ycombinator.com/item?id=17570029">Commentaires HN</a></li>
 </ul>
 
-<h1 id="show-hn-how-to-make-your-python-code-more-idiomatic-25-tips-and-tricks-https-github-com-jerry-git-learn-python3-idiomatic-python"><a href="https://github.com/jerry-git/learn-python3#idiomatic-python">Show HN: How to make your Python code more idiomatic – 25 tips and tricks</a></h1>
+<h1 id="show-hn-how-to-make-your-python-code-more-idiomatic-25-tips-and-tricks">Show HN: How to make your Python code more idiomatic – 25 tips and tricks</h1>
 
 <p>Un projet <em>Github</em> qui propose un ensemble de recommandation pour améliorer son
 code <em>Python</em>.</p>
 
+<p><strong>Liens</strong></p>
+
 <ul>
+<li><a href="https://github.com/jerry-git/learn-python3#idiomatic-python">Show HN: How to make your Python code more idiomatic – 25 tips and tricks</a></li>
 <li><a href="https://news.ycombinator.com/item?id=17529326">Commentaires HN</a></li>
 </ul>
 
-<h1 id="real-developers-don-t-use-uis-the-value-of-web-uis-for-cli-oriented-users-https-medium-com-design-ibm-real-developers-dont-use-uis-daea7404fb4e"><a href="https://medium.com/design-ibm/real-developers-dont-use-uis-daea7404fb4e">“Real developers don&rsquo;t use UIs”: The value of web UIs for CLI-oriented users</a></h1>
+<h1 id="real-developers-don-t-use-uis-the-value-of-web-uis-for-cli-oriented-users">“Real developers don&rsquo;t use UIs”: The value of web UIs for CLI-oriented users</h1>
 
 <p>Un article assez long mais divertissant sur interfaces utilisateurs en ligne
 de commande (CLI) versus les interfaces graphiques (GUI) dans le domaine du web
@@ -327,7 +358,10 @@ en particulier. L&rsquo;auteur détaille les avantages et les particularités de
 chacune des deux types d&rsquo;interface. Il conclut sur le fait que les deux
 interfaces doivent être complémentaires et non redondantes.</p>
 
+<p><strong>Liens</strong></p>
+
 <ul>
+<li><a href="https://medium.com/design-ibm/real-developers-dont-use-uis-daea7404fb4e">“Real developers don&rsquo;t use UIs”: The value of web UIs for CLI-oriented users</a></li>
 <li><a href="https://news.ycombinator.com/item?id=17559973">Commentaires HN</a></li>
 </ul>
 
@@ -565,7 +599,6 @@ Open Sourced Logo Icons
 http://logodust.com/?ref=mailchimp083582
 https://news.ycombinator.com/item?id=17529849
 -->
-
 
         
           <div class="blog-tags">

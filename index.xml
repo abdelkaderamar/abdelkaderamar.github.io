@@ -31,9 +31,7 @@ Déduction des arguments des templates de classe Avant le C++17, la déduction d
       <pubDate>Sun, 22 Jul 2018 12:00:00 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
       <guid>https://abdelkaderamar.github.io/post/hackernews/2018/07/hacker-news-digest-14-07-2018-au-20-07-2018/</guid>
-      <description>C++ Coroutine Types Un article qui parle du design des coroutines dans la prochaine norme C++20. Cette fonctionnalité permettra d&amp;rsquo;écrire des fonctions qui peuvent être suspendues puis redémarrées, le but étant de pouvoir écrire plus facilement du code asynchrone.
-Le type permettant d&amp;rsquo;écrire des coroutines n&amp;rsquo;est pas encore défini mais les spécifications s&amp;rsquo;orientent vers un type dans la STL qui s&amp;rsquo;appelera std::task&amp;lt;T&amp;gt;.
- Commentaires HN  Reflections on Three Years of Reading Knuth L&amp;rsquo;auteur a passé trois ans à lire les trois tomes de &amp;ldquo;The Art of Programming&amp;rdquo; de Donald Knuth et résume ses impressions sur l&amp;rsquo;utilité de cet ouvrage considéré comme beaucoup comme une référence mais que très peu de personnes ont lu effectivement.</description>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
