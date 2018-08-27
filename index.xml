@@ -56,7 +56,8 @@ auto f(...) : type de retour de fonction auto Il est possible avec la norme C++1
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
       <guid>https://abdelkaderamar.github.io/post/hackernews/2018/07/hacker-news-digest-07-07-2018-au-13-07-2018/</guid>
       <description>Ma sélection personnelle des sujets de la semaine sur Hacker News
-Ask HN: 2018 Summer Reading List? Ce sujet est l&amp;rsquo;occasion de découvrir les choix de la communauté de HackerNews en terme de lecture. Voici ma short liste de livres à tester : - 12 Rules for Life de Jordan Peterson - Why We Sleep de Matthew Walker - The Millionaire Next Door de Thomas J. Stanley - Deep work de Cal Newport</description>
+Ask HN: 2018 Summer Reading List? Ce sujet est l&amp;rsquo;occasion de découvrir les choix de la communauté de HackerNews en terme de lecture. Voici ma short liste de livres à tester :
+ 12 Rules for Life de Jordan Peterson Why We Sleep de Matthew Walker The Millionaire Next Door de Thomas J. Stanley Deep work de Cal Newport</description>
     </item>
     
     <item>
@@ -120,7 +121,7 @@ std::optional est une classe utilitaire qui permet de contenir un type et d&amp;
     </item>
     
     <item>
-      <title>La bibliothèque *Benchmark*</title>
+      <title>La bibliothèque Benchmark</title>
       <link>https://abdelkaderamar.github.io/post/blog/2018/06/la-biblioth%C3%A8que-benchmark/</link>
       <pubDate>Wed, 06 Jun 2018 21:30:00 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
@@ -146,7 +147,8 @@ Why Is Front-End Development So Unstable? Dans cet article l&amp;rsquo;auteur pa
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
       <guid>https://abdelkaderamar.github.io/post/hackernews/2018/05/hacker-news-digest-19-05-2018-au-25-05-2018/</guid>
       <description>Ma sélection personnelle des sujets de la semaine sur Hacker News
-Amazon device recorded private conversation, sent it out to random contact L&amp;rsquo;histoire d&amp;rsquo;un couple dont la conversation privée a été envoyée par l&amp;rsquo;assistant d&amp;rsquo;Amazon Alexa à un de leurs contacts. Amazon qui a confirmé l&amp;rsquo;incident a fourni une explication assez improbable selon laquelle l&amp;rsquo;assistant Alexa a interprété la conversation comme une suite d&amp;rsquo;actions et de confirmations. - Le couple : conversation =&amp;gt; Alexa entend &amp;ldquo;Send a message&amp;ldquo; - Alexa : &amp;ldquo;To whom ?</description>
+Amazon device recorded private conversation, sent it out to random contact L&amp;rsquo;histoire d&amp;rsquo;un couple dont la conversation privée a été envoyée par l&amp;rsquo;assistant d&amp;rsquo;Amazon Alexa à un de leurs contacts. Amazon qui a confirmé l&amp;rsquo;incident a fourni une explication assez improbable selon laquelle l&amp;rsquo;assistant Alexa a interprété la conversation comme une suite d&amp;rsquo;actions et de confirmations.
+ Le couple : conversation =&amp;gt; Alexa entend &amp;ldquo;Send a message&amp;ldquo; Alexa : &amp;ldquo;To whom ?</description>
     </item>
     
     <item>
@@ -160,7 +162,7 @@ Did Google Fake Its Big A.I. Demo? Un article qui reprend un sujet soulevé par 
     </item>
     
     <item>
-      <title>Utilisation de *Boost Multi-index*</title>
+      <title>Utilisation de Boost Multi-index</title>
       <link>https://abdelkaderamar.github.io/post/blog/2018/05/utilisation-de-boost-multi-index/</link>
       <pubDate>Wed, 16 May 2018 21:30:00 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
@@ -176,8 +178,7 @@ Did Google Fake Its Big A.I. Demo? Un article qui reprend un sujet soulevé par 
       <guid>https://abdelkaderamar.github.io/post/hackernews/2018/05/hacker-news-digest-04-05-2018-au-11-05-2018/</guid>
       <description>Dans cette série de billets, je listerai une sélection personnelle de quelques soumissions sur le site Hacker News de la semaine précédente.
 Conversations with a six-year-old on functional programming Un billet de blog d&amp;rsquo;un professeur d&amp;rsquo;université dans lequel il décrit comment il a expliqué à son fils de six ans la programmation fonctionnelle avec un jeu de devinettes de function machines.
-- Lien - Commentaires
-Surviving Your 40s Un article dans lequel l&amp;rsquo;auteur parle de son passage à l&amp;rsquo;age adulte.</description>
+ Lien Commentaires  Surviving Your 40s Un article dans lequel l&amp;rsquo;auteur parle de son passage à l&amp;rsquo;age adulte.</description>
     </item>
     
     <item>

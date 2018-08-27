@@ -59,7 +59,7 @@ auto sum() { return 0; } template&amp;lt;typename T, typename ... Ts&amp;gt; aut
     </item>
     
     <item>
-      <title>La bibliothèque *Benchmark*</title>
+      <title>La bibliothèque Benchmark</title>
       <link>https://abdelkaderamar.github.io/post/blog/2018/06/la-biblioth%C3%A8que-benchmark/</link>
       <pubDate>Wed, 06 Jun 2018 21:30:00 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
@@ -69,7 +69,7 @@ utilisation L&amp;rsquo;utilisation de base est simple. On commence par une fonc
     </item>
     
     <item>
-      <title>Utilisation de *Boost Multi-index*</title>
+      <title>Utilisation de Boost Multi-index</title>
       <link>https://abdelkaderamar.github.io/post/blog/2018/05/utilisation-de-boost-multi-index/</link>
       <pubDate>Wed, 16 May 2018 21:30:00 +0000</pubDate>
       <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
