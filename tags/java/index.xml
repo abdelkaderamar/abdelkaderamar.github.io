@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on A. Amar</title>
+    <link>https://abdelkaderamar.github.io/tags/java/</link>
+    <description>Recent content in Java on A. Amar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>abdelkader.amar@gmail.com (Abdelkader Amar)</managingEditor>
+    <webMaster>abdelkader.amar@gmail.com (Abdelkader Amar)</webMaster>
+    <lastBuildDate>Sun, 30 Sep 2018 10:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://abdelkaderamar.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Les nouveautés de Java 11</title>
+      <link>https://abdelkaderamar.github.io/post/blog/2018/09/les-nouveaut%C3%A9s-de-java-11/</link>
+      <pubDate>Sun, 30 Sep 2018 10:00:00 +0000</pubDate>
+      <author>abdelkader.amar@gmail.com (Abdelkader Amar)</author>
+      <guid>https://abdelkaderamar.github.io/post/blog/2018/09/les-nouveaut%C3%A9s-de-java-11/</guid>
+      <description>La version 11 de Java a été officiellement annoncée ce mardi 25 Septembre. Cette annonce est l&amp;rsquo;occasion pour moi de renouer avec ce langage que j&amp;rsquo;ai peu utilisé ces dernières années. Dans ce post je vais résumer les nouveautés de cette version qui contrairement au Java 9 et Java 10 est une version LTS.
+Utilisation de var dans les paramètres lambda Epsilon Garbage Collector Z Garbage Collector Versioning sur le temps Un nouveau mode de lancement Support d&amp;rsquo;Unicode 9 et 10 Éléments supprimés Références https://winterbe.</description>
+    </item>
+    
+  </channel>
+</rss>
